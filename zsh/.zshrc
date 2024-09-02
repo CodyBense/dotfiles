@@ -5,6 +5,7 @@ SAVEHIST=1000
 source <(fzf --zsh)
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 #aliases
 alias pacman="sudo pacman"
