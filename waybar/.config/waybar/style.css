@@ -1,0 +1,122 @@
+* {
+    font-size: 14px;
+    border-radius: 0px;
+    border: none;
+    font-family: JetBrainsMono Nerd Font Mono;
+    min-height: 0px;
+}
+
+window#waybar {
+    background-color: #282828;
+}
+
+#workspaces {
+    color: #282828;
+    background: #3C3836;
+    margin: 4px 4px;
+    padding: 8px 5px;
+    border-radius: 16px;
+}
+
+#workspaces button {
+    font-weight: bold;
+    padding: 0px 5px;
+    margin: 0px 3px;
+    border-radius: 16px;
+    color: #282828;
+    background: linear-gradient(45deg, #D3869B, #D65D0E, #83A598, #FE8019);
+    background-size: 300% 300%;
+    opacity: 0.5;
+}
+
+#workspaces button.active {
+    font-weight: bold;
+    padding: 0px 5px;
+    margin: 0px 3px;
+    border-radius: 16px;
+    color: #282828;
+    background: linear-gradient(45deg, #D3869B, #D65D0E, #83A598, #FE8019);
+    background-size: 300% 300%;
+    opacity: 1.0;
+    min-width: 40px;
+}
+
+#workspaces button:hover {
+    font-weight: bold;
+    border-radius: 16px;
+    color: #282828;
+    background: linear-gradient(45deg, #D3869B, #D65D0E, #83A598, #FE8019);
+    background-size: 300% 300%;
+    opacity: 0.8;
+}
+
+@keyframes gradient_horizontal {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes swiping {
+    0% {
+        background-position: 0% 200%;
+    }
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+tooltip {
+    background: #282828;
+    border: 1px solid #D3869B;
+    border-radius: 12px;
+}
+
+tooltip label {
+    color: #FBF1C7;
+}
+
+#window, #pulseaudio, #cpu, #memory, #idle_inhibitor {
+    font-weight: bold;
+    margin: 4px 0px;
+    margin-left: 7px;
+    padding: 0px 18px;
+    color: #D5C4A1;
+    background: #3C3836;
+    border-radius: 24px 10px 24px 10px;
+}
+
+#custom-startmenu {
+    color: #83A598;
+    background: #3C3836;
+    font-size: 24px;
+    margin: 0px;
+    padding: 0px 30px 0px 15px;
+    border-radius: 0px 0px 40px 0px;
+}
+
+#custom-hyprbindings, #network, #custom-themeselector, #battery,
+#custom-notification, #tray, #custom-exit {
+    font-weight: bold;
+    background: #3C3836;
+    color: #D5C4A1;
+    margin: 4px 0px;
+    margin-right: 7px;
+    border-radius: 10px 24px 10px 24px;
+    padding: 0px 18px;
+}
+
+#clock {
+    font-weight: bold;
+    color: #282828;
+    background: linear-gradient(45deg, #8EC07C, #D65D0E, #B8BB26, #FB4934);
+    background-size: 300% 300%;
+    margin: 0px;
+    padding: 0px 15px 0px 30px;
+    border-radius: 0px 0px 0px 40px;
+}
