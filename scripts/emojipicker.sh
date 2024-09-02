@@ -11,6 +11,6 @@
       if [ -n "$1" ]; then
   	    ydotool type "$chosen"
       else
-          printf "$chosen" | wl-clipboard/bin/wl-copy
+          printf "$chosen" | wl-copy
   	    notify-send "'$chosen' copied to clipboard." &
       fi
