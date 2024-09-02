@@ -8,6 +8,8 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 
+export PATH=$PATH:$HOME/go/bin
+
 #aliases
 alias pacman="sudo pacman"
 alias c="clear"
