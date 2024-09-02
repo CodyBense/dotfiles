@@ -2,6 +2,10 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+source <(fzf --zsh)
+
+eval "$(starship init zsh)"
+
 #aliases
 alias pacman="sudo pacman"
 alias c="clear"
