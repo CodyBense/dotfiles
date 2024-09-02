@@ -1,0 +1,55 @@
+window {
+    font-family: BlexMono Nerd Font;
+    font-size: 13pt;
+    color: #282828;
+    background-color: rgba(40, 40, 40, 0.76);
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 2px;
+    border-color: #282828;
+    background-color: #282828;
+    margin: 10px;
+    transition:
+        box-shadow 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #B8BB26;
+    color: #FE8019;
+}
+
+button:focus {
+    background-color: #FB4934;
+    color: #FE8019;
+}
+
+#lock {
+    background-image: image(url("/home/codybense/mysystem/config/wlogout/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/home/codybense/mysystem/config/wlogout/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/codybense/mysystem/config/wlogout/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/codybense/mysystem/config/wlogout/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/codybense/mysystem/config/wlogout/reboot.png"));
+}
+
+#hibernate {
+    background-image: image(url("/home/codybense/.config/wlogout/icons/hibernate.png"));
+}
