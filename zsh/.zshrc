@@ -3,6 +3,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 #aliases
+alias pacman="sudo pacman"
 alias c="clear"
 alias v="nvim"
 alias sv="sudo nvim"
