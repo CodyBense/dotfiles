@@ -1,0 +1,11 @@
+[user]
+	user = CodyBense
+	email = codybense@gmail.com
+	name = CodyBense
+[init]
+	defaultBranch = main
+[alias]
+	a = add
+	cm = commit
+	co = checkout
+	pu = push
