@@ -10,6 +10,7 @@ eval "$(starship init zsh)"
 alias pacman="sudo pacman"
 alias c="clear"
 alias v="nvim"
+alias iv='nvim $(fzf --preview="bat --color=always {}")'
 alias sv="sudo nvim"
 alias ll="ls -l"
 alias la="ls -a"
