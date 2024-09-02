@@ -1,0 +1,213 @@
+* {
+    bg: #282828;
+    bg-alt: #FE8019;
+    foreground: #3C3836;
+    selected: #FB4934;
+    active: #B8BB26;
+    text-selected: #282828;
+    text-color: #D5C4A1;
+    border-color: #D65D0E;
+    urgent: #D3869B;
+}
+
+window {
+    width: 50%;
+    transparency: "real";
+    orientation: vertical;
+    cursor: "default";
+    spacing: 0px;
+    border: 2px;
+    border-color: @border-color;
+    border-radius: 20px;
+    background-color: @bg;
+}
+
+mainbox {
+    padding: 15px;
+    enabled: true;
+    orientation: vertical;
+    children: [
+        inputbar,
+        listbox
+    ];
+    background-color: transparent;
+}
+
+inputbar {
+    enabled: true;
+    padding: 10px 10px 200px 10px;
+    margin: 10px;
+    background-color: transparent;
+    border-radius: 25px;
+    orientation: horizontal;
+    children: [
+        entry,
+        dummy,
+        mode-switcher
+    ];
+    background-image: url("~/Pictures/wallpapers/gruv-wallhaven-4yj28l.png", width);
+}
+
+entry {
+    enabled: true;
+    expand: false;
+    width: 20%;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: @selected;
+    text-color: @text-selected;
+    cursor: "text";
+    placeholder: "🖥️ Search ";
+    placeholder-color: inherit;
+}
+
+listbox {
+    spacing: 10px;
+    padding: 10px;
+    background-color: transparent;
+    orientation: vertical;
+    children: [
+        message,
+        listview
+    ];
+}
+
+listview {
+    enabled: true;
+    columns: 2;
+    lines: 6;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: false;
+    fixed-columns: true;
+    spacing: 10px;
+    background-color: transparent;
+    border: 0px;
+}
+
+dummy {
+        expand: true;
+        background-color: transparent;
+}
+
+mode-switcher {
+    enabled: true;
+    spacing: 10px;
+    background-color: transparent;
+}
+
+button {
+    width: 5%;
+    padding: 12px;
+    border-radius: 12px;
+    background-color: @text-selected;
+    text-color: @text-color;
+    cursor: pointer;
+}
+
+button selected {
+    background-color: @selected;
+    text-color: @text-selected;
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-color: @border-color;
+    handle-width: 8px;
+    padding: 0;
+}
+
+element {
+    enabled: true;
+    spacing: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element normal.urgent {
+        background-color: @urgent;
+        text-color: @foreground;
+}
+
+element normal.active {
+    background-color: @active;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @text-selected;
+}
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @text-selected;
+}
+
+element selected.active {
+    background-color: @urgent;
+    text-color: @text-selected;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element alternate.urgent {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element alternate.active {
+    background-color: transparent;
+    text-color: inherit;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 36px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    font: "JetBrainsMono Nerd Font Mono 12";
+    text-color: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+message {
+    background-color: transparent;
+    border: 0px;
+}
+
+textbox {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: @bg-alt;
+    text-color: @bg;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+error-message {
+    padding: 12px;
+    border-radius: 20px;
+    background-color: @bg-alt;
+    text-color: @bg;
+}
