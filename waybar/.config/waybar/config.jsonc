@@ -4,7 +4,7 @@
 
     "modules-center": ["hyprland/workspaces"],
     "modules-left": ["custom/startmenu", "pulseaudio", "cpu", "memory", "idle_inhibitor"],
-    "modules-right": ["custom/hyprbinding", "custom/notifications", "custom/exit", "battery", "tray", "clock"],
+    "modules-right": ["custom/hyprbindings", "custom/notifications", "custom/exit", "battery", "tray", "clock"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -103,7 +103,7 @@
         "tooltip": true
     },
 
-    "custom/notification": {
+    "custom/notifications": {
         "tooltip": false,
         "format": "{icon} {}",
         "format-icons": {
@@ -119,7 +119,7 @@
         "return-type": "json",
         "exec-if": "which swaync-client",
         "exec": "swaync-client -swb",
-        "on-click": "sleep 0.1 && task-waybar",
+        "on-click": "sleep 0.1 && ./../.scripts/task-waybar.sh",
         "escape": true
     },
 

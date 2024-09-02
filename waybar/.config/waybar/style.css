@@ -101,7 +101,7 @@ tooltip label {
 }
 
 #custom-hyprbindings, #network, #custom-themeselector, #battery,
-#custom-notification, #tray, #custom-exit {
+#custom-notifications, #tray, #custom-exit {
     font-weight: bold;
     background: #3C3836;
     color: #D5C4A1;
