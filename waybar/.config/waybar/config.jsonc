@@ -4,7 +4,7 @@
 
     "modules-center": ["hyprland/workspaces"],
     "modules-left": ["custom/startmenu", "pulseaudio", "cpu", "memory", "idle_inhibitor"],
-    "modules-right": ["custom/hyprbindings", "custom/notifications", "custom/exit", "battery", "tray", "clock"],
+    "modules-right": ["custom/hyprbindings", "custom/notifications", "custom/exit", "network", "battery", "tray", "clock"],
 
     "hyprland/workspaces": {
         "format": "{name}",
@@ -84,13 +84,13 @@
 
     "custom/startmenu": {
         "tooltip": false,
-        "format": "",
+        "format": """,
         "on-click": "sleep 0.1 && rofi"
     },
 
     "custom/hyprbindings": {
         "tooltip": false,
-        "format": "󱕴",
+        "format": """,
         "on-click": "sleep 0.1 && list-hypr-bindings"
     },
 
