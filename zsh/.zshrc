@@ -29,3 +29,6 @@ alias py="python3"
 
 randomPokemon="$HOME/.config/.scripts/randomPokemon.sh"
 [[ -s $randomPokemon ]] && source $randomPokemon
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
