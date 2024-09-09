@@ -1,3 +1,11 @@
+hyprland
+kitty
+rofi
+qt5-wayland
+qt6-wayland
+dolphin
+xdg-desktop-portal-hyprland
+
 arduino-cli
 arduino-ide
 base
@@ -53,8 +61,6 @@ otf-overpass-nerd
 pavucontrol
 pipewire-alsa
 polkit-kde-agent
-pulseaudio-alsa
-pulseaudio-bluetooth
 qt5-wayland
 ripgrep
 rofi-wayland
