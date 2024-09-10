@@ -17,7 +17,7 @@ mkdir -p ~/workspaces/github.com/CodyBense
 mkdir -p ~/workspaces/Projects
 
 # Clone dotfiles repo
-git clone https://github.com/CodyBense/dotfiles.git
+git clone https://github.com/CodyBense/dotfiles.git ~
 
 # Stow commands for dotfiles
 cd ~/dotfiles
