@@ -2,8 +2,9 @@
 
 # Install yay
 sudo pacman -S --needed git base-devel
+cd ~
 git clone https://aur.archlinux.org/yay.git
-cd yay
+cd ~/yay
 mkpkg -si
 
 # Install pacman packages
@@ -12,12 +13,9 @@ sudo pacman -S arduino-cli arduino-ide bat brightnessctl cmake direnv dmenu dock
 # Install yay packages
 yay -S rustmon-git tlpui trashy ttf-material-icons-git wlogout zen-browser-bin
 
-# Make some directorys
+# Make some directories
 mkdir -p ~/workspaces/github.com/CodyBense
 mkdir -p ~/workspaces/Projects
-
-# Clone dotfiles repo
-git clone https://github.com/CodyBense/dotfiles.git ~
 
 # Stow commands for dotfiles
 cd ~/dotfiles
