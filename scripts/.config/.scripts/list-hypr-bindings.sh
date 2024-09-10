@@ -15,8 +15,8 @@ yad --width=800 --height=650 \
   " + T" "Terminal" "kitty" \
   " + SPACE" "Rofi App Launcher" "rofi -show drun" \
   " + Q" "Kill Focused Window" "killactive" \
-  " + F" "Launch Web Browser" "firefox" \
-  " + E" "Launch New File Browser Window" "thunar" \
+  " + F" "Launch Web Browser" "zen" \
+  " + E" "Launch New File Browser Window" "dolphin" \
   " + M" "Launch Spotify" "spotify" \
   " + P" "Pseudo Tiling" "pseudo" \
   " + SHIFT + I" "Toggle Split Direction" "togglesplit" \
