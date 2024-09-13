@@ -8,7 +8,7 @@ cd ~/yay
 makepkg -si
 
 # Install pacman packages
-sudo pacman -S arduino-cli arduino-ide bat brightnessctl cmake direnv discord dmenu docker fastfetch firefox fzf go hypridle hyprlock lazygit lf libnotify neovim network-manager-applet nerd-fonts noto-fonts-cjk noto-fonts-emoji pavucontrol pipewire-pulse ripgrep rofi-wayland starship stow swayimg swaync swww tlp tmux tree ttf-font-awesome unzip wakeonlan waybar wl-clipboard yad zoxide zsh
+yes | sudo pacman -S arduino-cli arduino-ide bat brightnessctl cmake direnv discord dmenu docker fastfetch firefox fzf go hypridle hyprlock lazygit lf libnotify neovim network-manager-applet nerd-fonts noto-fonts-cjk noto-fonts-emoji pavucontrol pipewire-pulse ripgrep rofi-wayland starship stow swayimg swaync swww tlp tmux tree ttf-font-awesome unzip wakeonlan waybar wl-clipboard yad zoxide zsh
 
 # Install yay packages
 yay -S rustmon-git spotify tlpui trashy ttf-material-icons-git wlogout zen-browser-bin
