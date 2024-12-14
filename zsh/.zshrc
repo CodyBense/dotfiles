@@ -31,6 +31,15 @@ alias py="python3"
 randomPokemon="$HOME/.config/.scripts/randomPokemon.sh"
 [[ -s $randomPokemon ]] && source $randomPokemon
 
+function y() {
+    local tmp="$(mktemp -t "yazi-ced.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -40,3 +49,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Created by `pipx` on 2024-09-21 14:15:16
+export PATH="$PATH:/home/codybense/.local/bin"
