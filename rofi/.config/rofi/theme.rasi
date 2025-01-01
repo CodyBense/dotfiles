@@ -1,14 +1,4 @@
-* {
-    bg: #282828;
-    bg-alt: #FE8019;
-    foreground: #3C3836;
-    selected: #FB4934;
-    active: #B8BB26;
-    text-selected: #282828;
-    text-color: #D5C4A1;
-    border-color: #D65D0E;
-    urgent: #D3869B;
-}
+@import "~/.cache/wal/colors-rofi-dark"
 
 window {
     width: 50%;
@@ -19,7 +9,6 @@ window {
     border: 2px;
     border-color: @border-color;
     border-radius: 20px;
-    background-color: @bg;
 }
 
 mainbox {
@@ -54,8 +43,6 @@ entry {
     width: 20%;
     padding: 10px;
     border-radius: 12px;
-    background-color: @selected;
-    text-color: @text-selected;
     cursor: "text";
     placeholder: "🖥️ Search ";
     placeholder-color: inherit;
@@ -103,14 +90,10 @@ button {
     width: 5%;
     padding: 12px;
     border-radius: 12px;
-    background-color: @text-selected;
-    text-color: @text-color;
     cursor: pointer;
 }
 
 button selected {
-    background-color: @selected;
-    text-color: @text-selected;
 }
 
 scrollbar {
@@ -136,28 +119,20 @@ element normal.normal {
 }
 
 element normal.urgent {
-        background-color: @urgent;
         text-color: @foreground;
 }
 
 element normal.active {
-    background-color: @active;
     text-color: @foreground;
 }
 
 element selected.normal {
-    background-color: @selected;
-    text-color: @text-selected;
 }
 
 element selected.urgent {
-    background-color: @urgent;
-    text-color: @text-selected;
 }
 
 element selected.active {
-    background-color: @urgent;
-    text-color: @text-selected;
 }
 
 element alternate.normal {
@@ -199,8 +174,6 @@ message {
 textbox {
     padding: 12px;
     border-radius: 10px;
-    background-color: @bg-alt;
-    text-color: @bg;
     vertical-align: 0.5;
     horizontal-align: 0.0;
 }
@@ -208,6 +181,4 @@ textbox {
 error-message {
     padding: 12px;
     border-radius: 20px;
-    background-color: @bg-alt;
-    text-color: @bg;
 }
