@@ -14,6 +14,7 @@ export PATH=$PATH:$HOME/go/bin
 alias pacman="sudo pacman"
 alias c="clear"
 alias v="nvim"
+alias vi="nvim"
 alias iv='nvim $(fzf --preview="bat --color=always {}")'
 alias sv="sudo nvim"
 alias ll="ls -l"
@@ -52,3 +53,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Created by `pipx` on 2024-09-21 14:15:16
 export PATH="$PATH:/home/codybense/.local/bin"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
