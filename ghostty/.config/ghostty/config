@@ -2,7 +2,7 @@ theme = GruvboxDark
 
 shell-integration = zsh
 
-font-family = JetBrains Mono
+font-family = JetBrainsMono Nerd Font
 font-size = 14
 
 keybind = ctrl+a>n=new_tab
