@@ -8,6 +8,7 @@ font-size = 14
 keybind = ctrl+a>n=new_tab
 keybind = ctrl+a>v=new_split:right
 keybind = ctrl+a>s=new_split:down
+keybind = ctrl+a>x=close_surface
 
 keybind = ctrl+a>1=goto_tab:1
 keybind = ctrl+a>2=goto_tab:2

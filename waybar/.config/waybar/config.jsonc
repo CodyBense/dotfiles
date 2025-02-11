@@ -2,6 +2,9 @@
     "layer": "top",
     "position": "botton",
 
+    // "modules-left": ["custom/startmenu", "hyprland/waokspaces"],
+    // "modules-center": [],
+    // "modules-right": ["network","battery", "clock"],
     "modules-center": ["hyprland/workspaces"],
     "modules-left": ["custom/startmenu", "pulseaudio", "cpu", "memory", "idle_inhibitor"],
     "modules-right": ["custom/hyprbindings", "custom/notifications", "custom/exit", "network", "battery", "tray", "clock"],
