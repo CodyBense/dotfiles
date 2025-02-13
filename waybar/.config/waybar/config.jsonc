@@ -5,9 +5,12 @@
     // "modules-left": ["custom/startmenu", "hyprland/waokspaces"],
     // "modules-center": [],
     // "modules-right": ["network","battery", "clock"],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-left": ["custom/startmenu", "pulseaudio", "cpu", "memory", "idle_inhibitor"],
-    "modules-right": ["custom/hyprbindings", "custom/notifications", "custom/exit", "network", "battery", "tray", "clock"],
+    // "modules-center": ["hyprland/workspaces"],
+    // "modules-left": ["custom/startmenu", "pulseaudio", "cpu", "memory", "idle_inhibitor"],
+    // "modules-right": ["custom/hyprbindings", "custom/notifications", "custom/exit", "network", "battery", "tray", "clock"],
+    "modules-left": ["custom/startmenu", "hyrpland/workspaces","hyrpland/window"],
+    "moduels-right": ["network", "pulesaudio", "battery", "clock", "custom/notification"],
+
 
     "hyprland/workspaces": {
         "format": "{name}",
