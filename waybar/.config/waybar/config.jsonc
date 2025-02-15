@@ -90,7 +90,7 @@
 
     "custom/startmenu": {
         "tooltip": false,
-        "format": "",
+        "format": "󰣇",
         "on-click": "sleep 0.1 && rofi"
     },
 
