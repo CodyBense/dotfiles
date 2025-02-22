@@ -29,8 +29,8 @@ alias "3."="cd ../../.."
 alias "4."="cd ../../../.."
 alias py="python3"
 
-randomPokemon="$HOME/.config/.scripts/randomPokemon.sh"
-[[ -s $randomPokemon ]] && source $randomPokemon
+# randomPokemon="$HOME/.config/.scripts/randomPokemon.sh"
+# [[ -s $randomPokemon ]] && source $randomPokemon
 
 function y() {
     local tmp="$(mktemp -t "yazi-ced.XXXXXX")"

@@ -1,126 +1,128 @@
+@import "mocha.css"; 
+
 * {
-    font-size: 14px;
-    border-radius: 0px;
+    /* font-family: "MesloLGS Nerd Font Mono Bold"; */
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+    background-color: @crust;
+    color: @overlay0;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+    border-bottom: 1px solid @overlay1;
+}
+
+#window {
+    margin: 8px;
+    padding-left: 8;
+    padding-right: 8;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
     border: none;
-    font-family: JetBrainsMono Nerd Font Mono;
-    min-height: 0px;
+    border-radius: 0;
 }
 
-window#waybar { 
-     /* background-color: #000000;   */
-     background-color: #999999; 
- }
-
-#custom-startmenu {
-    color: #83A598;
-    background: #3C3836;
-    font-size: 25px;
-    margin: 5px;
-    margin-left: 35px;
-    padding: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
+button:hover {
+    background: inherit;
+    color: @mauve;
+    border-top: 2px solid @mauve;
 }
 
-/**/
-/* #workspaces { */
-/*     color: #282828; */
-/*     background: #3C3836; */
-/*     margin: 4px 4px; */
-/*     padding: 8px 5px; */
-/*     border-radius: 16px; */
-/* } */
-/**/
-/* #workspaces button { */
-/*     font-weight: bold; */
-/*     padding: 0px 5px; */
-/*     margin: 0px 3px; */
-/*     border-radius: 16px; */
-/*     color: #282828; */
-/*     background: linear-gradient(45deg, #D3869B, #D65D0E, #83A598, #FE8019); */
-/*     background-size: 300% 300%; */
-/*     opacity: 0.5; */
-/* } */
-/**/
-/* #workspaces button.active { */
-/*     font-weight: bold; */
-/*     padding: 0px 5px; */
-/*     margin: 0px 3px; */
-/*     border-radius: 16px; */
-/*     color: #282828; */
-/*     background: linear-gradient(45deg, #D3869B, #D65D0E, #83A598, #FE8019); */
-/*     background-size: 300% 300%; */
-/*     opacity: 1.0; */
-/*     min-width: 40px; */
-/* } */
-/**/
-/* #workspaces button:hover { */
-/*     font-weight: bold; */
-/*     border-radius: 16px; */
-/*     color: #282828; */
-/*     background: linear-gradient(45deg, #D3869B, #D65D0E, #83A598, #FE8019); */
-/*     background-size: 300% 300%; */
-/*     opacity: 0.8; */
-/* } */
-/**/
-/* @keyframes gradient_horizontal { */
-/*     0% { */
-/*         background-position: 0% 50%; */
-/*     } */
-/*     50% { */
-/*         background-position: 100% 50%; */
-/*     } */
-/*     100% { */
-/*         background-position: 0% 50%; */
-/*     } */
-/* } */
-/**/
-/* @keyframes swiping { */
-/*     0% { */
-/*         background-position: 0% 200%; */
-/*     } */
-/*     100% { */
-/*         background-position: 200% 200%; */
-/*     } */
-/* } */
-/**/
-/* tooltip { */
-/*     background: #282828; */
-/*     border: 1px solid #D3869B; */
-/*     border-radius: 12px; */
-/* } */
-/**/
-/* tooltip label { */
-/*     color: #FBF1C7; */
-/* } */
-/**/
-/* #window, #pulseaudio, #cpu, #memory, #idle_inhibitor { */
-/*     font-weight: bold; */
-/*     margin: 4px 0px; */
-/*     margin-left: 7px; */
-/*     padding: 0px 18px; */
-/*     color: #D5C4A1; */
-/*     background: #3C3836; */
-/*     border-radius: 24px 10px 24px 10px; */
-/* } */
-/**/
-/**/
-/* #custom-hyprbindings, #network, #custom-themeselector, #battery, */
-/* #custom-notifications, #tray, #custom-exit { */
-/*     font-weight: bold; */
-/*     background: #3C3836; */
-/*     color: #D5C4A1; */
-/*     margin: 4px 0px; */
-/*     margin-right: 7px; */
-/*     border-radius: 10px 24px 10px 24px; */
-/*     padding: 0px 18px; */
-/* } */
-/**/
-/* #clock { */
-/*     font-weight: bold; */
-/*     color: #282828; */
-/*     background: linear-gradient(45deg, #8EC07C, #D65D0E, #B8BB26, #FB4934); */
-/*     background-size: 300% 300%; */
-/*     margin: 0px; */
-/*     padding: 0px 15px 0px 30px; */
-/*     border-radius: 0px 0px 0px 40px; */
-/* } */
+#workspaces button {
+    padding: 0 4px;
+}
+
+#workspaces button.focused {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: @rosewater;
+    border-top: 2px solid @rosewater;
+}
+
+#workspaces button.active {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: @mauve;
+    border-top: 2px solid @mauve;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#pulseaudio,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#tray,
+#network,
+#mode,
+#scratchpad {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#clock {
+    color: @maroon;
+    border-bottom: 2px solid @maroon;
+}
+
+#clock.date {
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
+}
+
+#pulseaudio {
+    color: @blue;
+    border-bottom: 2px solid @blue;
+}
+
+#network {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#idle_inhibitor {
+    margin-right: 12px;
+    color: #7cb342;
+}
+
+#idle_inhibitor.activated {
+    color: @red;
+}
+
+#battery {
+    color: @green;
+    border-bottom: 2px solid @green;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+#custom-vpn {
+    color: @lavender;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}

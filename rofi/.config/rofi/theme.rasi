@@ -160,7 +160,8 @@ element-icon {
 element-text {
     background-color: transparent;
     font: "JetBrainsMono Nerd Font Mono 12";
-    text-color: inherit;
+    /*text-color: inherit;*/
+    text-color: #000000;
     cursor: inherit;
     vertical-align: 0.5;
     horizontal-align: 0.0;

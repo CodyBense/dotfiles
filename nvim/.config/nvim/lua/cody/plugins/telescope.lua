@@ -50,8 +50,7 @@ return {
             }):find()
         end
 
-        vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end,
-            { desc = "Open harpoon window" })
+        vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end, {desc = "Open harpoon window" })
     end
     -- keys = {
     --     { "<leader>pf", "<cmd>Telescope find_files<cr>" , desc = "Find files (project dir)" },
