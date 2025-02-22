@@ -3,7 +3,7 @@ return {
     cmd = {
         "LazyGit",
         "LazyGitconfig",
-        "LazyGitCurrentFile",
+        "LazyGitCurrentFiles",
         "LazyGitFilter",
         "LazyGitFilterCurrentFile",
     },
@@ -13,6 +13,6 @@ return {
     },
 
     keys = {
-        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazy git" },
+        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "Open lazygit" },
     },
 }

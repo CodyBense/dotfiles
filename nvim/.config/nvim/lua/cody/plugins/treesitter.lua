@@ -1,4 +1,3 @@
--- look through primeagen to see what i want to change
 return {
     {
         "nvim-treesitter/nvim-treesitter",
@@ -8,9 +7,7 @@ return {
             local treesitter = require("nvim-treesitter.configs")
 
             treesitter.setup({
-                highlight = {
-                    enable = true,
-                },
+                highlight = { enable = true, },
 
                 indent = { enable = true },
                 ensure_installed = {

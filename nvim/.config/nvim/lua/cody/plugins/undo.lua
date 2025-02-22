@@ -1,4 +1,3 @@
--- replace with telescope-undo
 return {
     "mbbill/undotree",
 

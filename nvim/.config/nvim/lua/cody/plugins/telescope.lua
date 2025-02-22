@@ -1,5 +1,5 @@
 return {
-    'nvim-telescope/telescope.nvim', 
+    'nvim-telescope/telescope.nvim',
 
     tag = '0.1.8',
 
@@ -12,8 +12,8 @@ return {
         require('telescope').setup({})
 
         local builtin = require('telescope.builtin')
-        vim.keymap.set('n' , '<leader>pf', builtin.find_files, {})
-        vim.keymap.set('n' , '<leader>pg', builtin.live_grep, {})
+        vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
         vim.keymap.set('n', '<C-p>', builtin.git_files, {})
         vim.keymap.set('n', '<leader>pws', function()
             local word = vim.fn.expand("<cword>")
@@ -28,11 +28,11 @@ return {
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
-        -- harpoon 2
+        --harpoon 2
         local harpoon = require('harpoon')
         harpoon:setup({})
 
-        -- basic telescope configuration
+        --basic telescope configuration
         local conf = require("telescope.config").values
         local function toggle_telescope(harpoon_files)
             local file_paths = {}
@@ -52,9 +52,4 @@ return {
 
         vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end, {desc = "Open harpoon window" })
     end
-    -- keys = {
-    --     { "<leader>pf", "<cmd>Telescope find_files<cr>" , desc = "Find files (project dir)" },
-    --     { "<C-p>", "<cmd>Telescope git_files<cr>" , desc = "Find files (git dir)" },
-    --     { "<leader>ps", "<cmd>Telescope grep_string<cr>" , desc = "Searches with a grep string" },
-    -- }
 }
