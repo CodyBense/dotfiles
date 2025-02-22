@@ -34,3 +34,4 @@ stow wallpapers
 stow waybar
 stow wlogout
 stow zsh
+stow ghostty
