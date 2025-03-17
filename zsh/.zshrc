@@ -44,6 +44,9 @@ function y() {
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# scripts
+export PATH=$PATH:$HOME/bin
+
 # bun completions
 [ -s "/home/codybense/.bun/_bun" ] && source "/home/codybense/.bun/_bun"
 
