@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+
+# Install Flatpak
+sudo dnf install -y flatpak
+# Enable the Flathub remote
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+# Install packages
+sudo dnf install bat -y
+sudo dnf install brightnessctl -y
+sudo dnf install cmake -y
+sudo dnf install direnv -y
+sudo dnf install dmenu -y
+sudo dnf install docker-compose -y
+sudo dnf install fastfetch -y
+sudo dnf install firefox -y
+sudo dnf install fzf -y
+sudo dnf install golang -y
+sudo dnf install hyprland -y
+sudo dnf install hypridle -y
+sudo dnf install hyprlock -y
+sudo dnf install lazygit -y
+sudo dnf install libnotify -y
+sudo dnf install neovim -y
+sudo dnf install network-manager-applet -y
+sudo dnf install pavucontrol -y
+sudo dnf install pipewire-pulseaudio -y
+sudo dnf install ripgrep -y
+sudo dnf install rofi-wayland -y
+sudo dnf install stow -y
+sudo dnf install swayimg -y
+sudo dnf install SwayNotificationCenter -y
+sudo dnf install swww -y
+sudo dnf install tlp -y
+sudo dnf install tmux -y
+sudo dnf install tree -y
+sudo dnf install fontawesome-fonts-all -y
+sudo dnf install unzip -y
+sudo dnf install waybar -y
+sudo dnf install wl-clipboard -y
+sudo dnf install yad -y
+sudo dnf install zoxide -y
+sudo dnf install zsh -y
+sudo dnf install man-pages -y
+sudo dnf install wlogout -y
+sudo dnf install python3 -y
+sudo dnf install material-icons-fonts -y
+
+# Copr packages
+sudo dnf copr enable sneexy/zen-browser -y
+sudo dnf install zen-browswer -y
+
+sudo dnf copr enable materka/swww -y
+sudo dnf install swww -y
+
+sudo dnf copr enable atim/starship -y
+sudo dnf install starship -y
+
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit -y
+
+sudo dnf copr enable pgdev/ghostty -y
+sudo dnf install ghostty -y
+
+# Install Flatpak pacakges
+flatpak install flathub com.spotify.Client
+
+# packages to figure out how to install
+# arduino-cli arduino-ide discord lf nerd-fonts noto-fonts-cjk noto-fonts-emoji wakeonlan ghostty tlpui trashy
+
+# Install yay packages
+#yay -S rustmon-git spotify tlpui trashy ttf-material-icons-git
+
+# Make some directories
+mkdir -p ~/workspaces/github.com/CodyBense
+mkdir -p ~/workspaces/Projects
+
+# Stow commands for dotfiles
+cd ~/dotfiles
+stow emoji
+stow git
+stow hypr
+stow kitty
+stow lf
+stow nvim
+stow rofi
+stow scripts
+stow starship
+stow swaync
+stow tmux
+stow wallpapers
+stow waybar
+stow wlogout
+stow zsh
+stow ghostty
