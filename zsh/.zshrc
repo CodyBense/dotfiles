@@ -29,6 +29,9 @@ alias "3."="cd ../../.."
 alias "4."="cd ../../../.."
 alias py="python3"
 
+#flatpak aliases
+alias yazi="flatpak run io.github.sxyazi.yazi"
+
 # randomPokemon="$HOME/.config/.scripts/randomPokemon.sh"
 # [[ -s $randomPokemon ]] && source $randomPokemon
 
