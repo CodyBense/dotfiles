@@ -1,4 +1,5 @@
-@import "~/.cache/wal/colors-rofi-dark"
+//@import "~/.cache/wal/colors-rofi-dark"
+@import "catppuccin-mocha"
 
 window {
     width: 50%;
@@ -7,7 +8,9 @@ window {
     cursor: "default";
     spacing: 0px;
     border: 2px;
-    border-color: @border-color;
+    //border-color: @border-color;
+    background-color: @base;
+    border-color: @crust;
     border-radius: 20px;
 }
 
@@ -24,9 +27,10 @@ mainbox {
 
 inputbar {
     enabled: true;
-    padding: 10px 10px 200px 10px;
+    padding: 10px 10px 10px 10px;
     margin: 10px;
-    background-color: transparent;
+    //background-color: transparent;
+    background-color: @blue;
     border-radius: 25px;
     orientation: horizontal;
     children: [
@@ -34,7 +38,7 @@ inputbar {
         dummy,
         mode-switcher
     ];
-    background-image: url("~/Pictures/wallpapers/gruv-wallhaven-4yj28l.png", width);
+    //background-image: url("~/Pictures/wallpapers/gruv-wallhaven-4yj28l.png", width);
 }
 
 entry {
@@ -51,7 +55,9 @@ entry {
 listbox {
     spacing: 10px;
     padding: 10px;
-    background-color: transparent;
+    //background-color: transparent;
+    border-radius: 25px;
+    background-color: @maroon;
     orientation: vertical;
     children: [
         message,
@@ -99,7 +105,7 @@ button selected {
 scrollbar {
     width: 4px;
     border: 0;
-    handle-color: @border-color;
+    handle-color: @base;
     handle-width: 8px;
     padding: 0;
 }
@@ -119,11 +125,11 @@ element normal.normal {
 }
 
 element normal.urgent {
-        text-color: @foreground;
+        text-color: @pink;
 }
 
 element normal.active {
-    text-color: @foreground;
+    text-color: @yellow;
 }
 
 element selected.normal {
@@ -161,7 +167,8 @@ element-text {
     background-color: transparent;
     font: "JetBrainsMono Nerd Font Mono 12";
     /*text-color: inherit;*/
-    text-color: #000000;
+    //text-color: #000000;
+    text-color: @crust;
     cursor: inherit;
     vertical-align: 0.5;
     horizontal-align: 0.0;
