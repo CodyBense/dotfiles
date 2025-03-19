@@ -1,4 +1,4 @@
-theme = GruvboxDark
+theme = catppuccin-mocha
 
 shell-integration = zsh
 
