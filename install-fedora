@@ -15,6 +15,7 @@ sudo dnf install docker-compose -y
 sudo dnf install fastfetch -y
 sudo dnf install firefox -y
 sudo dnf install fzf -y
+sudo dnf install gh -y
 sudo dnf install golang -y
 sudo dnf install hyprland -y
 sudo dnf install hypridle -y
