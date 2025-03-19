@@ -66,6 +66,9 @@ sudo dnf install ghostty -y
 # Install Flatpak pacakges
 flatpak install flathub com.spotify.Client
 
+# Fonts
+sudo dnf install fontawesome-fonts-all google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts -y
+
 # packages to figure out how to install
 # arduino-cli arduino-ide discord lf nerd-fonts noto-fonts-cjk noto-fonts-emoji wakeonlan ghostty tlpui trashy
 
