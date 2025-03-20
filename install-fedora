@@ -69,8 +69,15 @@ flatpak install flathub com.spotify.Client
 # Fonts
 sudo dnf install fontawesome-fonts-all google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts -y
 
+# Zsh plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+
+# Tmux plugin sesh
+go install github.com/joshmedeski/sesh/v2@latest
+
 # packages to figure out how to install
-# arduino-cli arduino-ide discord lf nerd-fonts noto-fonts-cjk noto-fonts-emoji wakeonlan ghostty tlpui trashy
+# arduino-cli arduino-ide discord lf nerd-fonts wakeonlan ghostty tlpui trashy
 
 # Install yay packages
 #yay -S rustmon-git spotify tlpui trashy ttf-material-icons-git
