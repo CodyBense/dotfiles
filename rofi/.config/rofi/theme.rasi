@@ -9,8 +9,8 @@ window {
     spacing: 0px;
     border: 2px;
     //border-color: @border-color;
-    background-color: @base;
-    border-color: @crust;
+    background-color: @overlay1;
+    border-color: @yellow;
     border-radius: 20px;
 }
 
