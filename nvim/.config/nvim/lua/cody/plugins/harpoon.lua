@@ -15,5 +15,6 @@ return {
         { "<C-2>", function() require("harpoon"):list():select(2) end, desc = "Switch to second file"},
         { "<C-3>", function() require("harpoon"):list():select(3) end, desc = "Switch to third file"},
         { "<C-4>", function() require("harpoon"):list():select(4) end, desc = "Switch to fourth file"},
+        { "<C-5>", function() require("harpoon"):list():select(5) end, desc = "Switch to fourth file"},
     }
 }
