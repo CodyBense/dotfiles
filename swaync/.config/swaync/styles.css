@@ -1,3 +1,5 @@
+@import "mocha.css";
+
 * {
         font-family: Ubuntu;
         font-weight: bolder;
@@ -6,7 +8,9 @@
     .control-center .notification-row:focus,
     .control-center .notification-row:hover {
         opacity: 0.9;
-        background: #282828
+        /* background: #282828; */
+        background: #f38ba8;
+        /* background-color: @crust; */
     }
 
     .notification-row {
@@ -37,6 +41,7 @@
 
     .close-button {
         background: #FB4934;
+        /* background: @red; */
         color: #282828;
         text-shadow: none;
         padding: 0;
