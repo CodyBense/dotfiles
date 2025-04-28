@@ -69,6 +69,7 @@ sudo dnf install ghostty -y
 # Install Flatpak pacakges
 echo "Installing Flatpak packages"
 flatpak install flathub com.spotify.Client
+flatpak run cc.arduino.IDE2
 
 # Fonts
 echo "Installing fonts"
