@@ -70,6 +70,8 @@ sudo dnf install ghostty -y
 echo "Installing Flatpak packages"
 flatpak install flathub com.spotify.Client
 flatpak run cc.arduino.IDE2
+echo "Arduino: adding user to dialout group"
+sudo usermod -a -G dialout $USER
 
 # Fonts
 echo "Installing fonts"
