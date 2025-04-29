@@ -8,46 +8,53 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # Install packages
 echo "Installing packages"
-sudo dnf install bat -y
-sudo dnf install brightnessctl -y
-sudo dnf install cmake -y
-sudo dnf install direnv -y
-sudo dnf install dmenu -y
-sudo dnf install docker-compose -y
-sudo dnf install fastfetch -y
-sudo dnf install firefox -y
-sudo dnf install fzf -y
-sudo dnf install gh -y
-sudo dnf install golang -y
-sudo dnf install hyprland -y
-sudo dnf install hypridle -y
-sudo dnf install hyprlock -y
-sudo dnf install lazygit -y
-sudo dnf install libnotify -y
-sudo dnf install neovim -y
-sudo dnf install network-manager-applet -y
-sudo dnf install pavucontrol -y
-sudo dnf install pipewire-pulseaudio -y
-sudo dnf install ripgrep -y
-sudo dnf install rofi-wayland -y
-sudo dnf install stow -y
-sudo dnf install swayimg -y
-sudo dnf install SwayNotificationCenter -y
-sudo dnf install swww -y
-sudo dnf install tlp -y
-sudo dnf install tmux -y
-sudo dnf install tree -y
-sudo dnf install fontawesome-fonts-all -y
-sudo dnf install unzip -y
-sudo dnf install waybar -y
-sudo dnf install wl-clipboard -y
-sudo dnf install yad -y
-sudo dnf install zoxide -y
-sudo dnf install zsh -y
-sudo dnf install man-pages -y
-sudo dnf install wlogout -y
-sudo dnf install python3 -y
-sudo dnf install material-icons-fonts -y
+packages=(
+    bat
+    brightnessctl
+    cmake
+    direnv
+    dmenu
+    docker-compose
+    fastfetch
+    firefox
+    fzf
+    gh
+    golang
+    hyprland
+    hypridle
+    hyprlock
+    lazygit
+    libnotify
+    neovim
+    network-manager-applet
+    pavucontrol
+    pipewire-pulseaudio
+    ripgrep
+    rofi-wayland
+    stow
+    swayimg
+    SwayNotificationCenter
+    swww
+    tlp
+    tmux
+    tree
+    fontawesome-fonts-all
+    unzip
+    waybar
+    wl-clipboard
+    yad
+    zoxide
+    zsh
+    man-pages
+    wlogout
+    python3
+    material-icons-fonts
+)
+
+for package in "${packages[@]}"
+do
+    sudo dnf install ${package} -y
+done
 
 # Copr packages
 echo "Intsalling copr packages"
@@ -75,7 +82,18 @@ sudo usermod -a -G dialout $USER
 
 # Fonts
 echo "Installing fonts"
-sudo dnf install fontawesome-fonts-all google-noto-sans-cjk-fonts google-noto-color-emoji-fonts google-noto-emoji-fonts jetbrains-mono-fonts -y
+fonts=(
+    fontawesome-fonts-all
+    google-noto-sans-cjk-fonts
+    google-noto-color-emoji-fonts
+    google-noto-emoji-fonts
+    jetbrains-mono-fonts
+)
+
+for font in "${fonts[@]}"
+do
+    sudo dnf install ${font} -y
+done
 
 # Zsh plugins
 echo "Installing zsh plugins"
