@@ -105,32 +105,49 @@ echo "Installing tmux plugins"
 go install github.com/joshmedeski/sesh/v2@latest
 
 # packages to figure out how to install
-# arduino-cli arduino-ide discord lf nerd-fonts wakeonlan ghostty tlpui trashy
+# discord lf wakeonlan tlpui trashy
 
 # Install yay packages
-#yay -S rustmon-git spotify tlpui trashy ttf-material-icons-git
+#yay -S rustmon-git tlpui trashy ttf-material-icons-git
 
 # Make some directories
 echo "Creating directories"
-mkdir -p ~/workspaces/github.com/CodyBense
-mkdir -p ~/workspaces/Projects
+if [ ! -d ~/workspaces/github.com/CodyBense ]; then
+    mkdir -p ~/workspaces/github.com/CodyBense
+fi
+
+if [ ! -d ~/workspaces/Projects ]; then
+    mkdir -p ~/workspaces/Projects
+fi
 
 # Stow commands for dotfiles
-echo "Using stow to create dotflies"
+echo "Using stow to source dotflies"
 cd ~/dotfiles
-stow emoji
-stow git
-stow hypr
-stow kitty
-stow lf
-stow nvim
-stow rofi
-stow scripts
-stow starship
-stow swaync
-stow tmux
-stow wallpapers
-stow waybar
-stow wlogout
-stow zsh
-stow ghostty
+dirs=(
+    emoji
+    git
+    hypr
+    kitty
+    lf
+    nvim
+    rofi
+    scripts
+    starship
+    swaync
+    tmux
+    wallpapers
+    waybar
+    wlogout
+    zsh
+    ghostty
+)
+
+for dir in "${dirs[@]}"
+do
+    stow ${dir}
+done
+
+echo "Chaning shell to zsh"
+chsh -s /bin/zsh $USER
+
+echo "Completed setup"
