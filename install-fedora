@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# choose shell
+echo "Do you want to use zsh or bash"
+read shell
+
 # Install Flatpak
 echo "Enabling flatpak"
 sudo dnf install -y flatpak
@@ -95,10 +99,6 @@ do
     sudo dnf install ${font} -y
 done
 
-# Zsh plugins
-echo "Installing zsh plugins"
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
 
 # Tmux plugin sesh
 echo "Installing tmux plugins"
@@ -127,7 +127,6 @@ dirs=(
     emoji
     git
     hypr
-    kitty
     lf
     nvim
     rofi
@@ -138,7 +137,6 @@ dirs=(
     wallpapers
     waybar
     wlogout
-    zsh
     ghostty
 )
 
@@ -147,7 +145,19 @@ do
     stow ${dir}
 done
 
-echo "Chaning shell to zsh"
-chsh -s /bin/zsh $USER
+# Zsh stuff
+if [ "$shell" = "zsh" ]; then
+    # Zsh plugins
+    echo "Installing zsh plugins"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+    echo "Chaning shell to zsh"
+    chsh -s /bin/zsh $USER
+    stow zsh
+fi
+
+if [ "$shell" = "bash" ]; then
+    stow bash
+fi
 
 echo "Completed setup"
