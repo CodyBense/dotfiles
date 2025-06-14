@@ -22,6 +22,7 @@ alias "2."="cd ../.."
 alias "3."="cd ../../.."
 alias "4."="cd ../../../.."
 alias py="python3"
+alias lg="lazygit"
 
 # flatpak aliases
 alias yazi="flatpak run io.github.sxyazi.yazi"
