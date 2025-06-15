@@ -39,7 +39,7 @@ if [ "$NUM_MONITORS_ACTIVE" -ge 2 ] && hyprctl monitors | cut --delimiter ' ' --
     move_all_workspaces_to_monitor $EXTERNAL_MONITOR
     hyprctl keyword monitor "$INTERNAL_MONITOR, disable"
     # Alternate fix to ensure I start on workspace 1
-    #hyprctl dispatch workspace 1
+    hyprctl dispatch workspace 1
     exit
 fi
 
