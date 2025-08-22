@@ -75,7 +75,7 @@ done
 # Copr packages
 echo "Intsalling copr packages"
 sudo dnf copr enable sneexy/zen-browser -y
-sudo dnf install zen-browswer -y
+sudo dnf install zen-browser -y
 
 sudo dnf copr enable materka/swww -y
 sudo dnf install swww -y
@@ -94,10 +94,10 @@ sudo dnf install zellij
 
 # Install Flatpak pacakges
 echo "Installing Flatpak packages"
-flatpak install flathub com.spotify.Client
-flatpak run cc.arduino.IDE2
-flatpak install flathub md.obsidian.Obsidian
-flatpak run io.github.sxyazi.yazi
+flatpak install flathub com.spotify.Client -y
+flatpak install cc.arduino.IDE2 -y
+flatpak install flathub md.obsidian.Obsidian -y
+flatpak install io.github.sxyazi.yazi -y
 echo "Arduino: adding user to dialout group"
 sudo usermod -a -G dialout $USER
 
