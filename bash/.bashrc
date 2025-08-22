@@ -12,7 +12,7 @@ alias vi="nvim"
 alias iv='nvim $(fzf --preview="bat --color=always {}")'
 alias sv="sudo nvim"
 alias ll="ls -l"
-alias la="ls -a"
+alias la="ls -la"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias mkdir="mkdir -p"
@@ -23,6 +23,7 @@ alias "3."="cd ../../.."
 alias "4."="cd ../../../.."
 alias py="python3"
 alias lg="lazygit"
+alias zj="zellij"
 
 # flatpak aliases
 alias yazi="flatpak run io.github.sxyazi.yazi"
