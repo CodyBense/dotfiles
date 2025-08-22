@@ -15,6 +15,8 @@ echo "Installing packages"
 packages=(
     bat
     brightnessctl
+    btop
+    cifs-utils
     cmake
     direnv
     dmenu
@@ -22,19 +24,30 @@ packages=(
     fastfetch
     firefox
     fzf
+    gcc
     gh
+    git
     golang
     hyprland
     hypridle
     hyprlock
-    lazygit
+    hyprpicker
+    kicad
+    killall
+    kitty
     libnotify
+    man-pages
     neovim
+    NetworkManager
     network-manager-applet
     pavucontrol
     pipewire-pulseaudio
+    power-profiles-daemon
+    psmisc
+    python3
     ripgrep
     rofi-wayland
+    rsync
     stow
     swayimg
     SwayNotificationCenter
@@ -42,17 +55,16 @@ packages=(
     tlp
     tmux
     tree
-    fontawesome-fonts-all
     unzip
+    uv
     waybar
+    wf-recorder
+    wget
     wl-clipboard
+    wlogout
     yad
     zoxide
     zsh
-    man-pages
-    wlogout
-    python3
-    material-icons-fonts
 )
 
 for package in "${packages[@]}"
@@ -77,10 +89,15 @@ sudo dnf install lazygit -y
 sudo dnf copr enable pgdev/ghostty -y
 sudo dnf install ghostty -y
 
+sudo dnf copr enable varlad/zellij 
+sudo dnf install zellij
+
 # Install Flatpak pacakges
 echo "Installing Flatpak packages"
 flatpak install flathub com.spotify.Client
 flatpak run cc.arduino.IDE2
+flatpak install flathub md.obsidian.Obsidian
+flatpak run io.github.sxyazi.yazi
 echo "Arduino: adding user to dialout group"
 sudo usermod -a -G dialout $USER
 
@@ -92,6 +109,7 @@ fonts=(
     google-noto-color-emoji-fonts
     google-noto-emoji-fonts
     jetbrains-mono-fonts
+    material-icons-fonts
 )
 
 for font in "${fonts[@]}"
@@ -118,6 +136,10 @@ fi
 
 if [ ! -d ~/workspaces/Projects ]; then
     mkdir -p ~/workspaces/Projects
+fi
+
+if [ ! -d ~/HOME/Documents/Notes ]; then
+    mkdir -p ~/Documents/Notes
 fi
 
 # Stow commands for dotfiles
