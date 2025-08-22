@@ -66,13 +66,15 @@ button:hover {
 #tray,
 #network,
 #mode,
+#backlight,
+#power-profiles-daemon,
 #scratchpad {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 #clock {
@@ -91,22 +93,25 @@ button:hover {
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @peach;
+    border-bottom: 2px solid @peach;
 }
 
-#idle_inhibitor {
-    margin-right: 12px;
-    color: #7cb342;
-}
-
-#idle_inhibitor.activated {
-    color: @red;
-}
 
 #battery {
     color: @green;
     border-bottom: 2px solid @green;
+}
+
+#backlight {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#custom-notification {
+    font-size: 25px;
+    color: @pink;
+    border-bottom: 2px solid @pink;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -125,3 +130,21 @@ button:hover {
     padding-left: 6px;
     padding-right: 6px;
 }
+
+#power-profiles-daemon {
+    font-size: 25px;
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+    border-bottom: 2px solid @red;
+}
+#power-profiles-daemon.balanced {
+    color: @blue;
+    border-bottom: 2px solid @blue;
+}
+#power-profiles-daemon.power-saver {
+    color: @green;
+    border-bottom: 2px solid @green;
+}
+
