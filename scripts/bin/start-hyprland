@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # initialize wallpaper daemon
-pkillall -q swww
-sleep .5
-swww-daemon &
+# pkillall -q swww
+# sleep .5
+# swww-daemon &
 
 pkillall -q waybar
 sleep .5
