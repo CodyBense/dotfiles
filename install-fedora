@@ -82,8 +82,10 @@ echo "Intsalling copr packages"
 sudo dnf copr enable sneexy/zen-browser -y
 sudo dnf install zen-browser -y
 
-sudo dnf copr enable materka/swww -y
-sudo dnf install swww -y
+sudo dnf copr enable solopasha/hyprland -y
+sudo dnf install hyprpaper -y
+# sudo dnf copr enable materka/swww -y
+# sudo dnf install swww -y
 
 sudo dnf copr enable atim/starship -y
 sudo dnf install starship -y
