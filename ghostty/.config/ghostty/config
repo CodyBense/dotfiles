@@ -4,7 +4,7 @@ confirm-close-surface = false
 
 shell-integration = bash
 
-font-family = JetBrainsMono Nerd Font
+font-family = Terminess Nerd Font Mono
 font-size = 14
 
 keybind = ctrl+g>n=new_tab
