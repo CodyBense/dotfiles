@@ -16,11 +16,13 @@ packages=(
     bat
     brightnessctl
     btop
+    cargo
     cifs-utils
     cmake
     direnv
     dmenu
     docker-compose
+    dolphin
     fastfetch
     firefox
     fzf
@@ -29,6 +31,7 @@ packages=(
     git
     golang
     hyprland
+    hyprpaper
     hypridle
     hyprlock
     hyprpicker
@@ -48,12 +51,14 @@ packages=(
     ripgrep
     rofi-wayland
     rsync
+    rust
     stow
     swayimg
     SwayNotificationCenter
-    swww
+    # swww
     tlp
     tmux
+    trash
     tree
     unzip
     uv
@@ -104,18 +109,46 @@ sudo usermod -a -G dialout $USER
 # Fonts
 echo "Installing fonts"
 fonts=(
+    cascadia-code-fonts
     fontawesome-fonts-all
     google-noto-sans-cjk-fonts
     google-noto-color-emoji-fonts
     google-noto-emoji-fonts
     jetbrains-mono-fonts
     material-icons-fonts
+    terminus-fonts
 )
 
 for font in "${fonts[@]}"
 do
     sudo dnf install ${font} -y
 done
+
+# echo "Installing fonts not in dnf repo"
+# sudo mkdir -p /usr/local/share/fonts/MapleMono
+# sudo mkdir -p /usr/local/share/fonts/Mononoki
+#
+# curl -L -o usr/local/share/fonts/MapleMono/MapleMono-NF-unhinted.zip www.github.com/subframe7536/maple-font/releases/download/v7.6/MapleMono-NF-unhinted.zip
+# curl -L -o usr/local/share/fonts/Mononoki/Mononoki.zip www.github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Mononoki.zip
+#
+# sudo unzip /usr/local/share/fonts/Mononoki/Mononoki.zip
+# sudo unzip /usr/local/share/fonts/MapleMono/MapleMono.zip
+#
+# sudo chown -R root: /usr/local/share/fonts/Mononoki
+# sudo chmod 644 /usr/local/share/fonts/Mononoki/*
+# sudo restorecon -vFr /usr/local/share/fonts/Mononoki
+#
+# sudo chown -R root: /usr/local/share/fonts/MapleMono
+# sudo chmod 644 /usr/local/share/fonts/MapleMono/*
+# sudo restorecon -vFr /usr/local/share/fonts/MapleMono
+#
+# sudo fc-cache -v
+#
+# sudo rm /usr/local/share/fonts/Mononoki/Mononoki.zip
+# sudo rm /usr/local/share/fonts/Mononoki/MapleMono.zip
+
+echo "Install cargo packages"
+cargo install kanata
 
 
 # Tmux plugin sesh
