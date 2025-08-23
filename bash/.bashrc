@@ -3,6 +3,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export MANPAGER='nvim +Man!'
 
 # aliases
