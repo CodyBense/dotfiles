@@ -1,4 +1,4 @@
-kanata
+Packages:
 hyprsunset
 freecad-wayland
 localsend
