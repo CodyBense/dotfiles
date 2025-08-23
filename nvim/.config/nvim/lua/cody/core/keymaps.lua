@@ -3,7 +3,8 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 -- goes to tree explorer
-keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- keymap.set("n", "<leader>pv", vim.cmd.Ex)
+keymap.set("n", "<leader>pv", "<CMD>Oil<CR>")
 
 -- allows moving of selected lines and autoindent
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
