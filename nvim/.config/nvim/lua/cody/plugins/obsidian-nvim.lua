@@ -1,4 +1,4 @@
-return {
+--[[ return {
     "obsidian-nvim/obsidian.nvim",
     version = "*", -- recommended, use latest release instead of latest commit
     ft = "markdown",
@@ -29,4 +29,4 @@ return {
         date_format = "%Y-%m-%d",
         default_tags = { "daily-notes" }
     }
-}
+} ]]
