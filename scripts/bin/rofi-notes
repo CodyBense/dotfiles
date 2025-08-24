@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-choice=$(printf "Pull\nPush" | rofi -dmenu)" || exit 0
+choice="$(printf "pl\nph" | rofi -dmenu)" || exit 0
 
 case $choice in
-    Pull) rsync -vr cody@192.168.1.243:/data/Notes $HOME/Dcouments;;
-    Push) rsync -vr $HOME/Documents/Notes cody@192.168.1.243:/data;;
+    pl) rsync -rtu cody@vault:/data/Obsidian $HOME/Documents && notify-send "Pulling notes is done";;
+    ph) rsync -rtu $HOME/Documents/Obsidian cody@vault:/data && notify-send "Pushing notes is done";;
 esac
 
