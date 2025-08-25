@@ -54,7 +54,7 @@ packages=(
     rust
     stow
     swayimg
-    SwayNotificationCenter
+    # SwayNotificationCenter
     # swww
     tlp
     tmux
@@ -84,8 +84,9 @@ sudo dnf install zen-browser -y
 
 sudo dnf copr enable solopasha/hyprland -y
 sudo dnf install hyprpaper -y
-# sudo dnf copr enable materka/swww -y
-# sudo dnf install swww -y
+
+sudo dnf copr enable materka/swww -y
+sudo dnf install swww -y
 
 sudo dnf copr enable atim/starship -y
 sudo dnf install starship -y
@@ -96,8 +97,11 @@ sudo dnf install lazygit -y
 sudo dnf copr enable pgdev/ghostty -y
 sudo dnf install ghostty -y
 
-sudo dnf copr enable varlad/zellij 
-sudo dnf install zellij
+sudo dnf copr enable varlad/zellij -y
+sudo dnf install zellij -y
+
+sudo dnf copr enable erikreider/SwayNotificationCenter -y
+sudo dnf install SwayNotificationCenter -y
 
 # Install Flatpak pacakges
 echo "Installing Flatpak packages"
