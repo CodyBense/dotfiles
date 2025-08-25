@@ -29,10 +29,11 @@ keymap.set("n", "<leader>y", "\"+y")
 keymap.set("v", "<leader>y", "\"+y")
 keymap.set("n", "<leader>Y", "\"+Y")
 
-
 -- deletes to void register
 keymap.set("n", "<leader>d", "\"_d")
 keymap.set("v", "<leader>d", "\"_d")
 
 -- Q is a bad place?
 keymap.set("n", "Q", "<nop>")
+
+keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
