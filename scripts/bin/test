@@ -1,14 +1,2 @@
 #!/usr/bin/bash
-echo "FIRST LINE"
-
-echo "Choose one or two"
-
-read input
-
-if [ "$input" = "one" ]; then
-    echo You chose $input
-fi
-
-if [ "$input" = "two" ]; then
-    echo You chose $input
-fi
+sudo mkdir -p /usr/local/share/testdir
