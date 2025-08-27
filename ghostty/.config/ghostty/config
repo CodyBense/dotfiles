@@ -4,8 +4,8 @@ confirm-close-surface = false
 
 shell-integration = bash
 
-font-family = Terminus
-font-size = 14
+font-family = Terminess Nerd Font Propo
+font-size = 16
 
 keybind = ctrl+g>n=new_tab
 keybind = ctrl+g>v=new_split:right

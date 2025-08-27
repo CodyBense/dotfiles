@@ -122,7 +122,6 @@ fonts=(
     google-noto-emoji-fonts
     jetbrains-mono-fonts
     material-icons-fonts
-    terminus-fonts
 )
 
 for font in "${fonts[@]}"
@@ -130,28 +129,18 @@ do
     sudo dnf install ${font} -y
 done
 
-# echo "Installing fonts not in dnf repo"
-# sudo mkdir -p /usr/local/share/fonts/MapleMono
-# sudo mkdir -p /usr/local/share/fonts/Mononoki
-#
-# curl -L -o usr/local/share/fonts/MapleMono/MapleMono-NF-unhinted.zip www.github.com/subframe7536/maple-font/releases/download/v7.6/MapleMono-NF-unhinted.zip
-# curl -L -o usr/local/share/fonts/Mononoki/Mononoki.zip www.github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Mononoki.zip
-#
-# sudo unzip /usr/local/share/fonts/Mononoki/Mononoki.zip
-# sudo unzip /usr/local/share/fonts/MapleMono/MapleMono.zip
-#
-# sudo chown -R root: /usr/local/share/fonts/Mononoki
-# sudo chmod 644 /usr/local/share/fonts/Mononoki/*
-# sudo restorecon -vFr /usr/local/share/fonts/Mononoki
-#
-# sudo chown -R root: /usr/local/share/fonts/MapleMono
-# sudo chmod 644 /usr/local/share/fonts/MapleMono/*
-# sudo restorecon -vFr /usr/local/share/fonts/MapleMono
-#
-# sudo fc-cache -v
-#
-# sudo rm /usr/local/share/fonts/Mononoki/Mononoki.zip
-# sudo rm /usr/local/share/fonts/Mononoki/MapleMono.zip
+echo "Installing fonts not in dnf repo"
+
+if [ ! -d ~/.local/share/fonts ]; then
+    mkdir -p ~/.local/share/fonts
+fi
+
+echo "Installing Terminess"
+curl -L -o ~/Downloads https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Terminus.zip
+sudo unzip ~/Downloads/Terminus.zip
+sudo cp ~/Downloads/*.ttf ~/.local/share/fonts
+sudo fc-cache -v
+sudo rm ~/Downloads/*
 
 echo "Install cargo packages"
 cargo install kanata
