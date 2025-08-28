@@ -1,4 +1,4 @@
-@import "mocha.css"; 
+@import "colors.css"; 
 
 * {
     font-family: "JetBrainsMono Nerd Font Mono";
@@ -13,7 +13,7 @@ window#waybar {
     /* color: @overlay0; */
     transition-property: background-color;
     transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
+    border-bottom: 1px solid @bottom-border;
 }
 
 #window {
@@ -30,8 +30,8 @@ button {
 
 button:hover {
     background: inherit;
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @workspaces;
+    border-top: 2px solid @workspaces;
 }
 
 #workspaces button {
@@ -40,14 +40,14 @@ button:hover {
 
 #workspaces button.focused {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @rosewater;
-    border-top: 2px solid @rosewater;
+    color: @workspaces;
+    border-top: 2px solid @workspaces;
 }
 
 #workspaces button.active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
+    color: @workspacs;
+    border-top: 2px solid @workspaces;
 }
 
 #workspaces button.urgent {
@@ -78,40 +78,42 @@ button:hover {
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    color: @clock;
+    border-bottom: 2px solid @clock;
 }
 
 #clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+    /* color: @mauve; */
+    /* border-bottom: 2px solid @mauve; */
+    color: @clock;
+    border-bottom: 2px solid @clock;
 }
 
 #pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @pulseaudio;
+    border-bottom: 2px solid @pulseaudio;
 }
 
 #network {
-    color: @peach;
-    border-bottom: 2px solid @peach;
+    color: @network;
+    border-bottom: 2px solid @network;
 }
 
 
 #battery {
-    color: @green;
-    border-bottom: 2px solid @green;
+    color: @battery;
+    border-bottom: 2px solid @battery;
 }
 
 #backlight {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @backlight;
+    border-bottom: 2px solid @backlight;
 }
 
 #custom-notification {
     font-size: 25px;
-    color: @pink;
-    border-bottom: 2px solid @pink;
+    color: @swaync;
+    border-bottom: 2px solid @swaync;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -124,27 +126,27 @@ button:hover {
     margin-right: 0;
 }
 
-#custom-vpn {
-    color: @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
-}
+/* #custom-vpn { */
+/*     color: @lavender; */
+/*     border-radius: 15px; */
+/*     padding-left: 6px; */
+/*     padding-right: 6px; */
+/* } */
 
 #power-profiles-daemon {
     font-size: 25px;
 }
 
 #power-profiles-daemon.performance {
-    color: @red;
-    border-bottom: 2px solid @red;
+    color: @ppd-p;
+    border-bottom: 2px solid @ppd-p;
 }
 #power-profiles-daemon.balanced {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+    color: @pulseaudio;
+    border-bottom: 2px solid @pulseaudio;
 }
 #power-profiles-daemon.power-saver {
-    color: @green;
-    border-bottom: 2px solid @green;
+    color: @battery;
+    border-bottom: 2px solid @battery;
 }
 
