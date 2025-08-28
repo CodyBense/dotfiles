@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Choose your theme"
+read theme
+echo $theme
+
+ln -s ~/.config/waybar/colors/$theme.css ~/.config/waybar/colors.css
