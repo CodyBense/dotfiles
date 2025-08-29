@@ -1,0 +1,4 @@
+configuration {
+    location: 0;
+    font: "Terminess Nerd Font Propo";
+}
