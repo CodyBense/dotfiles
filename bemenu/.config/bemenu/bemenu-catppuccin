@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+export BEMUNU_OPTS="
+ --ignorecase\
+ --prompt ''\
+ --fn 'Terminess Nerd Font Propo'\
+ --ch '20'\
+ --center\
+ --width-factor '0.25'\
+ --list '14'\
+ --line-height '26'\
+ --fixed-height\
+ --border '2'\
+ --hb 'f38ba8' --hf 'f9e2af'\
+ --nb '' --nf''\
+ --ab '' --af''\
+ --fb '' --ff''\
+"
