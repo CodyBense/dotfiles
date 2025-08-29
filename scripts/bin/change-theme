@@ -4,6 +4,6 @@ echo "Choose your theme"
 read theme
 echo $theme
 
-ln -sf ~/.config/waybar/colors/$theme.css ~/.config/waybar/colors.css
+ln -sf ~/.local/share/colors/$theme/$theme.css ~/.config/waybar/colors.css
 
 bash restart-waybar
