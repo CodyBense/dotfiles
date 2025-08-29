@@ -1,9 +1,25 @@
 #!/usr/bin/env bash
 
-echo -e "Choose your theme\ncatppuccin-mocha\ngruvbox"
-read theme
-echo $theme
+change () { \
+    ln -sf ~/.local/share/colors/$1/$1.css ~/.config/waybar/colors.css
 
-ln -sf ~/.local/share/colors/$theme/$theme.css ~/.config/waybar/colors.css
+    bash restart-waybar
+}
 
-bash restart-waybar
+selected () { \
+    choice=$(echo -e "catppuccin-mocha\ngruvbox" | bemenu -c -l 5 -i -p "Change theme: ")
+    case $choice in 
+        "catppuccin-mocha") change "catppuccin-mocha" ;;
+        "gruvbox") change "gruvbox" ;;
+    esac
+}
+
+selected
+
+# echo -e "Choose your theme\ncatppuccin-mocha\ngruvbox"
+# read theme
+# echo $theme
+#
+# ln -sf ~/.local/share/colors/$theme/$theme.css ~/.config/waybar/colors.css
+#
+# bash restart-waybar
