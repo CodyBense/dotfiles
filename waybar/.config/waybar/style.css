@@ -92,28 +92,38 @@ button:hover {
 #pulseaudio {
     color: @pulseaudio;
     border-bottom: 2px solid @pulseaudio;
+    padding-left: 8;
+    padding-right: 8;
 }
 
 #network {
     color: @network;
     border-bottom: 2px solid @network;
+    padding-left: 8;
+    padding-right: 8;
 }
 
 
 #battery {
     color: @battery;
     border-bottom: 2px solid @battery;
+    padding-left: 8;
+    padding-right: 8;
 }
 
 #backlight {
     color: @backlight;
     border-bottom: 2px solid @backlight;
+    padding-left: 8;
+    padding-right: 8;
 }
 
 #custom-notification {
     font-size: 25px;
     color: @swaync;
     border-bottom: 2px solid @swaync;
+    padding-left: 8;
+    padding-right: 8;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
