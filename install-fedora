@@ -110,9 +110,9 @@ sudo dnf install keyd -y
 # Install Flatpak pacakges
 echo "Installing Flatpak packages"
 flatpak install flathub com.spotify.Client -y
-flatpak install cc.arduino.IDE2 -y
-flatpak install md.obsidian.Obsidian -y
-flatpak install io.github.sxyazi.yazi -y
+flatpak install flathub cc.arduino.IDE2 -y
+flatpak install flathub md.obsidian.Obsidian -y
+flatpak install flathub io.github.sxyazi.yazi -y
 echo "Arduino: adding user to dialout group"
 sudo usermod -a -G dialout $USER
 
