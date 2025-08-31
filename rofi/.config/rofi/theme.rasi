@@ -1,4 +1,4 @@
-@import "catppuccin-mocha"
+@import "colors"
 
 window {
     width: 50%;
@@ -7,9 +7,8 @@ window {
     cursor: "default";
     spacing: 0px;
     border: 2px;
-    //border-color: @border-color;
-    background-color: @overlay1;
-    border-color: @yellow;
+    background-color: @base;
+    border-color: @overlay1;
     border-radius: 20px;
 }
 
@@ -28,8 +27,8 @@ inputbar {
     enabled: true;
     padding: 10px 10px 10px 10px;
     margin: 10px;
-    //background-color: transparent;
-    background-color: @overlay1;
+    background-color: @surface2;
+    border-color: @overlay2;
     border-radius: 25px;
     orientation: horizontal;
     children: [
@@ -54,9 +53,8 @@ entry {
 listbox {
     spacing: 10px;
     padding: 10px;
-    //background-color: transparent;
     border-radius: 25px;
-    background-color: @maroon;
+    background-color: @base;
     orientation: vertical;
     children: [
         message,
@@ -96,9 +94,12 @@ button {
     padding: 12px;
     border-radius: 12px;
     cursor: pointer;
+    background-color: @lavender;
+    text-color: @crust;
 }
 
 button selected {
+    background-color: @blue;
 }
 
 scrollbar {
@@ -124,7 +125,7 @@ element normal.normal {
 }
 
 element normal.urgent {
-        text-color: @pink;
+    text-color: @pink;
 }
 
 element normal.active {
@@ -164,10 +165,10 @@ element-icon {
 
 element-text {
     background-color: transparent;
-    font: "JetBrainsMono Nerd Font Mono 12";
+    font: "Terminess Nerd Font Mono 14";
     /*text-color: inherit;*/
     //text-color: #000000;
-    text-color: @crust;
+    text-color: @subtext0;
     cursor: inherit;
     vertical-align: 0.5;
     horizontal-align: 0.0;
