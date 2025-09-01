@@ -74,7 +74,7 @@ packages=(
 echo "Installing pacman packages"
 for package in "${packages[@]}"
 do
-    sudo pacman -S ${package}
+    sudo pacman -S ${package} --noconfirm
 done
 
 # Install AUR packages
@@ -88,7 +88,7 @@ aurpackages=(
 echo "Installing aur packages"
 for aurpackage in "${aurpackages[@]}"
 do
-    sudo paru -S ${aurpackage}
+    paru -S ${aurpackage}
 done
 
 echo "Installing fonts"
