@@ -1,5 +1,8 @@
 theme = catppuccin-mocha
 
+background-opacity = 0.75
+background-blur = false
+
 confirm-close-surface = false
 
 shell-integration = bash
