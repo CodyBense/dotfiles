@@ -37,6 +37,7 @@ packages=(
     kicad
     kitty
     lazygit
+    libnewt
     libnotify
     man-pages
     neovim
@@ -55,12 +56,12 @@ packages=(
     swayimg
     swaync
     swww
-    tlp
     tmux
     trash-cli
     tree
     unzip
     uv
+    uwsm
     waybar
     wf-recorder
     wget
