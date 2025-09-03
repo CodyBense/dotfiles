@@ -39,6 +39,7 @@ packages=(
     lazygit
     libnewt
     libnotify
+    man-db
     man-pages
     neovim
     networkmanager
