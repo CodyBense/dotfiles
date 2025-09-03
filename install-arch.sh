@@ -44,6 +44,7 @@ packages=(
     neovim
     networkmanager
     obsidian
+    openssh
     pavucontrol
     power-profiles-daemon
     psmisc
@@ -84,6 +85,7 @@ aurpackages=(
     arduino-ide
     kanata
     spotify
+    timeshift-systemd-timer
     wlogout
     zen-browser-bin
 )
