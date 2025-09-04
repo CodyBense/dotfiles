@@ -126,6 +126,7 @@ dirs=(
     ghostty
     git
     hypr
+    niri
     nvim
     rofi
     scripts
