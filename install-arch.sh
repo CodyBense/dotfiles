@@ -43,6 +43,7 @@ packages=(
     man-pages
     neovim
     networkmanager
+    niri
     obsidian
     openssh
     pavucontrol
@@ -68,6 +69,8 @@ packages=(
     wf-recorder
     wget
     wl-clipboard
+    xdg-desktop-portal-gnome
+    xdg-desktop-portal-gtk
     yad
     yazi
     zellij
