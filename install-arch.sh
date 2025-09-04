@@ -1,6 +1,10 @@
 #!/bin/bash
 
-echo "Do you want to use zsh of bash"
+echo ""
+echo "----------------------------------"
+echo "--Do you want to use zsh of bash--"
+echo "----------------------------------"
+echo ""
 read shell
 
 sudo pacman -S --needed base-devel
@@ -10,7 +14,13 @@ cd paru
 makepkg -si
 
 # Install pacman packages
-echo "Installing packages"
+echo ""
+echo "----------------------------------"
+echo "-------Installing packages--------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 packages=(
     bat
     bemenu
@@ -77,7 +87,13 @@ packages=(
     zoxide
     zsh
 )
-echo "Installing pacman packages"
+echo ""
+echo "----------------------------------"
+echo "----Installing pacman packages----"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 for package in "${packages[@]}"
 do
     sudo pacman -S ${package} --noconfirm
@@ -92,13 +108,25 @@ aurpackages=(
     wlogout
     zen-browser-bin
 )
-echo "Installing aur packages"
+echo ""
+echo "----------------------------------"
+echo "-----Installing aur packages------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 for aurpackage in "${aurpackages[@]}"
 do
     paru -S ${aurpackage}
 done
 
-echo "Installing fonts"
+echo ""
+echo "----------------------------------"
+echo "---------Installing fonts---------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 fonts=(
     ttf-cascadia-code-nerd
     awesome-terminal-fonts
@@ -109,7 +137,13 @@ fonts=(
     ttf-terminus-nerd
     )
 
-echo "Creating directories"
+echo ""
+echo "----------------------------------"
+echo "-------Creating directories-------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 if [ ! -d ~/workspaces/github/CodyBense ]; then
     mkdir -p ~/workspaces/github/CodyBense
 fi
@@ -119,7 +153,13 @@ if [ ! -d ~/workspaces/Projects ]; then
 fi
 
 # Stow commands for dotfiles
-echo "Using stow to source dotfiles"
+echo ""
+echo "----------------------------------"
+echo "--Using stow to source dotfiles---"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 cd ~/dotfiles
 dirs=(
     emoji
@@ -145,5 +185,27 @@ do
     stow ${dir}
 done
 
+echo ""
+echo "----------------------------------"
 echo "Arduino: adding user to dialout group"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 sudo usermod -a -G dialout $USER
+
+echo ""
+echo "----------------------------------"
+echo "-------Exporting variables--------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
+echo ""
+echo "----------------------------------"
+echo "------------Niri socket-----------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
+export NIRI_SOCKET=/run/user/$(id -u)/niri*.sock
