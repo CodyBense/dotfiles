@@ -375,10 +375,12 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86MonBrightnessUp { spawn-sh "brightnessctl set +5%"; }
+    XF86MonBrightnessDown { spawn-sh "brightnessctl set 5%-"; }
     Mod+Shift+W { spawn "rofi-wallpaper"; }
     Mod+Shift+M { spawn ""; } // figure out monitor toggling
     Mod+Shift+R { spawn "restart-waybar"; }
-    Mod+N { spawn "swaync-client" "-t" "-sw"; } // get spawn-sh to work
+    Mod+N { spawn-sh "swaync-client -t -sw"; }
     Mod+Shift+N { spawn "rofi-notes"; }
     Mod+Shift+T { spawn "change-theme"; }
     Mod+Q { close-window; }
