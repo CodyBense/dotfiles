@@ -1,0 +1,5 @@
+[Unit]
+Description=Turn off gammastep bluelight filter
+
+[Service]
+ExecStart=killall gammastep && notify-send "Turning off bluelight filter"

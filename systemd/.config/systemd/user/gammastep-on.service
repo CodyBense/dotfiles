@@ -1,0 +1,6 @@
+[Unit]
+Description=Run gammastep for bluelight filter
+
+[Service]
+ExecStart=gammastep -O 4500 && notify-send "Set gamma to 4500"
+
