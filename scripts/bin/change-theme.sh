@@ -5,7 +5,7 @@ change () { \
     ln -sf ~/.local/share/colors/$1/$1.rasi ~/.config/rofi/colors.rasi
     # ln -sf ~/dotfiles/bemenu/.config/bemenu/bemenu-$1 ~/dotfiles/scripts/bin/bemenu-launch
 
-    bash restart-waybar
+    bash restart-waybar.sh
 }
 
 selected () { \
