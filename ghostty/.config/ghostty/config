@@ -25,10 +25,10 @@ keybind = ctrl+b>7=goto_tab:7
 keybind = ctrl+b>8=goto_tab:8
 keybind = ctrl+b>9=goto_tab:9
 
-keybind = ctrl+b>h=goto_split:left
-keybind = ctrl+b>l=goto_split:right
-keybind = ctrl+b>j=goto_split:bottom
-keybind = ctrl+b>k=goto_split:top
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
+keybind = alt+j=goto_split:bottom
+keybind = alt+k=goto_split:top
 
 keybind = ctrl+shift+h=resize_split:left,10
 keybind = ctrl+shift+l=resize_split:right,10
