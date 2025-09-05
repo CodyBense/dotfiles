@@ -1,6 +1,7 @@
 {
     "position": "top",
-    "modules-left": ["hyprland/workspaces"],
+    // "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["niri/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network", "backlight", "battery", "power-profiles-daemon", "custom/notification"],
     "clock": {
