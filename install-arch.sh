@@ -64,6 +64,7 @@ packages=(
     rofi-wayland
     rsync
     rust
+    socat
     starship
     stow
     swayimg
