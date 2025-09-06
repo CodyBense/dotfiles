@@ -3,6 +3,8 @@ theme = catppuccin-mocha
 background-opacity = 0.95
 background-blur = false
 
+cursor-opacity = 0.4
+
 confirm-close-surface = false
 
 shell-integration = bash
