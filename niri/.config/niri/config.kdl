@@ -385,7 +385,7 @@ binds {
     XF86MonBrightnessUp { spawn-sh "brightnessctl set +5%"; }
     XF86MonBrightnessDown { spawn-sh "brightnessctl set 5%-"; }
     Mod+Shift+W { spawn "rofi-wallpaper.sh"; }
-    Mod+Shift+M { spawn ""; } // figure out monitor toggling
+    Mod+Shift+M { spawn "niri-monitor-toggle.sh"; }
     Mod+Shift+R { spawn "restart-waybar.sh"; }
     Mod+N { spawn-sh "swaync-client -t -sw"; }
     Mod+Shift+N { spawn "rofi-notes.sh"; }
