@@ -36,6 +36,7 @@ packages=(
     fzf
     gcc
     ghostty
+    gimp
     git
     github-cli
     go
@@ -76,6 +77,7 @@ packages=(
     unzip
     uv
     uwsm
+    vlc
     waybar
     wf-recorder
     wget
