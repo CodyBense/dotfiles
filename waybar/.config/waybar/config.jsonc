@@ -30,7 +30,7 @@
         "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
         "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     // "on-click": "rofi-wifi"
-    "on-click": "launch-nmtui"
+        "on-click": "launch-nmtui.sh"
     },
     "pulseaudio": {
         "format": "{icon}  {volume}%",
