@@ -17,13 +17,7 @@ if [ -z ${monitors_arr[1]} ]; then
         niri msg action focus-window --id ${focused_window}
         notify-send "Sending workspaces to internal monitor"
     elif [ ${monitors_arr[0]} == ${monitor_1} ]; then
-        # external off and internal on
-        niri msg output ${monitor_2} on
-        sleep 0.5
-        niri msg output ${monitor_1} off
-        niri msg action focus-window --id ${focused_window}
-        notify-send "Sending workspaces to external monitor"
-        echo "laptop monitor"
+        notify-send "No monitor to swtich to"
     fi
 else
     niri msg output ${monitor_1} off
