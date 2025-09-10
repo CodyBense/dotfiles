@@ -28,7 +28,7 @@ alias zj="zellij"
 alias zja="zellij attach"
 
 # flatpak aliases
-alias yazi="flatpak run io.github.sxyazi.yazi"
+# alias yazi="flatpak run io.github.sxyazi.yazi"
 
 # scripts
 export PATH=$PATH:$HOME/bin
