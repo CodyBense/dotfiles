@@ -175,12 +175,9 @@ dirs=(
     scripts
     starship
     swaync
-    tmux
     wallpapers
     waybar
     wlogout
-    zellij
-    zsh
 )
 
 for dir in "${dirs[@]}"
