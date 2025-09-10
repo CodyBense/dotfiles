@@ -1,0 +1,11 @@
+[Unit]
+Description=Kanata keyboard remapper
+Documentation=https://github.com/jtroo/kanata
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kanata --cfg /home/codybense/.config/kanata/kanata.kdb
+Restart=no
+
+[Install]
+WantedBy=multi-user.target
