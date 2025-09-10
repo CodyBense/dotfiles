@@ -175,6 +175,7 @@ dirs=(
     scripts
     starship
     swaync
+    systemd-user
     wallpapers
     waybar
     wlogout
@@ -184,6 +185,34 @@ for dir in "${dirs[@]}"
 do
     stow ${dir}
 done
+
+
+echo ""
+echo "----------------------------------"
+echo "-----Copying systemd services-----"
+echo "----------------------------------"
+echo ""
+sleep 1
+
+cp systemd/kanata.service /usr/lib/systemd/systemd/
+
+echo ""
+echo "----------------------------------"
+echo "---------System Services----------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
+sudo systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
+
+sudo systemctl enable kanata.service
+sudo systemctl start kanata.service
+
+systemctl --user enable gammastep-off.service
+systemctl --user enable gammastep-on.service
+systemctl --user start gammastep-off.service
+systemctl --user start gammastep-on.service
 
 echo ""
 echo "----------------------------------"
