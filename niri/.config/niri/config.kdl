@@ -1,5 +1,6 @@
-// workspace "browser"
-// workspace "terminal"
+workspace "terminal"
+workspace "browser"
+workspace "files"
 
 input {
     keyboard {
@@ -92,6 +93,11 @@ animations {
 
 window-rule {
     open-maximized true
+}
+
+window-rule {
+    match app-id=r#"ghostty"# title="file-manager"
+    open-on-workspace "files"
 }
 
 /-window-rule {
