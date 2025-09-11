@@ -113,7 +113,7 @@ aurpackages=(
 )
 echo ""
 echo "----------------------------------"
-echo "-----Installing aur packages------"
+echo "-----Installing AUR packages------"
 echo "----------------------------------"
 echo ""
 sleep 1
@@ -147,18 +147,42 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
-if [ ! -d ~/workspaces/github/CodyBense ]; then
+if [ ! -d ~/workspaces ]; then
     mkdir -p ~/workspaces/github/CodyBense
+    mkdir -p ~/workspaces/Projects
 fi
 
-if [ ! -d ~/workspaces/Projects ]; then
-    mkdir -p ~/workspaces/Projects
+if [ ! -d ~/Desktop ]; then
+    mkdir ~/Desktop
+fi
+
+if [ ! -d ~/Documents ]; then
+    mkdir ~/Documents
+fi
+
+
+if [ ! -d ~/Downloads ]; then
+    mkdir ~/Downloads
+fi
+
+if [ ! -d ~/Music ]; then
+    mkdir ~/Music
+fi
+
+
+if [ ! -d ~/Public ]; then
+    mkdir ~/Public
+fi
+
+
+if [ ! -d ~/Videos ]; then
+    mkdir ~/Videos
 fi
 
 # Stow commands for dotfiles
 echo ""
 echo "----------------------------------"
-echo "--Using stow to source dotfiles---"
+echo "---------Source dotfiles----------"
 echo "----------------------------------"
 echo ""
 sleep 1
@@ -194,6 +218,13 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
+echo ""
+echo "----------------------------------"
+echo "--------------Kanata--------------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 cp systemd/kanata.service /usr/lib/systemd/systemd/
 
 echo ""
@@ -216,7 +247,7 @@ systemctl --user start gammastep-on.service
 
 echo ""
 echo "----------------------------------"
-echo "Arduino: adding user to dialout group"
+echo "---Adding user to dialout group---"
 echo "----------------------------------"
 echo ""
 sleep 1
