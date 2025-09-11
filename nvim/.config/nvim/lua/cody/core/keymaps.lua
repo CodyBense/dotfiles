@@ -25,14 +25,14 @@ keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", "\"_dP")
 
 -- copys to computer clipboard
-keymap.set({"n","v"}, "<leader>y", "\"+y")
-keymap.set("n", "<leader>Y", "\"+Y")
+keymap.set({ "n", "v" }, "<leader>y", "\"+y")
 
 -- deletes to void register
-keymap.set("n", "<leader>d", "\"_d")
-keymap.set("v", "<leader>d", "\"_d")
+keymap.set({ "n", "v" }, "<leader>d", "\"_d")
 
 -- Q is a bad place?
 keymap.set("n", "Q", "<nop>")
 
 keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
+
+keymap.set("n", "<leader>lf", vim.lsp.buf.format)
