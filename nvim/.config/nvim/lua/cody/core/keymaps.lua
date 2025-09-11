@@ -36,3 +36,6 @@ keymap.set("n", "Q", "<nop>")
 keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 
 keymap.set("n", "<leader>lf", vim.lsp.buf.format)
+
+keymap.set("n", "<leader>f", ":Pick files<CR>")
+keymap.set("n", "<leader>h", ":Pick help<CR>")

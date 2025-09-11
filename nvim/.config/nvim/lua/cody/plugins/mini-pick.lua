@@ -1,4 +1,8 @@
 return {
     "nvim-mini/mini.pick",
-    version = '*'
+    version = false,
+
+    config = function ()
+        require('mini.pick').setup()
+    end,
 }
