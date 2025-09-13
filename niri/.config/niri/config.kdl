@@ -1,6 +1,7 @@
 workspace "terminal"
 workspace "browser"
 workspace "files"
+workspace "notes"
 
 input {
     keyboard {
