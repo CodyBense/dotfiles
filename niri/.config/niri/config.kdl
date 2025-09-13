@@ -99,6 +99,13 @@ window-rule {
 window-rule {
     match app-id=r#"ghostty"# title="file-manager"
     open-on-workspace "files"
+    open-focused true
+}
+
+window-rule {
+    match app-id=r#"obsidian"#
+    open-on-workspace "notes"
+    open-focused true
 }
 
 /-window-rule {
