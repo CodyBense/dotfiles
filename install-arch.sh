@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo ""
 echo "----------------------------------"
@@ -8,15 +8,21 @@ echo ""
 read shell
 
 sudo pacman -S --needed base-devel
-cd ~
 git clone https://aur.archlinux.org/paru.git ~/paru
-cd paru
+cd ~/paru
 makepkg -si
 
 # Install pacman packages
 echo ""
 echo "----------------------------------"
 echo "-------Installing packages--------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
+echo ""
+echo "----------------------------------"
+echo "----Installing pacman packages----"
 echo "----------------------------------"
 echo ""
 sleep 1
@@ -90,19 +96,19 @@ packages=(
     zoxide
     zsh
 )
-echo ""
-echo "----------------------------------"
-echo "----Installing pacman packages----"
-echo "----------------------------------"
-echo ""
-sleep 1
 
 for package in "${packages[@]}"
 do
     sudo pacman -S ${package} --noconfirm
 done
 
-# Install AUR packages
+echo ""
+echo "----------------------------------"
+echo "-----Installing AUR packages------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
 aurpackages=(
     arduino-ide
     kanata
@@ -111,12 +117,7 @@ aurpackages=(
     wlogout
     zen-browser-bin
 )
-echo ""
-echo "----------------------------------"
-echo "-----Installing AUR packages------"
-echo "----------------------------------"
-echo ""
-sleep 1
+
 
 for aurpackage in "${aurpackages[@]}"
 do
@@ -179,7 +180,6 @@ if [ ! -d ~/Videos ]; then
     mkdir ~/Videos
 fi
 
-# Stow commands for dotfiles
 echo ""
 echo "----------------------------------"
 echo "---------Source dotfiles----------"
