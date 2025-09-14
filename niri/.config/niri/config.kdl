@@ -86,6 +86,10 @@ spawn-at-startup "niri-monitor-toggle.sh"
 
 prefer-no-csd
 
+switch-events {
+    lid-close { spawn "niri-lid-shut.sh"; }
+}
+
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
