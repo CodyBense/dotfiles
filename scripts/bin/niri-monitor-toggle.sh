@@ -23,16 +23,22 @@ if [ -z ${monitors_arr[1]} ]; then
         niri msg action focus-window --id ${focused_window}
         notify-send "Sending workspaces to internal monitor"
     elif [ ${monitors_arr[0]} == ${monitor_1} ]; then
-        get_monitors
-        if [ ${monitors_arr[0]} != ${monitor_1} ]; then
-            sleep 0.5
-            niri msg output ${monitor_1} off
-            niri msg action focus-window --id ${focused_window}
-            notify-send "Sending workspaces to external monitor"
-        fi
+        niri msg output ${monitor_2} on
+        sleep 0.5
+        niri msg output ${monitor_1} off
+        niri msg action focus-window --id ${focused_window}
+        notify-send "Sending workspaces to external monitor"
+        # get_monitors
+        # if [ ${monitors_arr[0]} != ${monitor_1} ]; then
+        #     sleep 0.5
+        #     niri msg output ${monitor_1} off
+        #     niri msg action focus-window --id ${focused_window}
+        #     notify-send "Sending workspaces to external monitor"
+        # fi
 
     fi
 else
+    sleep 1
     niri msg output ${monitor_1} off
     niri msg action focus-window --id ${focused_window}
     notify-send "Sending workspaces to external monitor"
