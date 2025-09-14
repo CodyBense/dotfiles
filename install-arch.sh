@@ -231,14 +231,14 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
-echo ""
-echo "----------------------------------"
-echo "--------------Kanata--------------"
-echo "----------------------------------"
-echo ""
-sleep 1
+# echo ""
+# echo "----------------------------------"
+# echo "--------------Kanata--------------"
+# echo "----------------------------------"
+# echo ""
+# sleep 1
 
-sudo cp systemd/kanata.service /usr/lib/systemd/system/
+# sudo cp systemd/kanata.service /usr/lib/systemd/system/
 
 echo ""
 echo "----------------------------------"
