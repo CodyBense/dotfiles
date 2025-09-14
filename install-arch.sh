@@ -33,6 +33,7 @@ packages=(
     docker-compose
     dolphin
     fastfetch
+    flatpak
     firefox
     fzf
     gcc
@@ -124,7 +125,6 @@ echo ""
 sleep 1
 
 aurpackages=(
-    arduino-ide
     kanata
     spotify
     timeshift-systemd-timer
@@ -213,6 +213,7 @@ dirs=(
     ghostty
     git
     hypr
+    kanata
     niri
     nvim
     rofi
@@ -265,6 +266,10 @@ systemctl --user enable gammastep-on.service
 systemctl --user start gammastep-off.service
 systemctl --user start gammastep-on.service
 
+kanata --cfg ~/.config/kanata/kanata.kdb
+
+sudo groupadd uinput
+
 echo ""
 echo "----------------------------------"
 echo "---Adding user to dialout group---"
@@ -273,6 +278,7 @@ echo ""
 sleep 1
 
 sudo usermod -a -G dialout $USER
+sudo usermod -a -G uinput $USER
 
 echo ""
 echo "----------------------------------"
