@@ -145,6 +145,28 @@ done
 
 echo ""
 echo "----------------------------------"
+echo "-------Installing Flatpaks--------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
+flatpaks=(
+    cc.arduino.IDE2
+)
+
+for flatpak in "${flatpaks[@]}"
+do
+    echo ""
+    echo "----------------------------------"
+    echo "-----Installing ${flatpak} package------"
+    echo "----------------------------------"
+    echo ""
+    sleep 1
+    flatpak install flathub "${flatpak}"
+done
+
+echo ""
+echo "----------------------------------"
 echo "---------Installing fonts---------"
 echo "----------------------------------"
 echo ""
