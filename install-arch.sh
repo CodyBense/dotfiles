@@ -24,7 +24,7 @@ sleep 1
 
 packages=(
     bat
-    bemenu
+    bemenu-wayland
     brightnessctl
     btop
     cifs-utils
