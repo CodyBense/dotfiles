@@ -207,6 +207,9 @@ echo ""
 sleep 1
 
 cd ~/dotfiles
+rm ~/.bash_profile
+rm ~/.bashrc
+
 dirs=(
     colors
     emoji
@@ -216,6 +219,7 @@ dirs=(
     kanata
     niri
     nvim
+    profile
     rofi
     scripts
     starship
@@ -266,19 +270,20 @@ systemctl --user enable gammastep-on.service
 systemctl --user start gammastep-off.service
 systemctl --user start gammastep-on.service
 
-kanata --cfg ~/.config/kanata/kanata.kdb
 
 sudo groupadd uinput
 
 echo ""
 echo "----------------------------------"
-echo "---Adding user to dialout group---"
+echo "------Adding user to groups-------"
 echo "----------------------------------"
 echo ""
 sleep 1
 
 sudo usermod -a -G dialout $USER
 sudo usermod -a -G uinput $USER
+
+kanata --cfg ~/.config/kanata/kanata.kdb
 
 echo ""
 echo "----------------------------------"
