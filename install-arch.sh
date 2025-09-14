@@ -225,7 +225,7 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
-cp systemd/kanata.service /usr/lib/systemd/systemd/
+sudo cp systemd/kanata.service /usr/lib/systemd/systemd/
 
 echo ""
 echo "----------------------------------"
