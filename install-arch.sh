@@ -7,11 +7,6 @@ echo "----------------------------------"
 echo ""
 read shell
 
-sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git ~/paru
-cd ~/paru
-makepkg -si
-
 # Install pacman packages
 echo ""
 echo "----------------------------------"
@@ -110,6 +105,19 @@ done
 
 echo ""
 echo "----------------------------------"
+echo "---------Installing Paru----------"
+echo "----------------------------------"
+echo ""
+sleep 1
+
+rustup default stable
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git ~/paru
+cd ~/paru
+makepkg -si
+
+echo ""
+echo "----------------------------------"
 echo "-----Installing AUR packages------"
 echo "----------------------------------"
 echo ""
@@ -123,7 +131,6 @@ aurpackages=(
     wlogout
     zen-browser-bin
 )
-
 
 for aurpackage in "${aurpackages[@]}"
 do
