@@ -30,8 +30,6 @@ handle_suspend () {
             notify-send "Suspending computer"
             sleep 1
             systemctl suspend
-        else
-            notify-send "doing nothing"
         fi
     fi
 }
