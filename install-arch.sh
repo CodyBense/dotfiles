@@ -99,6 +99,12 @@ packages=(
 
 for package in "${packages[@]}"
 do
+    echo ""
+    echo "----------------------------------"
+    echo "-----Installing ${package} package------"
+    echo "----------------------------------"
+    echo ""
+    sleep 1
     sudo pacman -S ${package} --noconfirm
 done
 
@@ -121,6 +127,12 @@ aurpackages=(
 
 for aurpackage in "${aurpackages[@]}"
 do
+    echo ""
+    echo "----------------------------------"
+    echo "-----Installing ${aurpackage} package------"
+    echo "----------------------------------"
+    echo ""
+    sleep 1
     paru -S ${aurpackage}
 done
 
@@ -189,6 +201,7 @@ sleep 1
 
 cd ~/dotfiles
 dirs=(
+    colors
     emoji
     ghostty
     git
@@ -225,7 +238,7 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
-sudo cp systemd/kanata.service /usr/lib/systemd/systemd/
+sudo cp systemd/kanata.service /usr/lib/systemd/system/
 
 echo ""
 echo "----------------------------------"
