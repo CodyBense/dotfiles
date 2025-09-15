@@ -182,6 +182,11 @@ fonts=(
     ttf-terminus-nerd
     )
 
+for font in "${fonts[@]}"
+do
+    sudo pacman -S "${font}" --noconfirm
+done
+
 echo ""
 echo "----------------------------------"
 echo "-------Creating directories-------"
