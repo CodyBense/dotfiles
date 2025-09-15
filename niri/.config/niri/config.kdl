@@ -144,7 +144,8 @@ binds {
     // Applications
     Mod+T { spawn "ghostty"; }
     Mod+E {spawn "launch-file-manager.sh"; }
-    Mod+Space { spawn "rofi-launch.sh"; }
+    // Mod+Space { spawn "rofi-launch.sh"; }
+    Mod+Space { spawn "tofi-drun"; }
     Mod+F { spawn "zen-browser"; }
     Mod+M { spawn "spotify"; }
     Mod+O { spawn "obsidian"; }
