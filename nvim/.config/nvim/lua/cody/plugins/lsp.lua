@@ -69,6 +69,10 @@ return{
 
             require('mason-lspconfig').setup({
                 ensure_installed = {
+                    'rust-analyzer',
+                    'lua_ls',
+                    'jedi_language_server',
+                    'gopls'
                     -- 'tsserver',
                     -- 'eslint',
                     -- 'pyright',
