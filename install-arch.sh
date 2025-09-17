@@ -57,10 +57,10 @@ packages=(
     neovim
     networkmanager
     niri
-    obsidian
     openssh
     pavucontrol
     power-profiles-daemon
+    polkit-kde-agent
     psmisc
     python
     ripgrep
@@ -86,6 +86,7 @@ packages=(
     wl-clipboard
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
+    xwayland-satellite
     yad
     yazi
     zellij
@@ -152,6 +153,8 @@ sleep 1
 
 flatpaks=(
     cc.arduino.IDE2
+    md.obsidian.Obsidian
+    flathub com.github.tchx84.Flatseal
 )
 
 for flatpak in "${flatpaks[@]}"
