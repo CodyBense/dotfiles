@@ -27,7 +27,6 @@ get_monitors () {
 handle_suspend () {
     if [[ ${#monitors_arr[@]} == 1 ]]; then
         if [[ "${monitors_arr[0]}" == "${monitor_1}" ]]; then
-            notify-send "Suspending computer"
             sleep 1
             systemctl suspend
         fi
