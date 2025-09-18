@@ -86,6 +86,7 @@ packages=(
     wl-clipboard
     xdg-desktop-portal-gnome
     xdg-desktop-portal-gtk
+    xdg-desktop-portal-kde
     xwayland-satellite
     yad
     yazi
