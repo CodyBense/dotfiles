@@ -2,6 +2,7 @@ workspace "terminal"
 workspace "browser"
 workspace "files"
 workspace "notes"
+workspace "music"
 
 input {
     keyboard {
@@ -119,6 +120,12 @@ window-rule {
 window-rule {
     match app-id=r#"obsidian"#
     open-on-workspace "notes"
+    open-focused true
+}
+
+window-rule {
+    match app-id=r#"Spotify"#
+    open-on-workspace "music"
     open-focused true
 }
 
