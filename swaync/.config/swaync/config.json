@@ -59,22 +59,6 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": "󰐥",
-          "command": "systemctl poweroff"
-        },
-        {
-          "label": "󰜉",
-          "command": "systemctl reboot"
-        },
-        {
-          "label": "󰌾",
-          "command": "swaylock-corrupter"
-        },
-        {
-          "label": "󰍃",
-          "command": "swaymsg exit"
-        },
-        {
           "label": "󰆴",
           "command": "swaync-client -C"
         },
@@ -96,10 +80,6 @@
           "label": "󰂯",
           "command": "blueman-manager"
         },
-        {
-          "label": "",
-          "command": "kooha"
-        }
       ]
     }
   }
