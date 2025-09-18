@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+choice="$(printf "pl\nph" | tofi)" || exit 0
+
+case $choice in
+    pl) rsync -rtu cody@vault:/data/Obsidian $HOME/Documents && notify-send "Pulling notes is done";;
+    ph) rsync -rtu $HOME/Documents cody@vault:/data/Obsidian && notify-send "Pushing notes is done";;
+esac
+
