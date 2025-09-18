@@ -25,6 +25,10 @@ input {
 
 }
 
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+}
+
 output "eDP-1" {
     mode "1920x1200@59.950"
     scale 1
