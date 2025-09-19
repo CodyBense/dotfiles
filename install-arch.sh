@@ -32,6 +32,7 @@ packages=(
     direnv
     docker-compose
     dolphin
+    dosfstools
     fastfetch
     flatpak
     firefox
@@ -48,6 +49,7 @@ packages=(
     hypridle
     hyprlock
     kicad
+    kio-admin
     kitty
     lazygit
     libnewt
