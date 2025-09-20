@@ -1,9 +1,12 @@
 {
     "position": "top",
     // "modules-left": ["hyprland/workspaces"],
-    "modules-left": ["niri/workspaces"],
+    "modules-left": ["niri/workspaces", "niri/window"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network", "backlight", "battery", "power-profiles-daemon", "custom/notification"],
+    "niri/window": {
+        "format": "{app_id} | {title}"
+    },
     "clock": {
         "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
