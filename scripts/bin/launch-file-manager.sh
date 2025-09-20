@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ghostty --title="file-manager" -e yazi
+ghostty --title="files" -e yazi
