@@ -106,13 +106,13 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"ghostty"# title="file-manager"
+    match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^files$"#
     open-on-workspace "files"
     open-focused true
 }
 
 window-rule {
-    match app-id=r#"dolphin"#
+    match app-id="dolphin"
     open-on-workspace "files"
     open-focused true
 }
