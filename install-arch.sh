@@ -93,6 +93,7 @@ packages=(
     xwayland-satellite
     yad
     yazi
+    zathura
     zellij
     zoxide
     zsh
