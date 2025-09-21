@@ -54,7 +54,6 @@ switch_workspaces () {
     
     case "${len_monitors}" in
         1)
-            notify-send "only internal monitor but it is off"
             niri msg output ${monitor_1} on
             ;;
         2)
