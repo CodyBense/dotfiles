@@ -49,6 +49,8 @@ packages=(
     hypridle
     hyprlock
     kicad
+    kicad-library
+    kicad-library-3d
     kio-admin
     kitty
     lazygit
