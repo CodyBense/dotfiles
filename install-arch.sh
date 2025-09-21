@@ -94,6 +94,7 @@ packages=(
     yad
     yazi
     zathura
+    zathura-pdf-mupdf
     zellij
     zoxide
     zsh
