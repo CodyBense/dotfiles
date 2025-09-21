@@ -21,7 +21,6 @@ switch_mon_1 () {
     sleep 0.5
     niri msg output ${monitor_2} off
     niri msg action focus-window --id ${focused_window}
-    notify-send "Sending workspaces to internal monitor"
 }
 
 switch_mon_2 () {
@@ -29,7 +28,6 @@ switch_mon_2 () {
     sleep 0.5
     niri msg output ${monitor_1} off
     niri msg action focus-window --id ${focused_window}
-    notify-send "Sending workspaces to external monitor"
 }
 
 external_attatched () {
