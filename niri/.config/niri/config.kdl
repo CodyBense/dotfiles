@@ -83,11 +83,7 @@ layout {
     }
 }
 
-spawn-at-startup "waybar"
-spawn-at-startup "nm-applet --indicator"
-spawn-at-startup "swaync"
-spawn-at-startup "swww-daemon"
-spawn-at-startup "niri-monitor-toggle.sh"
+spawn-at-startup "niri-startup.sh"
 
 prefer-no-csd
 
@@ -106,12 +102,8 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"^com\.mitchellh\.ghostty$"# title=r#"^files$"#
-    open-on-workspace "files"
-    open-focused true
-}
-
-window-rule {
+    // match app-id="ghostty" title=r#"^files$"#
+    match title=r#"^files$"#
     match app-id="dolphin"
     open-on-workspace "files"
     open-focused true
