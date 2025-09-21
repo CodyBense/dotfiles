@@ -78,6 +78,7 @@ packages=(
     tmux
     trash-cli
     tree
+    udiskie
     unzip
     uv
     uwsm
