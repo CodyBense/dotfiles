@@ -46,9 +46,8 @@ layout {
     gaps 2
     center-focused-column "never"
     preset-column-widths {
-        proportion 0.33333
         proportion 0.5
-        proportion 0.66667
+        proportion 1.0
     }
 
    default-column-width {}
@@ -94,7 +93,7 @@ switch-events {
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 animations {
-    // off
+    off
 }
 
 window-rule {
@@ -102,7 +101,7 @@ window-rule {
 }
 
 window-rule {
-    // match app-id="ghostty" title=r#"^files$"#
+    match app-id=r#"^com\.mitchellh\.ghostty$" title="^files$"
     match title=r#"^files$"#
     match app-id="dolphin"
     open-on-workspace "files"
