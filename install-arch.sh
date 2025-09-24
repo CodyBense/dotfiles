@@ -58,7 +58,6 @@ packages=(
     libnotify
     man-db
     man-pages
-    neovim
     networkmanager
     niri
     openssh
@@ -136,6 +135,7 @@ sleep 1
 
 aurpackages=(
     kanata
+    neovim-nightly-bin
     spotify
     timeshift-systemd-timer
     wlogout
