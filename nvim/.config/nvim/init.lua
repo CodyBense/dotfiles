@@ -50,6 +50,8 @@ map("n", "<leader>pv", "<CMD>Oil<CR>")
 map("n", "<leader>f", ":Pick files<CR>")
 map("n", "<leader>gf", ":Pick files tool='git'<CR>")
 map("n", "<leader>h", ":Pick help<CR>")
+--Undotree
+map("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
@@ -57,20 +59,20 @@ vim.pack.add({
     { src = 'https://github.com/nvim-mini/mini.pick' },
     { src = 'https://github.com/neovim/nvim-lspconfig' },
     { src = 'https://github.com/mason-org/mason.nvim' },
+    { src = 'https://github.com/mbbill/undotree' },
 })
 
 vim.cmd("colorscheme catppuccin-mocha")
 
 require "oil".setup()
-
 require "mini.pick".setup()
-
 require "mason".setup()
+
 vim.lsp.enable(
     {
         "lua_ls",
         "jedi_language_server",
-        "bash_language_server",
+        "bashls",
         "beautysh",
         "cbfmt",
         "gopls",
