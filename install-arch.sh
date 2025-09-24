@@ -85,6 +85,7 @@ packages=(
     uv
     uwsm
     vlc
+    vlc-plugin-ffmpeg
     waybar
     wf-recorder
     wget
