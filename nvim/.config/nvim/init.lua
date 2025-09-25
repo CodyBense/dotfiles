@@ -80,6 +80,7 @@ require "render-markdown".setup({
     enabled = true,
     render_modes = { 'n', 'c', 't' },
     file_types = { 'markdown' },
+    nested = true,
     restart_highlighter = true,
 })
 require "mini.icons".setup()
