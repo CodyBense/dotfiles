@@ -50,8 +50,10 @@ map("n", "<leader>pv", "<CMD>Oil<CR>")
 map("n", "<leader>f", ":Pick files<CR>")
 map("n", "<leader>gf", ":Pick files tool='git'<CR>")
 map("n", "<leader>h", ":Pick help<CR>")
---Undotree
+-- Undotree
 map("n", "<leader>u", vim.cmd.UndotreeToggle)
+-- Trouble
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle focus=true<cr>")
 
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
@@ -62,9 +64,8 @@ vim.pack.add({
     { src = 'https://github.com/mbbill/undotree' },
     { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
     { src = 'https://github.com/nvim-mini/mini.icons' },
-    { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version="master" },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter',          version = "master" },
     { src = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown' },
-    { src = 'https://github.com/folke/which-key.nvim' },
     { src = 'https://github.com/folke/trouble.nvim' },
 
 })
