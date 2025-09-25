@@ -62,9 +62,10 @@ vim.pack.add({
     { src = 'https://github.com/mbbill/undotree' },
     { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
     { src = 'https://github.com/nvim-mini/mini.icons' },
-    { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version="master" },
     { src = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown' },
     { src = 'https://github.com/folke/which-key.nvim' },
+    { src = 'https://github.com/folke/trouble.nvim' },
 
 })
 
@@ -73,7 +74,13 @@ vim.cmd("colorscheme catppuccin-mocha")
 require "oil".setup()
 require "mini.pick".setup()
 require "mason".setup()
-require "render-markdown".setup()
+require "trouble".setup()
+require "render-markdown".setup({
+    enabled = true,
+    render_modes = { 'n', 'c', 't' },
+    file_types = { 'markdown' },
+    restart_highlighter = true,
+})
 require "mini.icons".setup()
 require "nvim-treesitter".setup({
     ensure_installed = {
