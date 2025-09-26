@@ -1,2 +1,159 @@
-require("cody.core")
-require("cody.lazy") 
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+vim.opt.wrap = false
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.termguicolors = true
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.updatetime = 50
+vim.opt.colorcolumn = "80"
+vim.opt.swapfile = false
+vim.opt.winborder = "rounded"
+vim.g.mapleader = " "
+
+-- Keymaps
+local map = vim.keymap.set
+
+-- allows moving of selected lines and autoindent
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+-- add next line at end and keeps cursor in current position
+map("n", "J", "mzJ`z")
+-- half page jumps and keeys cursor in middle
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+-- keeps cursor in place when searching terms
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+-- copys over and puts replace in void register
+map("x", "<leader>p", "\"_dP")
+-- copys to computer clipboard
+map({ "n", "v" }, "<leader>y", "\"+y")
+map("n", "<leader>Y", "\"+Y")
+-- deletes to void register
+map("n", "<leader>d", "\"_d")
+map("v", "<leader>d", "\"_d")
+-- Q is a bad place?
+map("n", "Q", "<nop>")
+map("n", "<leader><leader>x", "<cmd>source %<CR>")
+-- lsp format
+map("n", "<leader>lf", vim.lsp.buf.format)
+-- Oil
+map("n", "<leader>pv", "<CMD>Oil<CR>")
+-- Mini.pick
+map("n", "<leader>f", ":Pick files<CR>")
+map("n", "<leader>gf", ":Pick files tool='git'<CR>")
+map("n", "<leader>h", ":Pick help<CR>")
+-- Undotree
+map("n", "<leader>u", vim.cmd.UndotreeToggle)
+-- Trouble
+map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle focus=true<cr>")
+
+vim.pack.add({
+    { src = 'https://github.com/catppuccin/nvim' },
+    { src = 'https://github.com/stevearc/oil.nvim' },
+    { src = 'https://github.com/nvim-mini/mini.pick' },
+    { src = 'https://github.com/neovim/nvim-lspconfig' },
+    { src = 'https://github.com/mason-org/mason.nvim' },
+    { src = 'https://github.com/mbbill/undotree' },
+    { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
+    { src = 'https://github.com/nvim-mini/mini.icons' },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter',          version = "master" },
+    { src = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown' },
+    { src = 'https://github.com/folke/trouble.nvim' },
+
+})
+
+vim.cmd("colorscheme catppuccin-mocha")
+
+require "oil".setup()
+require "mini.pick".setup()
+require "trouble".setup()
+require "mini.icons".setup()
+require "mason".setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+require "render-markdown".setup({
+    enabled = true,
+    render_modes = { 'n', 'c', 't' },
+    file_types = { 'markdown' },
+    nested = true,
+    restart_highlighter = true,
+})
+require "nvim-treesitter.configs".setup({
+    ensure_installed = {
+        "json",
+        "javascript",
+        "typescript",
+        "html",
+        "css",
+        "lua",
+        "python",
+        "c",
+        "vimdoc",
+        "vim",
+        "rust",
+        "go",
+        "markdown",
+        "markdown_inline",
+    },
+    sync_install = true,
+    auto_install = true,
+    ignore_install = {},
+    highlight = {
+        enable = true,
+        disable = {},
+        additional_vim_regex_highlighting = false,
+    },
+})
+
+vim.lsp.enable(
+    {
+        "lua_ls",
+        "pylsp",
+        "bashls",
+        "beautysh",
+        "cbfmt",
+        "gopls",
+        "rust_analyzer",
+        "yaml_language_server",
+
+    }
+)
+
+vim.lsp.config("lua_ls", {
+    settings = {
+        Lua = {
+            workspace = {
+                library = vim.api.nvim_get_runtime_file("", true)
+            }
+        }
+    }
+})
+
+vim.api.nvim_create_autocmd('LspAttach', {
+    group = vim.api.nvim_create_augroup('my.lsp', {}),
+    callback = function(args)
+        local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
+        if client:supports_method('textDocument/completion') then
+            -- Optional: trigger autocompletion on EVERY keypress. May be slow!
+            local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
+            client.server_capabilities.completionProvider.triggerCharacters = chars
+            vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+        end
+    end,
+})
+
+vim.cmd [[set completeopt+=menuone,noselect,popup]]
