@@ -135,6 +135,7 @@ sleep 1
 
 aurpackages=(
     kanata
+    localsend
     neovim-nightly-bin
     spotify
     timeshift-systemd-timer
