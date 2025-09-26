@@ -76,6 +76,7 @@ require "oil".setup()
 require "mini.pick".setup()
 require "mason".setup()
 require "trouble".setup()
+require "mini.icons".setup()
 require "render-markdown".setup({
     enabled = true,
     render_modes = { 'n', 'c', 't' },
@@ -83,8 +84,7 @@ require "render-markdown".setup({
     nested = true,
     restart_highlighter = true,
 })
-require "mini.icons".setup()
-require "nvim-treesitter".setup({
+require "nvim-treesitter.configs".setup({
     ensure_installed = {
         "json",
         "javascript",
@@ -98,6 +98,8 @@ require "nvim-treesitter".setup({
         "vim",
         "rust",
         "go",
+        "markdown",
+        "markdown_inline",
     },
     auto_install = true,
     highlight = { enable = true, },
