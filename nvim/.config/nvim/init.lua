@@ -54,6 +54,14 @@ map("n", "<leader>h", ":Pick help<CR>")
 map("n", "<leader>u", vim.cmd.UndotreeToggle)
 -- Trouble
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle focus=true<cr>")
+-- Harpoon
+map("n", "<C-e>", function() local harpoon = require("harpoon") harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+map("n", "<leader>a", function() require("harpoon"):list():add() end)
+map("n", "<C-j>", function() require("harpoon"):list():select(1) end)
+map("n", "<C-k>", function() require("harpoon"):list():select(2) end)
+map("n", "<C-l>", function() require("harpoon"):list():select(3) end)
+map("n", "<C-;>", function() require("harpoon"):list():select(4) end)
+map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
 
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
@@ -64,10 +72,17 @@ vim.pack.add({
     { src = 'https://github.com/mbbill/undotree' },
     { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
     { src = 'https://github.com/nvim-mini/mini.icons' },
-    { src = 'https://github.com/nvim-treesitter/nvim-treesitter',          version = "master" },
+    {
+        src = 'https://github.com/nvim-treesitter/nvim-treesitter',
+        version = "master"
+    },
     { src = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown' },
     { src = 'https://github.com/folke/trouble.nvim' },
-
+    {
+        src = 'https://github.com/ThePrimeagen/harpoon',
+        version = "harpoon2"
+    },
+    { src = 'https://github.com/nvim-lua/plenary.nvim' },
 })
 
 vim.cmd("colorscheme catppuccin-mocha")
@@ -76,6 +91,7 @@ require "oil".setup()
 require "mini.pick".setup()
 require "trouble".setup()
 require "mini.icons".setup()
+require "harpoon".setup()
 require "mason".setup({
     ui = {
         icons = {
@@ -95,10 +111,6 @@ require "render-markdown".setup({
 require "nvim-treesitter.configs".setup({
     ensure_installed = {
         "json",
-        "javascript",
-        "typescript",
-        "html",
-        "css",
         "lua",
         "python",
         "c",
