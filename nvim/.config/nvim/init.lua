@@ -48,7 +48,9 @@ map("n", "<leader>lf", vim.lsp.buf.format)
 map("n", "<leader>pv", "<CMD>Oil<CR>")
 -- Mini.pick
 map("n", "<leader>f", ":Pick files<CR>")
+map("n", "<leader>s", ":Pick grep_live<CR>")
 map("n", "<leader>gf", ":Pick files tool='git'<CR>")
+map("n", "<leader>gs", ":Pick grep_live tool='git'<CR>")
 map("n", "<leader>h", ":Pick help<CR>")
 -- Undotree
 map("n", "<leader>u", vim.cmd.UndotreeToggle)
