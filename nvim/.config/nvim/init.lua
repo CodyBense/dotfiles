@@ -74,9 +74,17 @@ vim.cmd("colorscheme catppuccin-mocha")
 
 require "oil".setup()
 require "mini.pick".setup()
-require "mason".setup()
 require "trouble".setup()
 require "mini.icons".setup()
+require "mason".setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
 require "render-markdown".setup({
     enabled = true,
     render_modes = { 'n', 'c', 't' },
@@ -101,14 +109,20 @@ require "nvim-treesitter.configs".setup({
         "markdown",
         "markdown_inline",
     },
+    sync_install = true,
     auto_install = true,
-    highlight = { enable = true, },
+    ignore_install = {},
+    highlight = {
+        enable = true,
+        disable = {},
+        additional_vim_regex_highlighting = false,
+    },
 })
 
 vim.lsp.enable(
     {
         "lua_ls",
-        "jedi_language_server",
+        "pylsp",
         "bashls",
         "beautysh",
         "cbfmt",
