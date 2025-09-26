@@ -160,3 +160,6 @@ button:hover {
     border-bottom: 2px solid @battery;
 }
 
+#custom-updates {
+	background-color: transparent;
+}

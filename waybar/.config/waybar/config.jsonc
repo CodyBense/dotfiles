@@ -3,7 +3,7 @@
     // "modules-left": ["hyprland/workspaces"],
     "modules-left": ["niri/workspaces", "niri/window"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "backlight", "battery", "power-profiles-daemon", "custom/notification"],
+    "modules-right": ["custom/update", "pulseaudio", "network", "backlight", "battery", "power-profiles-daemon", "custom/notification"],
     "niri/window": {
         "format": "{app_id} | {title}"
     },
@@ -82,5 +82,16 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪"
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
     }
 }

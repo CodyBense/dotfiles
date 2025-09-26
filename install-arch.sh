@@ -139,6 +139,7 @@ aurpackages=(
     neovim-nightly-bin
     spotify
     timeshift-systemd-timer
+    waybar-module-pacman-updates-git
     wlogout
     zen-browser-bin
 )
