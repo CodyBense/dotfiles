@@ -8,6 +8,7 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -15,6 +16,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
+vim.opt.undofile = true
 vim.g.mapleader = " "
 
 -- Keymaps
@@ -53,11 +55,17 @@ map("n", "<leader>gf", ":Pick files tool='git'<CR>")
 map("n", "<leader>gs", ":Pick grep_live tool='git'<CR>")
 map("n", "<leader>h", ":Pick help<CR>")
 -- Undotree
-map("n", "<leader>u", vim.cmd.UndotreeToggle)
+map("n", "<leader>u", function()
+    vim.cmd.UndotreeToggle()
+    vim.cmd.UndotreeFocus()
+end)
 -- Trouble
 map("n", "<leader>xx", "<cmd>Trouble diagnostics toggle focus=true<cr>")
 -- Harpoon
-map("n", "<C-e>", function() local harpoon = require("harpoon") harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+map("n", "<C-e>", function()
+    local harpoon = require("harpoon")
+    harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
 map("n", "<leader>a", function() require("harpoon"):list():add() end)
 map("n", "<C-j>", function() require("harpoon"):list():select(1) end)
 map("n", "<C-k>", function() require("harpoon"):list():select(2) end)
@@ -76,13 +84,13 @@ vim.pack.add({
     { src = 'https://github.com/nvim-mini/mini.icons' },
     {
         src = 'https://github.com/nvim-treesitter/nvim-treesitter',
-        version = "master"
+        version = 'master'
     },
     { src = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown' },
     { src = 'https://github.com/folke/trouble.nvim' },
     {
         src = 'https://github.com/ThePrimeagen/harpoon',
-        version = "harpoon2"
+        version = 'harpoon2'
     },
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
 })
