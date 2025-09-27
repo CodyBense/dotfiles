@@ -43,6 +43,7 @@ map("n", "<leader>d", "\"_d")
 map("v", "<leader>d", "\"_d")
 -- Q is a bad place?
 map("n", "Q", "<nop>")
+-- Source file
 map("n", "<leader><leader>x", "<cmd>source %<CR>")
 -- lsp format
 map("n", "<leader>lf", vim.lsp.buf.format)
@@ -73,6 +74,7 @@ map("n", "<C-l>", function() require("harpoon"):list():select(3) end)
 map("n", "<C-;>", function() require("harpoon"):list():select(4) end)
 map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
 
+-- Run :=vim.pack.del({'plugin'}) to remove plugin
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
     { src = 'https://github.com/stevearc/oil.nvim' },
@@ -92,6 +94,7 @@ vim.pack.add({
         version = 'harpoon2'
     },
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
+    { src = 'https://github.com/rafamadriz/friendly-snippets' },
 })
 
 vim.cmd("colorscheme catppuccin-mocha")
@@ -101,6 +104,8 @@ require "mini.pick".setup()
 require "trouble".setup()
 require "mini.icons".setup()
 require "harpoon".setup()
+require "mini.completion".setup()
+require "mini.snippets".setup()
 require "mason".setup({
     ui = {
         icons = {
