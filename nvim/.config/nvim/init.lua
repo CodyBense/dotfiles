@@ -76,12 +76,11 @@ map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
     { src = 'https://github.com/stevearc/oil.nvim' },
-    { src = 'https://github.com/nvim-mini/mini.pick' },
+    { src = 'https://github.com/nvim-mini/mini.nvim' },
     { src = 'https://github.com/neovim/nvim-lspconfig' },
     { src = 'https://github.com/mason-org/mason.nvim' },
     { src = 'https://github.com/mbbill/undotree' },
     { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
-    { src = 'https://github.com/nvim-mini/mini.icons' },
     {
         src = 'https://github.com/nvim-treesitter/nvim-treesitter',
         version = 'master'
