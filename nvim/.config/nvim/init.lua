@@ -92,6 +92,7 @@ vim.pack.add({
     },
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
     { src = 'https://github.com/rafamadriz/friendly-snippets' },
+    { src = 'https://github.com/NvChad/nvim-colorizer.lua' },
 })
 vim.cmd("colorscheme catppuccin-mocha")
 require "oil".setup()
@@ -101,6 +102,7 @@ require "mini.icons".setup()
 require "harpoon".setup()
 require "mini.completion".setup()
 require "mini.snippets".setup()
+require "colorizer".setup()
 require "mason".setup({
     ui = {
         icons = {
