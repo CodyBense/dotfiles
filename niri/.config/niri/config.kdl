@@ -153,7 +153,7 @@ binds {
     Mod+E { spawn "launch-file-manager.sh"; }
     Mod+SHIFT+E { spawn "dolphin"; }
     // Mod+Space { spawn "rofi-launch.sh"; }
-    Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
+    Mod+Space { spawn-sh "tofi-drun.sh"; }
     Mod+F { spawn "zen-browser"; }
     Mod+M { spawn "spotify"; }
     Mod+O { spawn-sh "flatpak run md.obsidian.Obsidian"; }
