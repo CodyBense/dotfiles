@@ -9,7 +9,7 @@ change () {
 }
 
 selected () { 
-    choice=$(echo -e "catppuccin-mocha\ngruvbox" | tofi)
+    choice=$(echo -e "catppuccin-mocha\ngruvbox" | tofi.sh)
     case $choice in 
         "catppuccin-mocha")
             change "catppuccin-mocha"
