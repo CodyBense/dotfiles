@@ -123,6 +123,8 @@ require "render-markdown".setup({
     restart_highlighter = true,
 })
 require "nvim-treesitter.configs".setup({
+    modules = {
+    },
     ensure_installed = {
         "json",
         "lua",
