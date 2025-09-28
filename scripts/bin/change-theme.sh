@@ -14,10 +14,12 @@ selected () {
         "catppuccin-mocha")
             change "catppuccin-mocha"
             echo "${choice}" > $HOME/.local/share/THEME
+            swww img $HOME/Pictures/wallpapers/catppuccin-mocha/cm-minimalist-black-hole.png
             ;;
         "gruvbox")
             change "gruvbox"
             echo "${choice}" > $HOME/.local/share/THEME
+            swww img $HOME/Pictures/wallpapers/gruvbox/gb-solarsys.png
             ;;
     esac
 }
