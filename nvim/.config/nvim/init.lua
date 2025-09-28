@@ -18,10 +18,8 @@ vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
 vim.opt.undofile = true
 vim.g.mapleader = " "
-
 -- Keymaps
 local map = vim.keymap.set
-
 -- allows moving of selected lines and autoindent
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
@@ -73,7 +71,6 @@ map("n", "<C-k>", function() require("harpoon"):list():select(2) end)
 map("n", "<C-l>", function() require("harpoon"):list():select(3) end)
 map("n", "<C-;>", function() require("harpoon"):list():select(4) end)
 map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
-
 -- Run :=vim.pack.del({'plugin'}) to remove plugin
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
@@ -96,9 +93,7 @@ vim.pack.add({
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
     { src = 'https://github.com/rafamadriz/friendly-snippets' },
 })
-
 vim.cmd("colorscheme catppuccin-mocha")
-
 require "oil".setup()
 require "mini.pick".setup()
 require "trouble".setup()
@@ -146,7 +141,6 @@ require "nvim-treesitter.configs".setup({
         additional_vim_regex_highlighting = false,
     },
 })
-
 vim.lsp.enable(
     {
         "lua_ls",
@@ -160,7 +154,6 @@ vim.lsp.enable(
 
     }
 )
-
 vim.lsp.config("lua_ls", {
     settings = {
         Lua = {
@@ -170,7 +163,6 @@ vim.lsp.config("lua_ls", {
         }
     }
 })
-
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('my.lsp', {}),
     callback = function(args)
@@ -183,5 +175,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
         end
     end,
 })
-
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
