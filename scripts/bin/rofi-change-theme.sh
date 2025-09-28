@@ -11,8 +11,16 @@ change () {
 selected () {
     choice=$(echo -e "catppuccin-mocha\ngruvbox" | rofi -dmenu -p "Change theme: ")
     case $choice in
-        "catppuccin-mocha") change "catppuccin-mocha" ;;
-        "gruvbox") change "gruvbox" ;;
+        "catppuccin-mocha")
+            change "catppuccin-mocha"
+            echo "${choice}" > $HOME/.local/share/THEME
+            ;;
+
+        "gruvbox") 
+            change "gruvbox"
+            echo "${choice}" > $HOME/.local/share/THEME
+            ;;
+
     esac
 }
 

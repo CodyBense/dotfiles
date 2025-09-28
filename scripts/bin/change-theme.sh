@@ -9,19 +9,17 @@ change () {
 }
 
 selected () { 
-    choice=$(echo -e "catppuccin-mocha\ngruvbox" | bemenu -c -l 5 -i -p "Change theme: ")
+    choice=$(echo -e "catppuccin-mocha\ngruvbox" | tofi)
     case $choice in 
-        "catppuccin-mocha") change "catppuccin-mocha" ;;
-        "gruvbox") change "gruvbox" ;;
+        "catppuccin-mocha")
+            change "catppuccin-mocha"
+            echo "${choice}" > $HOME/.local/share/THEME
+            ;;
+        "gruvbox")
+            change "gruvbox"
+            echo "${choice}" > $HOME/.local/share/THEME
+            ;;
     esac
 }
 
 selected
-
-# echo -e "Choose your theme\ncatppuccin-mocha\ngruvbox"
-# read theme
-# echo $theme
-#
-# ln -sf ~/.local/share/colors/$theme/$theme.css ~/.config/waybar/colors.css
-#
-# bash restart-waybar

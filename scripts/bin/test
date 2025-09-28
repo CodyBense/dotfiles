@@ -1,19 +1,22 @@
 #!/usr/bin/bash
 
-change () {
-    ln -sf ~/.local/share/colors/$1/$1.css ~/.config/waybar/colors.css
-    ln -sf ~/.local/share/colors/$1/$1.rasi ~/.config/rofi/colors.rasi
-    # ln -sf ~/dotfiles/bemenu/.config/bemenu/bemenu-$1 ~/dotfiles/scripts/bin/bemenu-launch
+THEME=$(cat $HOME/.local/share/THEME)
+DIR=$HOME/Pictures/wallpapers
 
-    bash restart-waybar.sh
+change_wallpaper () {
+    swww img $DIR/$1
 }
 
-selected () {
-    choice=$(echo -e "catppuccin-mocha\ngruvbox" | rofi -dmenu -p "Change theme: ")
-    case $choice in
-        "catppuccin-mocha") change "catppuccin-mocha" ;;
-        "gruvbox") change "gruvbox" ;;
-    esac
-}
-
-selected
+case "${THEME}" in
+    "catppuccin-mocha")
+        choice=$(printf "$(ls $HOME/Pictures/wallpapers/$THEME)" | tofi) || exit 0
+        change_wallpaper $choice
+        ;;
+    "gruvbox")
+        choice=$(printf "$(ls $HOME/Pictures/wallpapers/$THEME)" | tofi) || exit 0
+        change_wallpaper $choice
+        ;;
+    *)
+        echo "wrong theme"
+        ;;
+esac
