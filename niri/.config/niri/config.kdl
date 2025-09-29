@@ -265,6 +265,15 @@ binds {
     Mod+Ctrl+7 { move-column-to-workspace 7; }
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
+    Mod+Alt+1 { move-column-to-workspace focus=false 1; }
+    Mod+Alt+2 { move-column-to-workspace focus=false 2; }
+    Mod+Alt+3 { move-column-to-workspace focus=false 3; }
+    Mod+Alt+4 { move-column-to-workspace focus=false 4; }
+    Mod+Alt+5 { move-column-to-workspace focus=false 5; }
+    Mod+Alt+6 { move-column-to-workspace focus=false 6; }
+    Mod+Alt+7 { move-column-to-workspace focus=false 7; }
+    Mod+Alt+8 { move-column-to-workspace focus=false 8; }
+    Mod+Alt+9 { move-column-to-workspace focus=false 9; }
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
