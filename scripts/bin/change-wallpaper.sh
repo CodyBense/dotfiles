@@ -9,11 +9,11 @@ change_wallpaper () {
 
 case "${THEME}" in
     "catppuccin-mocha")
-        choice=$(printf "$(ls $HOME/Pictures/wallpapers/$THEME)" | tofi.sh) || exit 0
+        choice=$(printf "$(ls $HOME/Pictures/wallpapers/$THEME)" | rofi -dmenu -p "Wallpaper: ") || exit 0
         change_wallpaper $choice
         ;;
     "gruvbox")
-        choice=$(printf "$(ls $HOME/Pictures/wallpapers/$THEME)" | tofi.sh) || exit 0
+        choice=$(printf "$(ls $HOME/Pictures/wallpapers/$THEME)" | rofi -dmenu -p "Wallpaper: ") || exit 0
         change_wallpaper $choice
         ;;
     *)
