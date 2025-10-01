@@ -101,9 +101,15 @@ window-rule {
 }
 
 window-rule {
-    match app-id="ghostty" title="files"
+    match app-id=r#"\bghostty\b"# title=r#"\bfiles\b"#
+    match app-id=r#"\bdolphin\b"#
     open-on-workspace "files"
-    match app-id="dolphin"
+    open-focused true
+}
+
+window-rule {
+    match title="[[project]]"
+    open-on-workspace "terminal"
     open-focused true
 }
 
@@ -152,8 +158,8 @@ binds {
     Mod+T { spawn "ghostty"; }
     Mod+E { spawn "launch-file-manager.sh"; }
     Mod+SHIFT+E { spawn "dolphin"; }
-    // Mod+Space { spawn "rofi-launch.sh"; }
-    Mod+Space { spawn-sh "tofi-drun.sh"; }
+    // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
+    Mod+Space { spawn-sh "rofi -show drun"; }
     Mod+F { spawn "zen-browser"; }
     Mod+M { spawn "spotify"; }
     Mod+O { spawn-sh "flatpak run md.obsidian.Obsidian"; }
@@ -311,5 +317,5 @@ binds {
     Mod+Shift+Q { quit; }
     Ctrl+Alt+Delete { quit; }
 
-    Mod+Shift+P { power-off-monitors; }
+    Mod+Shift+P { spawn-sh "project-launch.sh"; }
 }
