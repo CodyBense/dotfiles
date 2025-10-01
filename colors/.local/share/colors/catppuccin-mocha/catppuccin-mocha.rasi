@@ -25,4 +25,8 @@
     base: #1e1e2e;
     mantle: #181825;
     crust: #11111b;
+
+    bg-color: #1e1e2e;
+    br-color: #b4befe;
+    t-color: #f5c2e7;
 }

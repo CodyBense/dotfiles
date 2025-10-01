@@ -1,14 +1,4 @@
 * {
-    bottom-border: #504945;
-    workspaces: #d3869b;
-    clock: #fe8019;
-    pulseaudio: #83a598;
-    network: #fe8019;
-    battery: #b8bb26;
-    backlight: #fabd2f;
-    swaync: #d3869b;
-    ppd-p: #fb4934;
-
     bg: #282828;
     red: #cc241d;
     green: #98971a;
@@ -40,4 +30,8 @@
     fg1: #ebdbb2;
     fg0: #fbf1c7;
     orange-light: #fe8019;
+
+    bg-color: #1d2021;
+    br-color: #b16286;
+    t-color: #d65d0e;
 }
