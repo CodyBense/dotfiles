@@ -1,13 +1,13 @@
 configuration {
-    modes: [drun,filebrowser,run];
-    show-icons: true;
-    icon-theme: "Papirus";
+    modes: [drun];
+    // show-icons: true;
+    // icon-theme: "Papirus";
     location: 0;
     font: "Terminess Nerd Font Propo 12";
     drun-display-format: "{icon} {name}";
-    display-drun: " Apps";
-    display-run: " Run";
-    display-filebrowser: " File";
+    display-drun: "Apps: ";
+    display-run: "Run: ";
+    display-filebrowser: "File: ";
 }
-
+//
 @theme "theme"
