@@ -101,6 +101,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="com.project.ghostty"
+    open-on-workspace "terminal"
+    open-focused true
+}
+
+window-rule {
     match app-id=r#"obsidian"#
     open-on-workspace "notes"
     open-focused true
