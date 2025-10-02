@@ -1,8 +1,8 @@
 workspace "terminal"
 workspace "browser"
-workspace "files"
 workspace "notes"
 workspace "music"
+workspace "chat"
 
 input {
     keyboard {
@@ -101,19 +101,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"\bghostty\b"# title=r#"\bfiles\b"#
-    match app-id=r#"\bdolphin\b"#
-    open-on-workspace "files"
-    open-focused true
-}
-
-window-rule {
-    match title="[[project]]"
-    open-on-workspace "terminal"
-    open-focused true
-}
-
-window-rule {
     match app-id=r#"obsidian"#
     open-on-workspace "notes"
     open-focused true
@@ -125,26 +112,9 @@ window-rule {
     open-focused true
 }
 
-/-window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
-
-/-window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-}
-
-/-window-rule {
-    geometry-corner-radius 12
-    clip-to-geometry true
+window-rule {
+    match app-id="viber"
+    open-on-workspace "chat"
 }
 
 hotkey-overlay {
