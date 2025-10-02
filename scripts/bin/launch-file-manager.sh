@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ghostty --title="files" -e yazi
+ghostty --title="yazi" -e yazi
