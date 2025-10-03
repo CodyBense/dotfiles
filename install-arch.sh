@@ -163,7 +163,6 @@ echo ""
 sleep 1
 
 flatpaks=(
-    cc.arduino.IDE2
     md.obsidian.Obsidian
     flathub com.github.tchx84.Flatseal
 )
