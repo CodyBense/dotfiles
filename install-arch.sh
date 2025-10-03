@@ -82,6 +82,7 @@ packages=(
     tree
     udiskie
     unzip
+    usbutils
     uv
     uwsm
     vlc
