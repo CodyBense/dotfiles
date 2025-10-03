@@ -155,6 +155,8 @@ vim.lsp.enable(
         "gopls",
         "rust_analyzer",
         "yaml_language_server",
+        "arduino_language_server",
+        "clangd",
 
     }
 )
