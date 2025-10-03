@@ -5,6 +5,8 @@ change () {
     ln -sf ~/.local/share/colors/$1/$1.rasi ~/.config/rofi/colors.rasi
     ln -sf ~/.config/tofi/config-$1 ~/.config/tofi/config
 
+    echo "$1" > $HOME/.local/share/THEME
+
     bash restart-waybar.sh
 }
 
