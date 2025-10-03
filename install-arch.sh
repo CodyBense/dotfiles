@@ -23,6 +23,7 @@ echo ""
 sleep 1
 
 packages=(
+    arduino-cli
     bat
     bemenu-wayland
     brightnessctl
@@ -134,6 +135,7 @@ echo ""
 sleep 1
 
 aurpackages=(
+    arduino-ide
     kanata
     localsend
     neovim-nightly-bin
