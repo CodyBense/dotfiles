@@ -34,6 +34,7 @@ packages=(
     docker-compose
     dolphin
     dosfstools
+    esptool
     fastfetch
     flatpak
     firefox
