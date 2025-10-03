@@ -1,7 +1,5 @@
 configuration {
     modes: [drun];
-    // show-icons: true;
-    // icon-theme: "Papirus";
     location: 0;
     font: "Terminess Nerd Font Propo 12";
     drun-display-format: "{icon} {name}";
