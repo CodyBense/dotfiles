@@ -45,6 +45,8 @@ map("n", "Q", "<nop>")
 map("n", "<leader><leader>x", "<cmd>source %<CR>")
 -- lsp format
 map("n", "<leader>lf", vim.lsp.buf.format)
+map("n", "<leader>gd", vim.lsp.buf.definition)
+map("n", "<leader>gD", vim.lsp.buf.declaration)
 -- Oil
 map("n", "<leader>pv", "<CMD>Oil<CR>")
 -- Mini.pick
