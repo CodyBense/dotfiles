@@ -138,7 +138,7 @@ binds {
     Mod+Space { spawn-sh "rofi -show drun"; }
     Mod+F { spawn "zen-browser"; }
     Mod+M { spawn "spotify"; }
-    Mod+O { spawn-sh "flatpak run md.obsidian.Obsidian"; }
+    Mod+O { spawn-sh "obsidian"; }
 
     // Utilities
     Mod+Backspace { spawn "wlogout"; }
