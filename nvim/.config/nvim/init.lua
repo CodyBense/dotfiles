@@ -95,6 +95,7 @@ vim.pack.add({
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
     { src = 'https://github.com/rafamadriz/friendly-snippets' },
     { src = 'https://github.com/NvChad/nvim-colorizer.lua' },
+    { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
 })
 vim.cmd("colorscheme catppuccin-mocha")
 require "oil".setup()
@@ -113,6 +114,17 @@ require "mason".setup({
             package_uninstalled = "✗"
         }
     }
+})
+require "mason-lspconfig".setup({
+    ensure_installed = {
+        "arduino_language_server",
+        "clangd",
+        "bashls",
+        "gopls",
+        "lua_ls",
+        "pylsp",
+        "rust_analyzer",
+    },
 })
 require "render-markdown".setup({
     enabled = true,
@@ -157,7 +169,6 @@ vim.lsp.enable(
         "yaml_language_server",
         "arduino_language_server",
         "clangd",
-
     }
 )
 vim.lsp.config("lua_ls", {
@@ -168,6 +179,13 @@ vim.lsp.config("lua_ls", {
             }
         }
     }
+})
+vim.lsp.config("arduino_language_server", {
+    cmd = {
+        'arduino-language-server',
+        '-cli-config',
+        '$HOME/.arduino15/arduino-cli.yaml',
+    },
 })
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('my.lsp', {}),
