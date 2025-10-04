@@ -154,7 +154,7 @@ binds {
     Mod+Shift+M { spawn "niri-monitor-toggle.sh"; }
     Mod+Shift+R { spawn "restart-waybar.sh"; }
     Mod+N { spawn-sh "swaync-client -t -sw"; }
-    Mod+Shift+N { spawn "notes.sh"; }
+    Mod+Shift+N { spawn "notes-launcher.sh"; }
     Mod+Shift+T { spawn-sh "change-theme.sh"; }
     Mod+Q { close-window; }
 
