@@ -36,7 +36,6 @@ packages=(
     dosfstools
     esptool
     fastfetch
-    flatpak
     firefox
     fzf
     gcc
@@ -62,6 +61,7 @@ packages=(
     man-pages
     networkmanager
     niri
+    obsidian
     openssh
     pavucontrol
     power-profiles-daemon
@@ -157,29 +157,6 @@ do
     echo ""
     sleep 1
     paru -S ${aurpackage}
-done
-
-echo ""
-echo "----------------------------------"
-echo "-------Installing Flatpaks--------"
-echo "----------------------------------"
-echo ""
-sleep 1
-
-flatpaks=(
-    md.obsidian.Obsidian
-    flathub com.github.tchx84.Flatseal
-)
-
-for flatpak in "${flatpaks[@]}"
-do
-    echo ""
-    echo "----------------------------------"
-    echo "-----Installing ${flatpak} package------"
-    echo "----------------------------------"
-    echo ""
-    sleep 1
-    flatpak install flathub "${flatpak}"
 done
 
 echo ""
