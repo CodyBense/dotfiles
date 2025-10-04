@@ -324,6 +324,7 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
+sudo groupadd dialout
 sudo usermod -a -G dialout $USER
 sudo usermod -a -G uinput $USER
 
