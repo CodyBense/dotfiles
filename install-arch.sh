@@ -141,6 +141,7 @@ aurpackages=(
     kanata
     localsend
     neovim-nightly-bin
+    orca-slicer-git
     spotify
     timeshift-systemd-timer
     waybar-module-pacman-updates-git
