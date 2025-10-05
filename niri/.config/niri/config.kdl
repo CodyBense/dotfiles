@@ -1,5 +1,6 @@
 workspace "terminal"
 workspace "browser"
+workspace "files"
 workspace "notes"
 workspace "music"
 workspace "chat"
@@ -107,6 +108,13 @@ window-rule {
 }
 
 window-rule {
+    match app-id="com.files.ghostty"
+    match app-id="dolphin"
+    open-on-workspace "files"
+    open-focused true
+}
+
+window-rule {
     match app-id=r#"obsidian"#
     open-on-workspace "notes"
     open-focused true
@@ -156,6 +164,7 @@ binds {
     Mod+N { spawn-sh "swaync-client -t -sw"; }
     Mod+Shift+N { spawn "notes-launcher.sh"; }
     Mod+Shift+T { spawn-sh "change-theme.sh"; }
+    Mod+B { spawn-sh "bookmarks.sh"; }
     Mod+Q { close-window; }
 
     // Window management
