@@ -1,6 +1,0 @@
-Packages:
-hyprsunset
-freecad-wayland
-localsend
-matugen
-qmk
