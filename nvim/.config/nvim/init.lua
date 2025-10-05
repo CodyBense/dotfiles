@@ -1,3 +1,4 @@
+-- Options
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
@@ -18,6 +19,7 @@ vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
 vim.opt.undofile = true
 vim.g.mapleader = " "
+
 -- Keymaps
 local map = vim.keymap.set
 -- allows moving of selected lines and autoindent
@@ -73,6 +75,7 @@ map("n", "<C-k>", function() require("harpoon"):list():select(2) end)
 map("n", "<C-l>", function() require("harpoon"):list():select(3) end)
 map("n", "<C-;>", function() require("harpoon"):list():select(4) end)
 map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
+
 -- Run :=vim.pack.del({'plugin'}) to remove plugin
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
@@ -97,6 +100,8 @@ vim.pack.add({
     { src = 'https://github.com/NvChad/nvim-colorizer.lua' },
     { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
 })
+
+-- Plygin settings
 vim.cmd("colorscheme catppuccin-mocha")
 require "oil".setup()
 require "mini.pick".setup()
