@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-ghostty --title="yazi" -e yazi
+ghostty --class="com.files.ghostty" --title="yazi" -e yazi
