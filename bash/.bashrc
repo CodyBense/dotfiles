@@ -18,7 +18,6 @@ alias la="ls -la"
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias mkdir="mkdir -p"
-alias cat="bat"
 alias ib='bat $(fzf --preview="bat --color=always {}")'
 alias ".."="cd .."
 alias "2."="cd ../.."
