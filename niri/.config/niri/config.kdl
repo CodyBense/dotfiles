@@ -31,6 +31,9 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
+xwayland-satellite {
+}
+
 output "eDP-1" {
     mode "1920x1200@59.950"
     scale 1
@@ -115,6 +118,7 @@ window-rule {
 }
 
 window-rule {
+    match app-id="com.notes.ghostty"
     match app-id=r#"obsidian"#
     open-on-workspace "notes"
     open-focused true
