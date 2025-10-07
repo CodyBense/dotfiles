@@ -60,6 +60,7 @@ packages=(
     man-db
     man-pages
     networkmanager
+    network-manager-applet
     niri
     obsidian
     openssh
