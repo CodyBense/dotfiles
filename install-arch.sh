@@ -250,6 +250,7 @@ dirs=(
     wallpapers
     waybar
     wlogout
+    yazi
 )
 
 for dir in "${dirs[@]}"
@@ -264,15 +265,6 @@ echo "-----Copying systemd services-----"
 echo "----------------------------------"
 echo ""
 sleep 1
-
-# echo ""
-# echo "----------------------------------"
-# echo "--------------Kanata--------------"
-# echo "----------------------------------"
-# echo ""
-# sleep 1
-
-# sudo cp systemd/kanata.service /usr/lib/systemd/system/
 
 echo ""
 echo "----------------------------------"
