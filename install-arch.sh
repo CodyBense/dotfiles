@@ -68,6 +68,7 @@ packages=(
     polkit-kde-agent
     psmisc
     python
+    resvg
     ripgrep
     rofi-wayland
     rsync
@@ -103,6 +104,7 @@ packages=(
     zellij
     zoxide
     zsh
+    7zip
 )
 
 for package in "${packages[@]}"
