@@ -194,7 +194,7 @@ sleep 1
 
 if [ ! -d ~/workspaces ]; then
     mkdir -p ~/workspaces/github/CodyBense
-    mkdir -p ~/workspaces/Projects
+    mkdir -p ~/workspaces/projects
 fi
 
 if [ ! -d ~/Desktop ]; then
