@@ -219,6 +219,9 @@ if [ ! -d ~/Public ]; then
     mkdir ~/Public
 fi
 
+if [ ! -d ~/Pictures ]; then
+    mkdir ~/Pictures
+fi
 
 if [ ! -d ~/Videos ]; then
     mkdir ~/Videos
