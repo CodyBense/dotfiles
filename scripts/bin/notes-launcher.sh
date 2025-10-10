@@ -22,7 +22,7 @@ case $choice in
     "open")
         note_dir=$(printf "$(command ls -t1 $DIR)" | rofi -dmenu -p "Note dir: ") || exit 0
         echo $note_dir
-        ghostty --class="com.notes.ghostty" --title="notes" --working-directory=$DIR/$note_dir &
+        ghostty --class="com.notes.ghostty" --title="notes" --working-directory=$DIR/$note_dir -e nvim -- .&
         obsidian obsidian://open?vault="$note_dir" &
         sleep 2
         niri msg action focus-workspace notes
