@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-echo ""
-echo "----------------------------------"
-echo "--Do you want to use zsh of bash--"
-echo "----------------------------------"
-echo ""
-read shell
-
 # Install pacman packages
 echo ""
 echo "----------------------------------"
@@ -128,8 +121,8 @@ sleep 1
 
 rustup default stable
 sudo pacman -S --needed base-devel
-git clone https://aur.archlinux.org/paru.git ~/paru
-cd ~/paru
+git clone https://aur.archlinux.org/paru.git ${HOME}/paru
+cd ${HOME}/paru
 makepkg -si
 
 echo ""
@@ -192,39 +185,39 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
-if [ ! -d ~/workspaces ]; then
-    mkdir -p ~/workspaces/github/CodyBense
-    mkdir -p ~/workspaces/projects
+if [ ! -d ${HOME}/workspaces ]; then
+    mkdir -p ${HOME}/workspaces/github/CodyBense
+    mkdir -p ${HOME}/workspaces/projects
 fi
 
-if [ ! -d ~/Desktop ]; then
-    mkdir ~/Desktop
+if [ ! -d ${HOME}/Desktop ]; then
+    mkdir ${HOME}/Desktop
 fi
 
-if [ ! -d ~/Documents ]; then
-    mkdir ~/Documents
-fi
-
-
-if [ ! -d ~/Downloads ]; then
-    mkdir ~/Downloads
-fi
-
-if [ ! -d ~/Music ]; then
-    mkdir ~/Music
+if [ ! -d ${HOME}/Documents ]; then
+    mkdir ${HOME}/Documents
 fi
 
 
-if [ ! -d ~/Public ]; then
-    mkdir ~/Public
+if [ ! -d ${HOME}/Downloads ]; then
+    mkdir ${HOME}/Downloads
 fi
 
-if [ ! -d ~/Pictures ]; then
-    mkdir ~/Pictures
+if [ ! -d ${HOME}/Music ]; then
+    mkdir ${HOME}/Music
 fi
 
-if [ ! -d ~/Videos ]; then
-    mkdir ~/Videos
+
+if [ ! -d ${HOME}/Public ]; then
+    mkdir ${HOME}/Public
+fi
+
+if [ ! -d ${HOME}/Pictures ]; then
+    mkdir ${HOME}/Pictures
+fi
+
+if [ ! -d ${HOME}/Videos ]; then
+    mkdir ${HOME}/Videos
 fi
 
 echo ""
@@ -234,11 +227,10 @@ echo "----------------------------------"
 echo ""
 sleep 1
 
-cd ~/dotfiles
-rm ~/.bash_profile
-rm ~/.bashrc
+cd ${HOME}/dotfiles
 
 dirs=(
+    bash
     colors
     emoji
     ghostty
@@ -263,7 +255,6 @@ for dir in "${dirs[@]}"
 do
     stow ${dir}
 done
-
 
 echo ""
 echo "----------------------------------"
@@ -304,7 +295,7 @@ sudo groupadd dialout
 sudo usermod -a -G dialout $USER
 sudo usermod -a -G uinput $USER
 
-kanata --cfg ~/.config/kanata/kanata.kdb
+kanata --cfg ${HOME}/.config/kanata/kanata.kdb
 
 echo ""
 echo "----------------------------------"
