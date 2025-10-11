@@ -65,6 +65,7 @@ packages=(
     resvg
     ripgrep
     rofi-wayland
+    rofi-emoji
     rsync
     rust
     socat
