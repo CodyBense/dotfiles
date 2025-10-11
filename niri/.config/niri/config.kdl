@@ -125,6 +125,7 @@ window-rule {
 }
 
 window-rule {
+    match app-id="com.spotify.ghostty"
     match app-id=r#"Spotify"#
     open-on-workspace "music"
     open-focused true
@@ -149,7 +150,8 @@ binds {
     // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
     Mod+Space { spawn-sh "rofi -show drun"; }
     Mod+F { spawn "zen-browser"; }
-    Mod+M { spawn "spotify"; }
+    // Mod+M { spawn "spotify"; }
+    Mod+M { spawn-sh "spotify-player.sh"; }
     Mod+O { spawn-sh "obsidian"; }
 
     // Utilities
