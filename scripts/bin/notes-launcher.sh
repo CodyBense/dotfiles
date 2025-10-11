@@ -26,7 +26,7 @@ case $choice in
         obsidian obsidian://open?vault="$note_dir" &
         sleep 2
         niri msg action focus-workspace notes
-        niri msg action focus-column 0
+        niri msg action focus-column-first
         ;;
     "new")
         new_notes
