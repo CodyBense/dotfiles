@@ -19,6 +19,7 @@ packages=(
     arduino-cli
     bat
     bemenu-wayland
+    bluetui
     brightnessctl
     btop
     cifs-utils
