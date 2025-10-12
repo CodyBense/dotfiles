@@ -279,6 +279,7 @@ binds {
     Mod+Comma  { consume-window-into-column; }
 
     Mod+R { switch-preset-column-width; }
+    Mod+S { spawn-sh "resize-two.sh"; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+Ctrl+F { maximize-column; }
     Mod+Shift+F { expand-column-to-available-width; }
