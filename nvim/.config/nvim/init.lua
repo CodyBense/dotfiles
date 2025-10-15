@@ -32,11 +32,14 @@ map("n", "<C-u>", "<C-u>zz")
 -- keeps cursor in place when searching terms
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
--- copys over and puts replace in void register
-map("x", "<leader>p", "\"_dP")
 -- copys to computer clipboard
 map({ "n", "v" }, "<leader>y", "\"+y")
 map("n", "<leader>Y", "\"+Y")
+-- pastes from computer clipboard
+map({ "n", "v" }, "<leader>p", "\"+p")
+map("n", "<leader>P", "\"+P")
+-- copys over and puts replace in void register
+map("x", "<leader>P", "\"_dP")
 -- deletes to void register
 map("n", "<leader>d", "\"_d")
 map("v", "<leader>d", "\"_d")
