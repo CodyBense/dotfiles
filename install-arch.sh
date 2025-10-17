@@ -16,81 +16,121 @@ echo ""
 sleep 1
 
 packages=(
-    arduino-cli
+    7zip
+    awesome-terminal-fonts
+    base
+    base-devel
     bat
     bemenu-wayland
     bluetui
+    bluez
+    bluez-utils
     brightnessctl
     btop
+    btrfs-progs
+    chromium
     cifs-utils
     cmake
+    cronie
+    cyme
     direnv
     docker-compose
     dolphin
     dosfstools
+    efibootmgr
     esptool
     fastfetch
     firefox
+    flatpak
+    freecad
     fzf
-    gcc
     ghostty
     gimp
     git
     github-cli
+    github-desktop
     go
+    gst-plugin-pipewire
+    hypridle
     hyprland
+    hyprlock
     hyprpaper
     hyprpicker
-    hypridle
-    hyprlock
+    imv
+    intel-ucode
+    jq
+    jqp-bin
+    kanata
     kicad
     kicad-library
     kicad-library-3d
     kio-admin
     kitty
     lazygit
-    libnewt
-    libnotify
+    libpulse
+    linux
+    linux-firmware
+    localsend
     man-db
     man-pages
-    networkmanager
+    neovim-nightly-bin
     network-manager-applet
+    networkmanager
     niri
+    nodejs-material-design-icons
+    noto-fonts-cjk
+    noto-fonts-emoji
     obsidian
     openssh
+    orca-slicer-git
+    paru
+    paru-debug
     pavucontrol
-    power-profiles-daemon
+    pipewire
+    pipewire-alsa
+    pipewire-jack
+    pipewire-pulse
     polkit-kde-agent
-    psmisc
-    python
+    power-profiles-daemon
     resvg
-    ripgrep
-    rofi-wayland
+    rofi
     rofi-emoji
-    rsync
-    rust
+    rust-analyzer
     socat
+    sof-firmware
+    spotify
+    spotify-player
     starship
     stow
+    stress
     swayimg
     swaync
     swww
+    timeshift
+    timeshift-systemd-timer
     tmux
+    tofi
     trash-cli
     tree
+    ttf-cascadia-code-nerd
+    ttf-jetbrains-mono-nerd
+    ttf-terminus-nerd
     udiskie
     unzip
     usbutils
     uv
     uwsm
+    viber
     vlc
     vlc-plugin-ffmpeg
     waybar
+    waybar-module-pacman-updates-git
     wf-recorder
     wget
+    wireplumber
     wl-clipboard
+    wlogout
     xdg-desktop-portal-gnome
-    xdg-desktop-portal-gtk
     xdg-desktop-portal-kde
     xwayland-satellite
     yad
@@ -98,9 +138,9 @@ packages=(
     zathura
     zathura-pdf-mupdf
     zellij
+    zen-browser-bin
     zoxide
-    zsh
-    7zip
+    zram-generator
 )
 
 for package in "${packages[@]}"
