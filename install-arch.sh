@@ -28,6 +28,7 @@ packages=(
     brightnessctl
     btop
     btrfs-progs
+    cargo
     chromium
     cifs-utils
     cmake
@@ -64,6 +65,7 @@ packages=(
     kicad
     kicad-library
     kicad-library-3d
+    killall
     kio-admin
     kitty
     lazygit
