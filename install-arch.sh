@@ -289,6 +289,7 @@ dirs=(
     starship
     swaync
     systemd-user
+    tmux
     wallpapers
     waybar
     wlogout
