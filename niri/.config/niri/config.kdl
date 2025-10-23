@@ -170,6 +170,7 @@ binds {
     Mod+Shift+N { spawn "notes-launcher.sh"; }
     Mod+Shift+T { spawn-sh "change-theme.sh"; }
     Mod+B { spawn-sh "bookmarks.sh"; }
+    Mod+Shift+S { spawn-sh "ssh-connections.sh"; }
     Mod+Q { close-window; }
 
     // Window management
