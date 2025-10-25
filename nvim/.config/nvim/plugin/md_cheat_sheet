@@ -6,9 +6,19 @@ EMPHASIS
 *text*,     italic
 ***text***, bold & italic
 ~~text~~,   strikethrough
->,          blockquote
+
+BLOCKQUOTES
+
+single line
+> text here,
+
+multiline
 >
->>,         nested blockquote
+>,
+
+nested blockquote
+>
+>>,
 
 LISTS
 1.
