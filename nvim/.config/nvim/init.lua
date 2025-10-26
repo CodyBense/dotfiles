@@ -78,6 +78,41 @@ map("n", "<C-k>", function() require("harpoon"):list():select(3) end)
 map("n", "<C-l>", function() require("harpoon"):list():select(4) end)
 map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
 
+map("n", "<leader>pc", function ()
+    local active_plugins = {}
+    local unused_plugins = {}
+
+    for _, plugin in ipairs(vim.pack.get()) do
+        active_plugins[plugin.spec.name] = plugin.active
+    end
+
+    for _, plugin in ipairs(vim.pack.get()) do
+        if not active_plugins[plugin.spec.name] then
+            table.insert(unused_plugins, plugin.spec.name)
+        end
+    end
+
+    if #unused_plugins == 0 then
+        print("No unused plugins.")
+        return
+    end
+
+    local choice = vim.fn.confirm("Remove unused plugins?", "&Yes\n&No", 2)
+    if choice == 1 then
+        vim.pack.del(unused_plugins)
+    end
+end)
+
+map("n", "<leader>pu", function ()
+    local active_plugins = {}
+    for _, plugin in ipairs(vim.pack.get()) do
+        -- active_plugins[plugin.spec.name] = plugin.active
+        table.insert(active_plugins, plugin.spec.name)
+    end
+
+    vim.pack.update(active_plugins)
+end)
+
 -- Run :=vim.pack.del({'plugin'}) to remove plugin
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
