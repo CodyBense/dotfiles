@@ -78,7 +78,7 @@ map("n", "<C-k>", function() require("harpoon"):list():select(3) end)
 map("n", "<C-l>", function() require("harpoon"):list():select(4) end)
 map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
 
-map("n", "<leader>pc", function ()
+map("n", "<leader>pc", function()
     local active_plugins = {}
     local unused_plugins = {}
 
@@ -103,7 +103,7 @@ map("n", "<leader>pc", function ()
     end
 end)
 
-map("n", "<leader>pu", function ()
+map("n", "<leader>pu", function()
     local active_plugins = {}
     for _, plugin in ipairs(vim.pack.get()) do
         -- active_plugins[plugin.spec.name] = plugin.active
@@ -118,37 +118,34 @@ vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
     { src = 'https://github.com/stevearc/oil.nvim' },
     { src = 'https://github.com/nvim-mini/mini.nvim' },
-    { src = 'https://github.com/neovim/nvim-lspconfig' },
-    { src = 'https://github.com/mason-org/mason.nvim' },
     { src = 'https://github.com/mbbill/undotree' },
     { src = 'https://github.com/MeanderingProgrammer/render-markdown.nvim' },
-    {
-        src = 'https://github.com/nvim-treesitter/nvim-treesitter',
-        version = 'master'
-    },
+    { src = 'https://github.com/nvim-treesitter/nvim-treesitter',          version = 'master' },
     { src = 'https://github.com/tree-sitter-grammars/tree-sitter-markdown' },
     { src = 'https://github.com/folke/trouble.nvim' },
-    {
-        src = 'https://github.com/ThePrimeagen/harpoon',
-        version = 'harpoon2'
-    },
+    { src = 'https://github.com/ThePrimeagen/harpoon',                     version = 'harpoon2' },
     { src = 'https://github.com/nvim-lua/plenary.nvim' },
-    { src = 'https://github.com/rafamadriz/friendly-snippets' },
     { src = 'https://github.com/NvChad/nvim-colorizer.lua' },
+    { src = 'https://github.com/neovim/nvim-lspconfig' },
+    { src = 'https://github.com/mason-org/mason.nvim' },
     { src = 'https://github.com/mason-org/mason-lspconfig.nvim' },
+    { src = 'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim' },
+    { src = 'https://github.com/L3MON4D3/LuaSnip' },
+    { src = 'https://github.com/rafamadriz/friendly-snippets' },
+    { src = 'https://github.com/Saghen/blink.cmp',                         version = 'v1.7.0' },
 })
 
 -- Plygin settings
 vim.cmd("colorscheme catppuccin-mocha")
-require "oil".setup()
-require "mini.pick".setup()
-require "trouble".setup()
-require "mini.icons".setup()
-require "harpoon".setup()
-require "mini.completion".setup()
-require "mini.snippets".setup()
-require "colorizer".setup()
-require "mason".setup({
+require("oil").setup()
+require("mini.pick").setup()
+require("trouble").setup()
+require("mini.icons").setup()
+require("harpoon").setup()
+require("mini.completion").setup()
+require("mini.snippets").setup()
+require("colorizer").setup()
+require("mason").setup({
     ui = {
         icons = {
             package_installed = "✓",
@@ -157,7 +154,8 @@ require "mason".setup({
         }
     }
 })
-require "mason-lspconfig".setup({
+require("mason-lspconfig").setup()
+require("mason-tool-installer").setup({
     ensure_installed = {
         "arduino_language_server",
         "clangd",
@@ -169,14 +167,14 @@ require "mason-lspconfig".setup({
         "gopls"
     },
 })
-require "render-markdown".setup({
+require("render-markdown").setup({
     enabled = true,
     render_modes = { 'n', 'c', 't' },
     file_types = { 'markdown' },
     nested = true,
     restart_highlighter = true,
 })
-require "nvim-treesitter.configs".setup({
+require("nvim-treesitter.configs").setup({
     modules = {
     },
     ensure_installed = {
@@ -200,26 +198,39 @@ require "nvim-treesitter.configs".setup({
         additional_vim_regex_highlighting = false,
     },
 })
-vim.lsp.enable(
-    {
-        "lua_ls",
-        "pylsp",
-        "bashls",
-        "beautysh",
-        "cbfmt",
-        "gopls",
-        "rust_analyzer",
-        "yaml_language_server",
-        "arduino_language_server",
-        "clangd",
-    }
-)
+require("luasnip.loaders.from_vscode").lazy_load()
+require("blink.cmp").setup({
+    signature = { enabled = true },
+    completion = {
+        documentation = { auto_show = true, auto_show_delay_ms = 500 },
+        menu = {
+            auto_show = true,
+            draw = {
+                treesitter = { "lsp" },
+                columns = { { "kind_icon", "label", "label_description", gap = 1 }, { "kind" } },
+            },
+        },
+    },
+})
+
 vim.lsp.config("lua_ls", {
     settings = {
         Lua = {
+            runtime = {
+                version = "LuaJIT",
+            },
+            diagnostics = {
+                globals = {
+                    "vim",
+                    "require",
+                },
+            },
             workspace = {
                 library = vim.api.nvim_get_runtime_file("", true)
-            }
+            },
+            telemetry = {
+                enable = false,
+            },
         }
     }
 })
@@ -230,16 +241,3 @@ vim.lsp.config("arduino_language_server", {
         '$HOME/.arduino15/arduino-cli.yaml',
     },
 })
-vim.api.nvim_create_autocmd('LspAttach', {
-    group = vim.api.nvim_create_augroup('my.lsp', {}),
-    callback = function(args)
-        local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
-        if client:supports_method('textDocument/completion') then
-            -- Optional: trigger autocompletion on EVERY keypress. May be slow!
-            -- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
-            -- client.server_capabilities.completionProvider.triggerCharacters = chars
-            -- vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-        end
-    end,
-})
-vim.cmd [[set completeopt+=menuone,noselect,popup]]

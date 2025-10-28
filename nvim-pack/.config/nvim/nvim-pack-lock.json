@@ -1,10 +1,23 @@
 {
   "plugins": {
+    "LuaSnip": {
+      "rev": "ccf25a5",
+      "src": "https://github.com/L3MON4D3/LuaSnip"
+    },
+    "blink.cmp": {
+      "rev": "327fff9",
+      "src": "https://github.com/Saghen/blink.cmp",
+      "version": "'v1.7.0'"
+    },
     "friendly-snippets": [],
     "harpoon": {
       "version": "'harpoon2'"
     },
     "mason-lspconfig.nvim": [],
+    "mason-tool-installer.nvim": {
+      "rev": "517ef59",
+      "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
+    },
     "mason.nvim": [],
     "mini.nvim": [],
     "nvim": [],
