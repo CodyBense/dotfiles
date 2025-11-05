@@ -19,7 +19,10 @@
       "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
     },
     "mason.nvim": [],
-    "mini.nvim": [],
+    "mini.nvim": {
+      "rev": "ee4a4a4",
+      "src": "https://github.com/nvim-mini/mini.nvim"
+    },
     "nvim": [],
     "nvim-colorizer.lua": [],
     "nvim-lspconfig": [],
