@@ -76,8 +76,10 @@ map("n", "<C-h>", function() require("harpoon"):list():select(1) end)
 map("n", "<C-j>", function() require("harpoon"):list():select(2) end)
 map("n", "<C-k>", function() require("harpoon"):list():select(3) end)
 map("n", "<C-l>", function() require("harpoon"):list():select(4) end)
+map("n", "<C-;>", function() require("harpoon"):list():select(5) end)
 map("n", "<leader>mr", function() require("harpoon"):list():remove() end)
 
+-- vim.pack stuff
 map("n", "<leader>pc", function()
     local active_plugins = {}
     local unused_plugins = {}
@@ -113,6 +115,16 @@ map("n", "<leader>pu", function()
     vim.pack.update(active_plugins)
 end)
 
+-- LuaSnip
+map({ "i" }, "<C-k>", function() require("luasnip").expand() end, { silent = true })
+map({ "i", "s" }, "<C-l>", function() require("luasnip").jump(1) end, { silent = true })
+map({ "i", "s" }, "<C-j>", function() require("luasnip").jump(-1) end, { silent = true })
+map({ "i", "s" }, "<C-e>", function()
+    if require("luasnip").choice_expand() then
+        require("luasnip").change_choice(1)
+    end
+end, { silent = true })
+
 -- Run :=vim.pack.del({'plugin'}) to remove plugin
 vim.pack.add({
     { src = 'https://github.com/catppuccin/nvim' },
@@ -142,8 +154,6 @@ require("mini.pick").setup()
 require("trouble").setup()
 require("mini.icons").setup()
 require("harpoon").setup()
-require("mini.completion").setup()
-require("mini.snippets").setup()
 require("colorizer").setup()
 require("mason").setup({
     ui = {
@@ -198,6 +208,8 @@ require("nvim-treesitter.configs").setup({
         additional_vim_regex_highlighting = false,
     },
 })
+
+require("luasnip").setup({ enable_autosnippets = true })
 require("luasnip.loaders.from_vscode").lazy_load()
 require("blink.cmp").setup({
     signature = { enabled = true },
