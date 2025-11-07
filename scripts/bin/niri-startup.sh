@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-waybar &
+# waybar &
+qs -c noctalia-shell &
 nm-applet --indicator &
 swaync &
 swww-daemon &
