@@ -4,6 +4,10 @@ workspace "files"
 workspace "notes"
 workspace "music"
 workspace "chat"
+workspace "7"
+workspace "8"
+workspace "9"
+workspace "10"
 
 input {
     keyboard {
@@ -135,6 +139,15 @@ window-rule {
     open-on-workspace "chat"
 }
 
+window-rule {
+    // geometry-corner-radius 20
+    clip-to-geometry true
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
 hotkey-overlay {
     skip-at-startup
 }
@@ -166,12 +179,15 @@ binds {
     Mod+Shift+W { spawn "change-wallpaper.sh"; }
     Mod+Shift+M { spawn "niri-monitor-toggle.sh"; }
     Mod+Shift+R { spawn "restart-waybar.sh"; }
-    Mod+N { spawn-sh "swaync-client -t -sw"; }
+    // Mod+N { spawn-sh "swaync-client -t -sw"; }
+    Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
+    Mod+Alt+N { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
     Mod+Shift+N { spawn "notes-launcher.sh"; }
     Mod+Shift+T { spawn-sh "change-theme.sh"; }
     Mod+B { spawn-sh "bookmarks.sh"; }
     Mod+Shift+S { spawn-sh "ssh-connections.sh"; }
     Mod+Q { close-window; }
+    Mod+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
 
     // Window management
     Mod+Left  { focus-column-left; }
@@ -285,7 +301,7 @@ binds {
     Mod+Shift+F { expand-column-to-available-width; }
     Mod+Alt+F { fullscreen-window; }
 
-    Mod+C { center-column; }
+    // Mod+C { center-column; }
 
     Mod+Ctrl+C { center-visible-columns; }
 
