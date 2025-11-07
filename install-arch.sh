@@ -137,6 +137,7 @@ dirs=(
     hypr
     kanata
     niri
+    noctalia
     nvim
     profile
     rofi
