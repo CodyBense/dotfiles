@@ -172,7 +172,8 @@ binds {
     XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
     XF86MonBrightnessUp { spawn-sh "brightnessctl set +5%"; }
     XF86MonBrightnessDown { spawn-sh "brightnessctl set 5%-"; }
-    Mod+Shift+W { spawn "change-wallpaper.sh"; }
+    // Mod+Shift+W { spawn "change-wallpaper.sh"; }
+    Mod+Shift+W { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
     Mod+Shift+M { spawn "niri-monitor-toggle.sh"; }
     Mod+Shift+R { spawn "restart-waybar.sh"; }
     // Mod+N { spawn-sh "swaync-client -t -sw"; }
