@@ -4,10 +4,6 @@ workspace "files"
 workspace "notes"
 workspace "music"
 workspace "chat"
-workspace "7"
-workspace "8"
-workspace "9"
-workspace "10"
 
 input {
     keyboard {
