@@ -1,4 +1,3 @@
-theme = Catppuccin Mocha
 
 background-opacity = 0.95
 background-blur = false
@@ -36,3 +35,4 @@ font-size = 16
 # keybind = ctrl+shift+l=resize_split:right,10
 # keybind = ctrl+shift+j=resize_split:down,10
 # keybind = ctrl+shift+k=resize_split:up,10
+theme = noctalia
