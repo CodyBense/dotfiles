@@ -321,5 +321,5 @@ binds {
     Mod+Shift+Q { quit; }
     Ctrl+Alt+Delete { quit; }
 
-    Mod+Shift+P { spawn-sh "project-launch.sh"; }
+    Mod+Shift+P { spawn-sh "project-launch-zellij.sh"; }
 }
