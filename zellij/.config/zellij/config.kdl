@@ -313,7 +313,7 @@ mouse_mode false
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -348,7 +348,7 @@ mouse_mode false
 // Examples:
 //
 // copy_command "xclip -selection clipboard" // x11
-// copy_command "wl-copy"                    // wayland
+copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 // 
 // copy_command "pbcopy"
@@ -360,16 +360,16 @@ mouse_mode false
 //   - system (default)
 //   - primary
 // 
-// copy_clipboard "primary"
+copy_clipboard "primary"
  
 // Enable automatic copying (and clearing) of selection when releasing mouse
 // Default: true
 // 
-// copy_on_select true
+copy_on_select true
  
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "/usr/bin/nvim"
  
 // A fixed name to always give the Zellij session.
 // Consider also setting `attach_to_session true,`
