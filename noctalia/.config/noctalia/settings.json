@@ -115,7 +115,7 @@
         }
     },
     "battery": {
-        "chargingMode": 0
+        "chargingMode": 3
     },
     "brightness": {
         "brightnessStep": 5,
@@ -314,6 +314,11 @@
             {
                 "directory": "/home/codybense/Pictures/wallpapers",
                 "name": "eDP-1",
+                "wallpaper": "/home/codybense/Pictures/wallpapers/cm-my-neighbor-totoro-sunflowers.png"
+            },
+            {
+                "directory": "/home/codybense/Pictures/wallpapers",
+                "name": "DP-3",
                 "wallpaper": "/home/codybense/Pictures/wallpapers/cm-my-neighbor-totoro-sunflowers.png"
             }
         ],
