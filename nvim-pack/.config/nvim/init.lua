@@ -155,6 +155,7 @@ require("trouble").setup()
 require("mini.icons").setup()
 require("harpoon").setup()
 require("colorizer").setup()
+require("mini.surround").setup()
 require("mason").setup({
     ui = {
         icons = {
