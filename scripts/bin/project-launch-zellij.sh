@@ -10,7 +10,7 @@ case "${options}" in
         ghostty --class="com.project.ghostty" --title="$options" --working-directory=$HOME/dotfiles -e zellij a -c dotfiles
         ;;
     "test-scripts")
-        ghostty --class="com.project.ghostty" --title="$options" --working-directory=$HOME/dotfiles -e zellij a -c test-scripts
+        ghostty --class="com.project.ghostty" --title="$options" --working-directory=$HOME/workspaces/projects/test-scripts/ -e zellij a -c test-scripts
         ;;
     "new")
         project_name="$(printf '' | rofi -dmenu -p 'Project Name: ')"
