@@ -100,6 +100,7 @@ wf-recorder
 wget
 wireplumber
 wl-clipboard
+wlsunset
 xdg-desktop-portal-gnome
 xdg-desktop-portal-kde
 xwayland-satellite
