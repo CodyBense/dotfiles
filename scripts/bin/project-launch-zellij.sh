@@ -2,12 +2,15 @@
 set -eu
 
 DIR=$HOME/workspaces/github/CodyBense
-other_projects="new\ndotfiles"
+other_projects="new\ndotfiles\ntest-scripts"
 options=$(printf "${other_projects}\n$(ls $DIR)\n" | rofi -dmenu -p "Projects: ")
 
 case "${options}" in
     "dotfiles")
         ghostty --class="com.project.ghostty" --title="$options" --working-directory=$HOME/dotfiles -e zellij a -c dotfiles
+        ;;
+    "test-scripts")
+        ghostty --class="com.project.ghostty" --title="$options" --working-directory=$HOME/dotfiles -e zellij a -c test-scripts
         ;;
     "new")
         project_name="$(printf '' | rofi -dmenu -p 'Project Name: ')"
