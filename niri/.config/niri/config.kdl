@@ -191,6 +191,7 @@ binds {
     Mod+Shift+S { spawn-sh "ssh-connections.sh"; }
     Mod+Q { close-window; }
     Mod+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
+    Mod+Shift+P { spawn-sh "project-launch-zellij.sh"; }
 
     // Window management
     Mod+Left  { focus-column-left; }
@@ -327,6 +328,4 @@ binds {
 
     Mod+Shift+Q { quit; }
     Ctrl+Alt+Delete { quit; }
-
-    Mod+Shift+P { spawn-sh "project-launch-zellij.sh"; }
 }
