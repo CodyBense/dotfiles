@@ -71,12 +71,6 @@
                     "showVisualizer": false,
                     "useFixedWidth": false,
                     "visualizerType": "linear"
-                },
-                {
-                    "colorName": "primary",
-                    "hideWhenIdle": true,
-                    "id": "AudioVisualizer",
-                    "width": 200
                 }
             ],
             "right": [
@@ -302,7 +296,7 @@
         "discord_lightcord": false,
         "discord_vesktop": false,
         "discord_webcord": false,
-        "enableUserTemplates": true,
+        "enableUserTemplates": false,
         "foot": false,
         "fuzzel": false,
         "ghostty": true,
