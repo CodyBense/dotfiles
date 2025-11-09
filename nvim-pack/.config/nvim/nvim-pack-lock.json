@@ -29,6 +29,10 @@
     "nvim-treesitter": {
       "version": "'master'"
     },
+    "obsidian.nvim": {
+      "rev": "14e0427",
+      "src": "https://github.com/epwalsh/obsidian.nvim"
+    },
     "oil.nvim": [],
     "plenary.nvim": [],
     "render-markdown.nvim": [],

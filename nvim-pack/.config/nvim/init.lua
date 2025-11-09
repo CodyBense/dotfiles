@@ -17,6 +17,7 @@ vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
 vim.opt.undofile = true
+vim.opt.conceallevel = 1
 vim.g.mapleader = " "
 
 -- Keymaps
@@ -145,6 +146,7 @@ vim.pack.add({
     { src = 'https://github.com/L3MON4D3/LuaSnip' },
     { src = 'https://github.com/rafamadriz/friendly-snippets' },
     { src = 'https://github.com/Saghen/blink.cmp',                         version = 'v1.7.0' },
+    { src = 'https://github.com/epwalsh/obsidian.nvim' },
 })
 
 -- Plygin settings
@@ -224,6 +226,56 @@ require("blink.cmp").setup({
             },
         },
     },
+})
+
+require("obsidian").setup({
+    workspaces = {
+        {
+            name = "notes",
+            path = "~/Documents/Obsidian/notes/",
+        },
+        {
+            name = "projects",
+            path = "~/Documents/Obsidian/projects/",
+        },
+        {
+            name = "daily",
+            path = "~/Documents/Obsidian/daily/",
+        },
+        {
+            name = "book_view",
+            path = "~/Documents/Obsidian/book_view/",
+        },
+    },
+
+    log_level = vim.log.levels.INFO,
+
+    daily_notes = {
+        date_format = "%m-%d-%Y",
+        alias_format = "%m-%d-%Y",
+        default_tags = { "daily-notes" },
+        template = nil,
+    },
+
+    completion = {
+        nvim_cmp = false,
+        blink = true,
+        min_chars = 2,
+        create_new = false,
+    },
+
+    picker = {
+        name = "mini.pick",
+        note_mappings = {
+            new = "<C-x>",
+            insert_link = "<C-l>",
+        },
+        tag_mappings = {
+            new = "<C-x>",
+            insert_link = "<C-l>",
+        },
+    },
+
 })
 
 vim.lsp.config("lua_ls", {
