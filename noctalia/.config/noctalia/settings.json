@@ -8,7 +8,7 @@
         ],
         "position": "center",
         "sortByMostUsed": true,
-        "terminalCommand": "xterm -e",
+        "terminalCommand": "ghostty -e",
         "useApp2Unit": false
     },
     "audio": {
@@ -23,11 +23,13 @@
     "bar": {
         "backgroundOpacity": 1,
         "density": "comfortable",
+        "exclusive": true,
         "floating": false,
         "marginHorizontal": 0.25,
         "marginVertical": 0.25,
         "monitors": [
         ],
+        "outerCorners": false,
         "position": "top",
         "showCapsule": true,
         "widgets": {
@@ -44,10 +46,11 @@
                     "id": "SystemMonitor",
                     "showCpuTemp": true,
                     "showCpuUsage": true,
-                    "showDiskUsage": false,
-                    "showMemoryAsPercent": false,
+                    "showDiskUsage": true,
+                    "showMemoryAsPercent": true,
                     "showMemoryUsage": true,
-                    "showNetworkStats": false
+                    "showNetworkStats": false,
+                    "usePrimaryColor": true
                 },
                 {
                     "colorizeIcons": false,
@@ -60,6 +63,7 @@
                 },
                 {
                     "hideMode": "hidden",
+                    "hideWhenIdle": false,
                     "id": "MediaMini",
                     "maxWidth": 145,
                     "scrollingMode": "hover",
@@ -67,6 +71,12 @@
                     "showVisualizer": false,
                     "useFixedWidth": false,
                     "visualizerType": "linear"
+                },
+                {
+                    "colorName": "primary",
+                    "hideWhenIdle": true,
+                    "id": "AudioVisualizer",
+                    "width": 200
                 }
             ],
             "right": [
@@ -74,10 +84,12 @@
                     "id": "PowerProfile"
                 },
                 {
-                    "blacklist": [
-                    ],
-                    "colorizeIcons": false,
-                    "id": "Tray"
+                    "displayMode": "onhover",
+                    "id": "Bluetooth"
+                },
+                {
+                    "displayMode": "onhover",
+                    "id": "WiFi"
                 },
                 {
                     "hideWhenZero": true,
@@ -119,6 +131,7 @@
     },
     "brightness": {
         "brightnessStep": 5,
+        "enableDdcSupport": false,
         "enforceMinimum": true
     },
     "colorSchemes": {
@@ -204,17 +217,22 @@
         "animationSpeed": 1,
         "avatarImage": "/home/codybense/.face",
         "compactLockScreen": false,
+        "dimDesktop": false,
+        "enableShadows": false,
         "forceBlackScreenCorners": false,
         "language": "",
         "lockOnSuspend": true,
         "radiusRatio": 1,
         "scaleRatio": 1,
         "screenRadiusRatio": 1,
+        "shadowDirection": "bottom_right",
+        "shadowOffsetX": 2,
+        "shadowOffsetY": 3,
         "showScreenCorners": false
     },
     "hooks": {
         "darkModeChange": "",
-        "enabled": false,
+        "enabled": true,
         "wallpaperChange": ""
     },
     "location": {
@@ -244,6 +262,7 @@
         "backgroundOpacity": 1,
         "criticalUrgencyDuration": 15,
         "doNotDisturb": false,
+        "enabled": true,
         "location": "top_right",
         "lowUrgencyDuration": 3,
         "monitors": [
@@ -271,9 +290,10 @@
         "videoCodec": "h264",
         "videoSource": "portal"
     },
-    "settingsVersion": 16,
+    "settingsVersion": 20,
     "setupCompleted": true,
     "templates": {
+        "alacritty": false,
         "code": false,
         "discord": false,
         "discord_armcord": false,
@@ -292,7 +312,8 @@
         "pywalfox": false,
         "qt": true,
         "vicinae": false,
-        "walker": false
+        "walker": false,
+        "wezterm": false
     },
     "ui": {
         "fontDefault": "Roboto",
@@ -300,7 +321,7 @@
         "fontFixed": "JetBrainsMono Nerd Font Propo",
         "fontFixedScale": 1,
         "panelsAttachedToBar": true,
-        "panelsOverlayLayer": true,
+        "settingsPanelAttachToBar": false,
         "tooltipsEnabled": true
     },
     "wallpaper": {
@@ -322,9 +343,11 @@
                 "wallpaper": "/home/codybense/Pictures/wallpapers/cm-my-neighbor-totoro-sunflowers.png"
             }
         ],
+        "overviewEnabled": false,
+        "panelPosition": "follow_bar",
         "randomEnabled": false,
         "randomIntervalSec": 300,
-        "recursiveSearch": false,
+        "recursiveSearch": true,
         "setWallpaperOnAllMonitors": true,
         "transitionDuration": 1500,
         "transitionEdgeSmoothness": 0.05,
