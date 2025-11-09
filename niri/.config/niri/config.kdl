@@ -163,14 +163,16 @@ binds {
     Mod+E { spawn "launch-file-manager.sh"; }
     Mod+SHIFT+E { spawn "dolphin"; }
     // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
-    Mod+Space { spawn-sh "rofi -show drun"; }
+    // Mod+Space { spawn-sh "rofi -show drun"; }
+    Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+F { spawn "zen-browser"; }
     // Mod+M { spawn "spotify"; }
     Mod+M { spawn-sh "spotify-player.sh"; }
     Mod+O { spawn-sh "obsidian"; }
 
     // Utilities
-    Mod+Backspace { spawn "wlogout"; }
+    // Mod+Backspace { spawn "wlogout"; }
+    Mod+Backspace { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+Period { spawn-sh "rofi -modi emoji -show emoji"; }
     Mod+Alt+L {spawn "hyprlock"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+"; }
