@@ -1,7 +1,7 @@
 {
   "plugins": {
     "LuaSnip": {
-      "rev": "ccf25a5",
+      "rev": "3732756",
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
     "blink.cmp": {
@@ -11,21 +11,32 @@
     },
     "friendly-snippets": [],
     "harpoon": {
+      "rev": "87b1a35",
       "version": "'harpoon2'"
     },
-    "mason-lspconfig.nvim": [],
+    "mason-lspconfig.nvim": {
+      "rev": "b1d9a91"
+    },
     "mason-tool-installer.nvim": {
       "rev": "517ef59",
       "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
     },
-    "mason.nvim": [],
+    "mason.nvim": {
+      "rev": "ad7146a"
+    },
     "mini.nvim": {
-      "rev": "ee4a4a4",
+      "rev": "f43357b",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
-    "nvim": [],
-    "nvim-colorizer.lua": [],
-    "nvim-lspconfig": [],
+    "nvim": {
+      "rev": "234fc04"
+    },
+    "nvim-colorizer.lua": {
+      "rev": "81e676d"
+    },
+    "nvim-lspconfig": {
+      "rev": "2010fc6"
+    },
     "nvim-treesitter": {
       "version": "'master'"
     },
@@ -33,11 +44,24 @@
       "rev": "14e0427",
       "src": "https://github.com/epwalsh/obsidian.nvim"
     },
-    "oil.nvim": [],
+    "oil.nvim": {
+      "rev": "7e1cd77"
+    },
     "plenary.nvim": [],
-    "render-markdown.nvim": [],
+    "render-markdown.nvim": {
+      "rev": "6a744f0"
+    },
+    "telescope.nvim": {
+      "rev": "a0bbec2",
+      "src": "https://github.com/nvim-telescope/telescope.nvim",
+      "version": "'0.1.8'"
+    },
     "tree-sitter-markdown": [],
-    "trouble.nvim": [],
-    "undotree": []
+    "trouble.nvim": {
+      "rev": "bd67efe"
+    },
+    "undotree": {
+      "rev": "0f1c981"
+    }
   }
 }
