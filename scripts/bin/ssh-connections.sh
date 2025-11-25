@@ -7,13 +7,16 @@ mapfile -t username < <(cat ${FILE} | cut --delimiter ',' --fields 2) || exit 0
 
 case "${connections}" in
     vault)
-        ghostty --class="com.ssh.ghostty" --title="${connections}" -e ssh ${username[0]}@${connections}
+        # ghostty --class="com.ssh.ghostty" --title="${connections}" -e ssh ${username[0]}@${connections}
+        kitty --title "${connections}" --app-id ssh ssh ${username[0]}@${connections}
         ;;
     pikachu)
-        ghostty --class="com.ssh.ghostty" --title="${connections}" -e ssh ${username[1]}@${connections}
+        # ghostty --class="com.ssh.ghostty" --title="${connections}" -e ssh ${username[1]}@${connections}
+        kitty --title "${connections}" --app-id ssh ssh ${username[1]}@${connections}
         ;;
     192.168.1.129)
-        ghostty --class="com.ssh.ghostty" --title="${connections}" -e ssh ${username[2]}@${connections}
+        # ghostty --class="com.ssh.ghostty" --title="${connections}" -e ssh ${username[2]}@${connections}
+        kitty --title "${connections}" --app-id ssh ssh ${username[2]}@${connections}
         ;;
     *)
         notify-send "Not a valid ssh connection"

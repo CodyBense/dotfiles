@@ -112,12 +112,14 @@ window-rule {
 
 window-rule {
     match app-id="com.project.ghostty"
+    match app-id="project"
     open-on-workspace "terminal"
     open-focused true
 }
 
 window-rule {
     match app-id="com.files.ghostty"
+    match app-id="files"
     match app-id="dolphin"
     open-on-workspace "files"
     open-focused true
@@ -125,6 +127,7 @@ window-rule {
 
 window-rule {
     match app-id="com.notes.ghostty"
+    match app-id="notes"
     match app-id=r#"obsidian"#
     open-on-workspace "notes"
     open-focused true
@@ -132,6 +135,7 @@ window-rule {
 
 window-rule {
     match app-id="com.spotify.ghostty"
+    match app-id="spotify"
     match app-id=r#"Spotify"#
     open-on-workspace "music"
     open-focused true
@@ -159,7 +163,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Applications
-    Mod+T { spawn "ghostty"; }
+    Mod+T { spawn "kitty"; }
     Mod+E { spawn "launch-file-manager.sh"; }
     Mod+SHIFT+E { spawn "dolphin"; }
     // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
