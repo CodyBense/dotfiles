@@ -8,7 +8,7 @@ workspace "chat"
 input {
     keyboard {
         repeat-rate 35
-        repeat-delay 200
+        repeat-delay 250
         xkb {
         }
         numlock
@@ -164,8 +164,9 @@ binds {
 
     // Applications
     Mod+T { spawn "kitty"; }
-    Mod+E { spawn "launch-file-manager.sh"; }
-    Mod+SHIFT+E { spawn "dolphin"; }
+    Mod+E { spawn "emacs"; }
+    Mod+SHIFT+E { spawn "launch-file-manager.sh"; }
+    Mod+ALT+E { spawn "dolphin"; }
     // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
     // Mod+Space { spawn-sh "rofi -show drun"; }
     Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
