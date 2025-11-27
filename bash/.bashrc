@@ -4,6 +4,8 @@ SAVEHIST=1000
 
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:/usr/bin/zig
+export PATH=$PATH:$HOME/.config/emacs/bin
 export MANPAGER='nvim +Man!'
 . "$HOME/.cargo/env"
 
