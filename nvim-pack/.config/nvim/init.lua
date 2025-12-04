@@ -42,6 +42,8 @@ vim.pack.add({
     { src = "https://github.com/Saghen/blink.cmp",                         version = "v1.7.0" },
     { src = "https://github.com/epwalsh/obsidian.nvim" },
     { src = "https://github.com/nvim-telescope/telescope.nvim",            version = "0.1.8" },
+    { src = "https://github.com/chipsenkbeil/org-roam.nvim", },
+    { src = "https://github.com/nvim-orgmode/orgmode", },
 })
 
 -- Plygin settings
@@ -75,6 +77,17 @@ require("mason-tool-installer").setup({
         "gopls"
     },
 })
+require("org-roam").setup({
+    directory = "~/Documents/Notes/",
+    org_files = {
+        -- other directories or files
+        "~/Documents/Notes/default.org",
+    }
+})
+-- require("orgmode").setup({
+--     org_agenda_files = "~/Documents/orgfiles/**/*",
+--     org_default_notes_file = "~/Documents/Notes/default.org",
+-- })
 require("render-markdown").setup({
     enabled = true,
     render_modes = { 'n', 'c', 't' },
@@ -158,19 +171,6 @@ require("obsidian").setup({
         min_chars = 2,
         create_new = false,
     },
-
-    picker = {
-        name = "telescope.nvim",
-        note_mappings = {
-            new = "<C-x>",
-            insert_link = "<C-l>",
-        },
-        tag_mappings = {
-            new = "<C-x>",
-            insert_link = "<C-l>",
-        },
-    },
-
 })
 
 require("telescope").setup({
@@ -236,10 +236,11 @@ map("n", "<leader>pv", "<CMD>Oil<CR>")
 local builtin = require('telescope.builtin')
 map("n", "<leader>f", builtin.find_files)
 map("n", "<leader>s", builtin.live_grep)
-map("n", "<leader>ps", function ()
+map("n", "<leader>ps", function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 map("n", "<leader>gf", builtin.git_files)
+-- map("n", "<leader>gs", ":Pick grep_live tool='git'<CR>")
 map("n", "<leader>h", builtin.help_tags)
 -- Mini.pick
 -- map("n", "<leader>f", ":Pick files<CR>")

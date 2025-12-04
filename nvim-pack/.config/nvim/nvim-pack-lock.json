@@ -47,6 +47,14 @@
     "oil.nvim": {
       "rev": "7e1cd77"
     },
+    "org-roam.nvim": {
+      "rev": "087b7ba",
+      "src": "https://github.com/chipsenkbeil/org-roam.nvim"
+    },
+    "orgmode": {
+      "rev": "ca572cc",
+      "src": "https://github.com/nvim-orgmode/orgmode"
+    },
     "plenary.nvim": [],
     "render-markdown.nvim": {
       "rev": "6a744f0"
