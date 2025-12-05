@@ -98,7 +98,7 @@ spawn-at-startup "niri-monitor-toggle.sh"
 prefer-no-csd
 
 switch-events {
-    lid-close { spawn "niri-lid-shut.sh"; }
+    lid-close { spawn "~/.config/niri/scripts/niri-lid-shut.sh"; }
 }
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
@@ -188,7 +188,7 @@ binds {
     XF86MonBrightnessDown { spawn-sh "brightnessctl set 5%-"; }
     // Mod+Shift+W { spawn "change-wallpaper.sh"; }
     Mod+Shift+W { spawn-sh "qs -c noctalia-shell ipc call wallpaper toggle"; }
-    Mod+Shift+M { spawn "niri-monitor-toggle.sh"; }
+    Mod+Shift+M { spawn "~/.config/niri/scripts/niri-monitor-toggle.sh"; }
     Mod+Shift+R { spawn "restart-waybar.sh"; }
     // Mod+N { spawn-sh "swaync-client -t -sw"; }
     Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
@@ -307,7 +307,7 @@ binds {
     Mod+Comma  { consume-window-into-column; }
 
     Mod+R { switch-preset-column-width; }
-    Mod+S { spawn-sh "resize-two.sh"; }
+    Mod+S { spawn-sh "~/.config/niri/scripts/resize-two.sh"; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+Ctrl+F { maximize-column; }
     Mod+Shift+F { expand-column-to-available-width; }
