@@ -9,35 +9,46 @@
       "src": "https://github.com/Saghen/blink.cmp",
       "version": "'v1.7.0'"
     },
-    "friendly-snippets": [],
+    "friendly-snippets": {
+      "rev": "572f5660cf05f8cd8834e096d7b4c921ba18e175",
+      "src": "https://github.com/rafamadriz/friendly-snippets"
+    },
     "harpoon": {
-      "rev": "87b1a35",
+      "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
+      "src": "https://github.com/ThePrimeagen/harpoon",
       "version": "'harpoon2'"
     },
     "mason-lspconfig.nvim": {
-      "rev": "b1d9a91"
+      "rev": "b1d9a914b02ba5660f1e272a03314b31d4576fe2",
+      "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason-tool-installer.nvim": {
       "rev": "517ef59",
       "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
     },
     "mason.nvim": {
-      "rev": "ad7146a"
+      "rev": "ad7146aa61dcaeb54fa900144d768f040090bff0",
+      "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.nvim": {
       "rev": "f43357b",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "nvim": {
-      "rev": "234fc04"
+      "rev": "234fc048de931a0e42ebcad675bf6559d75e23df",
+      "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-colorizer.lua": {
-      "rev": "81e676d"
+      "rev": "81e676d3203c9eb6e4c0ccf1eba1679296ef923f",
+      "src": "https://github.com/NvChad/nvim-colorizer.lua"
     },
     "nvim-lspconfig": {
-      "rev": "2010fc6"
+      "rev": "2010fc6ec03e2da552b4886fceb2f7bc0fc2e9c0",
+      "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
+      "rev": "42fc28ba918343ebfd5565147a42a26580579482",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
       "version": "'master'"
     },
     "obsidian.nvim": {
@@ -45,7 +56,8 @@
       "src": "https://github.com/epwalsh/obsidian.nvim"
     },
     "oil.nvim": {
-      "rev": "7e1cd77"
+      "rev": "7e1cd7703ff2924d7038476dcbc04b950203b902",
+      "src": "https://github.com/stevearc/oil.nvim"
     },
     "org-roam.nvim": {
       "rev": "087b7ba",
@@ -55,21 +67,30 @@
       "rev": "ca572cc",
       "src": "https://github.com/nvim-orgmode/orgmode"
     },
-    "plenary.nvim": [],
+    "plenary.nvim": {
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
     "render-markdown.nvim": {
-      "rev": "6a744f0"
+      "rev": "6a744f0d14fd1d0fa8e3f446ac7825ec1e351d55",
+      "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
     },
     "telescope.nvim": {
       "rev": "a0bbec2",
       "src": "https://github.com/nvim-telescope/telescope.nvim",
       "version": "'0.1.8'"
     },
-    "tree-sitter-markdown": [],
+    "tree-sitter-markdown": {
+      "rev": "2dfd57f547f06ca5631a80f601e129d73fc8e9f0",
+      "src": "https://github.com/tree-sitter-grammars/tree-sitter-markdown"
+    },
     "trouble.nvim": {
-      "rev": "bd67efe"
+      "rev": "bd67efe408d4816e25e8491cc5ad4088e708a69a",
+      "src": "https://github.com/folke/trouble.nvim"
     },
     "undotree": {
-      "rev": "0f1c981"
+      "rev": "0f1c9816975b5d7f87d5003a19c53c6fd2ff6f7f",
+      "src": "https://github.com/mbbill/undotree"
     }
   }
 }
