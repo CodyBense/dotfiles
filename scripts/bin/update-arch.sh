@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-sudo snapper -c root create --description "System update" &
-wait
+sudo snapper -c root create --description "System update"
 
-sudo pacman -Syu &
-wait
+sudo snapper list
 
-paru -Syu &
-wait
+sudo pacman -Syu
 
-echo "System update is done"
+paru -Syu
+
+printf "\nSystem update is done"
