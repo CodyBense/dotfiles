@@ -17,7 +17,8 @@ new_notes() {
 choice=$(printf "sync\nopen\nnew" | rofi -dmenu -p "Notes menu: ") || exit 0
 case $choice in 
     "sync") 
-        rsync -rtu $HOME/Documents/Obsidian/* cody@vault:/data/Obsidian && rsync -rtu cody@vault:/data/Obsidian $HOME/Documents && notify-send "Syncing notes is complete"
+        rsync -rtu $HOME/Documents/Obsidian/* cody@vault:/data/Obsidian && rsync -rtu cody@vault:/data/Obsidian $HOME/Documents && notify-send "Syncing Obsidian is complete"
+        rsync -rtu $HOME/Documents/Notes/* cody@vault:/data/Notes && rsync -rtu cody@vault:/data/Notes $HOME/Documents && notify-send "Syncing Notes is complete"
         ;;
     "open")
         note_dir=$(printf "$(command ls -t1 $DIR)" | rofi -dmenu -p "Note dir: ") || exit 0

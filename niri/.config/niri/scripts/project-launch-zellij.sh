@@ -20,7 +20,7 @@ case "${options}" in
         echo $DIR/$project_name
         mkdir -p $DIR/$project_name
         # ghostty --class="com.project.ghostty" --title="$options" --working-directory=$DIR/$project_name -e zellij a -c $project_name
-        kitty --title "$options" --app-id project --directory $HOME/$project_name zellij a -c $project_name
+        kitty --title "$options" --app-id project --directory $DIR/$project_name zellij a -c $project_name
         ;;
     *)
         # ghostty --class="com.project.ghostty" --title="$options" --working-directory=$DIR/$options -e zellij a -c $options

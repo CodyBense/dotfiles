@@ -93,12 +93,12 @@ spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "swaync"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "udiskie"
-spawn-at-startup "niri-monitor-toggle.sh"
+spawn-at-startup "scripts/niri-monitor-toggle.sh"
 
 prefer-no-csd
 
 switch-events {
-    lid-close { spawn "~/.config/niri/scripts/niri-lid-shut.sh"; }
+    lid-close { spawn "scripts/niri-lid-shut.sh"; }
 }
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
@@ -165,7 +165,7 @@ binds {
     // Applications
     Mod+T { spawn "kitty"; }
     Mod+E { spawn "emacs"; }
-    Mod+SHIFT+E { spawn "launch-file-manager.sh"; }
+    Mod+SHIFT+E { spawn "~/.config/niri/scripts/launch-file-manager.sh"; }
     Mod+ALT+E { spawn "dolphin"; }
     // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
     // Mod+Space { spawn-sh "rofi -show drun"; }
@@ -193,13 +193,13 @@ binds {
     // Mod+N { spawn-sh "swaync-client -t -sw"; }
     Mod+N { spawn-sh "qs -c noctalia-shell ipc call notifications toggleHistory"; }
     Mod+Alt+N { spawn-sh "qs -c noctalia-shell ipc call controlCenter toggle"; }
-    Mod+Shift+N { spawn "notes-launcher.sh"; }
+    Mod+Shift+N { spawn "~/.config/niri/scripts/notes-launcher.sh"; }
     Mod+Shift+T { spawn-sh "change-theme.sh"; }
-    Mod+B { spawn-sh "bookmarks.sh"; }
+    Mod+B { spawn-sh "~/.config/niri/scripts/bookmarks.sh"; }
     Mod+Shift+S { spawn-sh "ssh-connections.sh"; }
     Mod+Q { close-window; }
     Mod+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
-    Mod+Shift+P { spawn-sh "project-launch-zellij.sh"; }
+    Mod+Shift+P { spawn-sh "~/.config/niri/scripts/project-launch-zellij.sh"; }
 
     // Window management
     Mod+Left  { focus-column-left; }
