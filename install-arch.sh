@@ -162,6 +162,8 @@ echo "----------------------------------"
 echo "-----Copying systemd services-----"
 echo "----------------------------------"
 echo ""
+
+sudo cp systemd/kanata.service /lib/systemd/system/kanata.service
 sleep 1
 
 echo ""
@@ -181,7 +183,6 @@ systemctl --user enable gammastep-off.service
 systemctl --user enable gammastep-on.service
 systemctl --user start gammastep-off.service
 systemctl --user start gammastep-on.service
-
 
 sudo groupadd uinput
 
