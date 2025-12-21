@@ -14,6 +14,7 @@ alias c="clear"
 alias v="nvim"
 alias vi="nvim"
 alias iv='nvim $(fzf --preview="bat --color=always {}")'
+alias ie='emacs $(fzf --preview="bat --color=always {}")'
 alias sv="sudo nvim"
 alias ll="ls -l"
 alias la="ls -la"
