@@ -3,7 +3,7 @@ binds {
 
     // Applications
     Mod+T { spawn "kitty"; }
-    Mod+E { spawn "emacs"; }
+    Mod+E { spawn-sh "emacsclient -c"; }
     Mod+SHIFT+E { spawn "~/.config/niri/scripts/launch-file-manager.sh"; }
     Mod+ALT+E { spawn "dolphin"; }
     // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
@@ -38,7 +38,8 @@ binds {
     Mod+Shift+S { spawn-sh "ssh-connections.sh"; }
     Mod+Q { close-window; }
     Mod+C { spawn-sh "qs -c noctalia-shell ipc call launcher clipboard"; }
-    Mod+Shift+P { spawn-sh "~/.config/niri/scripts/project-launch-zellij.sh"; }
+    //Mod+Shift+P { spawn-sh "~/.config/niri/scripts/project-launch-zellij.sh"; }
+    Mod+Shift+P { spawn-sh "~/.config/niri/scripts/project-launch.sh"; }
 
     // Window management
     Mod+Left  { focus-column-left; }

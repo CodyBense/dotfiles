@@ -21,7 +21,7 @@ case $choice in
         sleep 1
         rsync -rtu $HOME/Documents/Notes/* cody@vault:/data/Notes && rsync -rtu cody@vault:/data/Notes $HOME/Documents && notify-send "Syncing Notes is complete"
         sleep 1
-        rsync -rtu $HOME/org/* cody@vault:/data/org && rsync -rtu cody@vault:/data/org $HOME/org/ && notify-send "Syncing org is complete"
+        rsync -rtu $HOME/org/* cody@vault:/data/org && rsync -rtu cody@vault:/data/org $HOME/ && notify-send "Syncing org is complete"
         ;;
     "open")
         note_dir=$(printf "$(command ls -t1 $DIR)" | rofi -dmenu -p "Note dir: ") || exit 0
