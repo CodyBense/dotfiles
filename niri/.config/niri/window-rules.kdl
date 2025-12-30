@@ -11,6 +11,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="zen"
+    open-on-workspace "browser"
+    open-focused true
+}
+
+window-rule {
     match app-id="com.files.ghostty"
     match app-id="files"
     match app-id="dolphin"
