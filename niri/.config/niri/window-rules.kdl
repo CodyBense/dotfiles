@@ -5,6 +5,7 @@ window-rule {
 window-rule {
     match app-id="com.project.ghostty"
     match app-id="project"
+    match app-id="Emacs"
     open-on-workspace "terminal"
     open-focused true
 }

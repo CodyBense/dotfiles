@@ -86,6 +86,7 @@ spawn-at-startup "swaync"
 spawn-at-startup "swww-daemon"
 spawn-at-startup "udiskie"
 spawn-at-startup "scripts/niri-monitor-toggle.sh"
+spawn-at-startup "emacsclient -c"
 
 prefer-no-csd
 
