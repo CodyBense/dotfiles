@@ -175,6 +175,7 @@ binds {
 
     Mod+W { toggle-column-tabbed-display; }
 
+    Mod+Ctrl+s { screenshot; }
     Print { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
