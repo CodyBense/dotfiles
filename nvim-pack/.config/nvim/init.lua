@@ -78,16 +78,18 @@ require("mason-tool-installer").setup({
     },
 })
 require("org-roam").setup({
-    directory = "~/Documents/Notes/",
+    directory = "/home/codybense/OrgRoamFiles",
     org_files = {
         -- other directories or files
-        "~/Documents/Notes/default.org",
+        "/home/codybense/OrgRoamFiles/Notes",
     }
 })
--- require("orgmode").setup({
---     org_agenda_files = "~/Documents/orgfiles/**/*",
---     org_default_notes_file = "~/Documents/Notes/default.org",
--- })
+require("orgmode").setup({
+    org_agenda_files = "/home/codybense/OrgRoamFiles/agenda.org",
+    org_default_notes_file = "/home/codybense/OrgRoamFiles/Notes/default.org",
+    -- org_agenda_files = "/home/codybense/Documents/orgfiles/**/*",
+    -- org_default_notes_file = "/home/codybense/Documents/Notes/default.org",
+})
 require("render-markdown").setup({
     enabled = true,
     render_modes = { 'n', 'c', 't' },
