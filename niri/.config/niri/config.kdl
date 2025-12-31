@@ -79,14 +79,14 @@ layout {
     }
 }
 
-// spawn-at-startup "niri-startup.sh"
+//spawn-at-startup "niri-startup.sh"
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "nm-applet" "--indicator"
 spawn-at-startup "swaync"
-spawn-at-startup "swww-daemon"
+//spawn-at-startup "swww-daemon"
 spawn-at-startup "udiskie"
-spawn-at-startup "scripts/niri-monitor-toggle.sh"
 spawn-at-startup "emacsclient" "-c"
+spawn-at-startup "scripts/niri-monitor-toggle.sh"
 
 prefer-no-csd
 
@@ -106,4 +106,3 @@ debug {
 hotkey-overlay {
     skip-at-startup
 }
-

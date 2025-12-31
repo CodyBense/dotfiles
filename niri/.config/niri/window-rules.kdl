@@ -8,6 +8,7 @@ window-rule {
     match app-id="Emacs"
     open-on-workspace "terminal"
     open-focused true
+    open-maximized true
 }
 
 window-rule {
