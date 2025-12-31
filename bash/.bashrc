@@ -40,6 +40,9 @@ export PATH=$PATH:$HOME/bin
 # pipx
 export PATH="$PATH:/home/codybense/.local/bin"
 
+# xwayland-satellite
+export PATH="$PATH:/usr/bin/xwayland-satellite"
+
 # pyenv
 # export PYENV_ROOT="$HOME/.pyenv"
 # [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
