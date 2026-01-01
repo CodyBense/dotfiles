@@ -3,7 +3,7 @@ binds {
 
     // Applications
     Mod+T { spawn "kitty"; }
-    Mod+E { spawn-sh "emacsclient -c"; }
+    Mod+E { spawn-sh "emacs"; }
     Mod+SHIFT+E { spawn "~/.config/niri/scripts/launch-file-manager.sh"; }
     Mod+ALT+E { spawn "dolphin"; }
     // Mod+Space { spawn-sh "tofi-drun --drun-launch=true"; }
