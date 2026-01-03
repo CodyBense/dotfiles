@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 set -eu
 
+check_project_session() {
+    local session_name=""
+    zellij list-sessions | grep "$1"
+    if [[ $? == 0 ]]; then
+        session_name=$(zellij list-sessions | grep "$1" | cut --delimiter ' ' --field 1)
+    fi
+    echo "$session_name"
+}
+
 DIR=$HOME/workspaces/github/CodyBense
 other_projects="new\ndotfiles"
 options=$(printf "${other_projects}\n$(ls $DIR)\n" | rofi -dmenu -p "Projects: ")
@@ -19,7 +28,15 @@ case "${options}" in
         emacsclient -c $DIR/$project_name
         ;;
     *)
-        kitty --title "$options" --app-id project --directory $DIR/$options zellij a -c $options &
-        emacsclient -c $DIR/$options
+        # kitty --title "$options" --app-id project --directory $DIR/$options zellij a -c $options &
+        # emacsclient -c $DIR/$options
+        session_name="$(check_project_session $options)"
+        if [[ session_name == "" ]]; then
+            echo "It is not a session"
+            # kitty --title "$options" --app-id project --directory $DIR/$options zellij attach $options &
+        else
+            echo "It is a session"
+            # kitty --title "$options" --app-id project --directory $DIR/$options zellij --session $options &
+        fi
         ;;
 esac
