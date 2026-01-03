@@ -15,6 +15,7 @@ return {
         { "<C-j>", function() require("harpoon"):list():select(2) end, desc = "Switch to second file"},
         { "<C-k>", function() require("harpoon"):list():select(3) end, desc = "Switch to third file"},
         { "<C-l>", function() require("harpoon"):list():select(4) end, desc = "Switch to fourth file"},
-        { "mr", function() require("harpoon"):list():remove() end, desc = "Remove location"},
+        { "<C-;>", function() require("harpoon"):list():select(5) end, desc = "Switch to fourth file"},
+        { "<leader>mr", function() require("harpoon"):list():remove() end, desc = "Remove location"},
     }
 }
