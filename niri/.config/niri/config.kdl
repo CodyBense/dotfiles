@@ -86,7 +86,7 @@ spawn-at-startup "udiskie"
 spawn-at-startup "sleep" "1"
 spawn-at-startup "emacs"
 spawn-at-startup "sleep" "5"
-spawn-at-startup "scripts/niri-monitor-toggle.sh"
+spawn-sh-at-startup "~/.config/niri/scripts/niri-monitor-toggle.sh"
 
 prefer-no-csd
 
