@@ -7,6 +7,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/bin/zig
 export PATH=$PATH:$HOME/.config/emacs/bin
 export MANPAGER='nvim +Man!'
+export PATH=$PATH:$HOME/.nix-profile/bin
 . "$HOME/.cargo/env"
 
 # aliases
