@@ -1,7 +1,6 @@
 workspace "terminal"
 workspace "browser"
 workspace "files"
-workspace "notes"
 workspace "music"
 workspace "chat"
 

@@ -21,15 +21,8 @@ window-rule {
     match app-id="com.files.ghostty"
     match app-id="files"
     match app-id="dolphin"
+    match app-id="localsend"
     open-on-workspace "files"
-    open-focused true
-}
-
-window-rule {
-    match app-id="com.notes.ghostty"
-    match app-id="notes"
-    match app-id=r#"obsidian"#
-    open-on-workspace "notes"
     open-focused true
 }
 
@@ -46,6 +39,13 @@ window-rule {
     open-on-workspace "chat"
 }
 
+window-rule {
+    match title="Picture-in-Picture"
+    open-floating true
+    default-column-width { fixed 500; }
+    default-window-height { fixed 300; }
+    default-floating-position x=50 y=50 relative-to="top-right"
+}
 window-rule {
     // geometry-corner-radius 20
     clip-to-geometry true
