@@ -58,6 +58,9 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org")
 
+(use-package! javelin
+  :config
+  (global-javelin-minor-mode 1))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -91,8 +94,75 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(use-package! websocket
-  :after org-roam)
+(use-package! org-roam
+  :defer t
+  :commands (org-roam-node-find
+             org-roam-node-insert
+             org-roam-dailies-goto-today
+             org-roam-buffer-toggle
+             org-roam-db-sync
+             org-roam-capture)  ; Add this
+  :init
+  (setq org-roam-directory "~/org/roam"
+        org-roam-database-connector 'sqlite-builtin
+        org-roam-db-location (expand-file-name "org-roam.db" org-roam-directory)
+        org-roam-v2-ack t)
+
+  :config
+  ;; Don't sync on startup, only when explicitly needed
+  (setq org-roam-db-update-on-save nil)
+
+  ;; Create directory if needed
+  (unless (file-exists-p org-roam-directory)
+    (make-directory org-roam-directory t))
+
+  ;; Only enable autosync AFTER first use
+  (add-hook 'org-roam-find-file-hook
+            (lambda ()
+              (unless org-roam-db-autosync-mode
+                (org-roam-db-autosync-mode 1))))
+
+  ;; CAPTURE TEMPLATES - Human readable filenames
+  (setq org-roam-capture-templates
+        '(("d" "default" plain "%?"
+           :target (file+head "${slug}.org"
+                              ":PROPERTIES:\n:ID:       %(org-id-new)\n:END:\n#+title: ${title}\n#+filetags: \n\n")
+           :unnarrowed t)
+
+          ("n" "note" plain "%?"
+           :target (file+head "notes/${slug}.org"
+                              ":PROPERTIES:\n:ID:      %(org-id-new)\n:TOPIC: %^{Topic}\n:END:\n#+title: ${title}\n#+filetags: \n\n")
+           :unnarrowed t)
+
+          ("b" "book" plain "%?"
+           :target (file+head "books/${slug}.org"
+                              ":PROPERTIES:\n:ID:       %(org-id-new)\n:END:\n#+title: ${title}\n#+author: \n#+filetags: :book:\n\n* Summary\n\n* Key Ideas\n\n* Quotes\n\n* Related\n\n")
+           :unnarrowed t)
+
+          ("P" "project" plain "%?"
+           :target (file+head "projects/${slug}.org"
+                              ":PROPERTIES:\n:ID:       %(org-id-new)\n:END:\n#+title: ${title}\n#+filetags: :project:private:\n\n* Overview\n\n* Goals\n\n* Status\n\n* Notes\n\n")
+           :unnarrowed t)))
+
+  ;; DAILIES - Clean date format
+  (setq org-roam-dailies-directory "daily/"
+        org-roam-dailies-capture-templates
+        '(("d" "default" entry "* %<%H:%M>: %?"
+           :target (file+head "%<%Y-%m-%d>.org"
+                              ":PROPERTIES:\n:ID:       %(org-id-new)\n:END:\n#+title: %<%Y-%m-%d %A>\n#+filetags: :daily:\n\n"))))
+
+  ;; Enable completion everywhere (for linking)
+  (setq org-roam-completion-everywhere t))
+
+;; org-roam-ui
+(use-package! org-roam-ui
+  :commands (org-roam-ui-mode org-roam-ui-open)
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync-theme t
+        org-roam-ui-follow t
+        org-roam-ui-update-on-save t
+        org-roam-ui-open-on-start nil))
 
 (use-package! org-roam-ui
   :after org-roam ;; or :after org
@@ -145,32 +215,36 @@
            (file+headline "~/org/contacts.org" "Inbox")
            "* %^{Name}
 
-:PROPERTIES:
-:CREATED: %U
-:CAPTURED: %a
-:EMAIL: %^{Email}
-:PHONE: %^{Phone}
-:BIRTHDAY: %^{Birthday +1y}u
-:LOCATION: %^{Address}
-:LAST_CONTACTED: %U
-:END:
-\\ *** Communications
-\\ *** Notes
-%?")
+                               :PROPERTIES:
+                               :CREATED: %U
+                               :CAPTURED: %a
+                               :EMAIL: %^{Email}
+                               :PHONE: %^{Phone}
+                               :BIRTHDAY: %^{Birthday +1y}u
+                               :LOCATION: %^{Address}
+                               :LAST_CONTACTED: %U
+                               :END:
+                               \\ *** Communications
+                               \\ *** Notes
+                               %?")
 
           ("n" "Note" entry
            (file+headline "~/org/notes.org" "Inbox")
            "* [%<%Y-%m-%d %a>] %^{Title}\n:PROPERTIES:\n:CREATED: %U\n:CAPTURED: %a\n:END:\n%?"
            :prepend t)))
-  )
-(defadvice! fixed-doom--load-theme-a (fn theme &optional no-confirm no-enable)
-  "Record `doom-theme', disable old themes, and trigger `doom-load-theme-hook'."
-  :override #'doom--load-theme-a
-  (with-temp-buffer
-    (let ((last-themes (copy-sequence custom-enabled-themes)))
-      (mapc #'disable-theme custom-enabled-themes)
-      (prog1 (funcall fn theme no-confirm no-enable)
-        (when (and (not no-enable) (custom-theme-enabled-p theme))
-          (setq doom-theme theme)
-          (put 'doom-theme 'previous-themes (or last-themes 'none))
-          (doom-run-hooks 'doom-load-theme-hook))))))
+  (setq org-hide-emphasis-markers t))
+
+;; (defadvice! fixed-doom--load-theme-a (fn theme &optional no-confirm no-enable)
+;;   "Record `doom-theme', disable old themes, and trigger `doom-load-theme-hook'."
+;;   :override #'doom--load-theme-a
+;;   (with-temp-buffer
+;;     (let ((last-themes (copy-sequence custom-enabled-themes)))
+;;       (mapc #'disable-theme custom-enabled-themes)
+;;       (prog1 (funcall fn theme no-confirm no-enable)
+;;         (when (and (not no-enable) (custom-theme-enabled-p theme))
+;;           (setq doom-theme theme)
+;;           (put 'doom-theme 'previous-themes (or last-themes 'none))
+;;           (doom-run-hooks 'doom-load-theme-hook))))))
+(setq +latex-viewers '(zathura))
+(setq org-latex-compiler "xelatex")
+(setq org-latex-pdf-process '("xelatex %f"))

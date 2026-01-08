@@ -58,3 +58,4 @@
 (package! org-roam-ui)
 (package! compline-theme
   :recipe (:host github :repo "joshuablais/compline"))
+(package! javelin)
