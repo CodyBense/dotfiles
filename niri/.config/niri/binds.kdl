@@ -10,8 +10,7 @@ binds {
     // Mod+Space { spawn-sh "rofi -show drun"; }
     Mod+Space { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     Mod+F { spawn "zen-browser"; }
-    // Mod+M { spawn "spotify"; }
-    Mod+M { spawn-sh "spotify-player.sh"; }
+    Mod+M { spawn "spotify"; }
     Mod+O { spawn-sh "obsidian"; }
 
     // Utilities
