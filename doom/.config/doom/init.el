@@ -118,6 +118,7 @@
        :lang
        ;;ada               ; In strong typing we (blindly) trust
        ;;agda              ; types of types of types of types...
+       (arduino +tree-sitter +lsp)
        ;;beancount         ; mind the GAAP
        (cc +tree-sitter +lsp)         ; C > C++ == 1
        ;;clojure           ; java with a lisp
