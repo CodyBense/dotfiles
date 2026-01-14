@@ -248,3 +248,13 @@
 (setq +latex-viewers '(zathura))
 (setq org-latex-compiler "xelatex")
 (setq org-latex-pdf-process '("xelatex %f"))
+(after! lsp-mode
+  (lsp-register-client
+   (make-lsp-client
+    :new-connection (lsp-stdio-connection '("nixd"))
+    :major-modes '(nix-mode nix-ts-mode)
+    :server-id 'nixd
+    :priority 1)))
+
+(after! nix-mode
+  (setq nix-nixfmt-bin "nixfmt"))
